@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:paddingTop="10dp"
+    android:paddingHorizontal="15dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/notice_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="공지 제목"
+        android:textSize="16dp"
+        android:gravity="left"
+        android:textColor="#000000"
+        android:padding="2dp"/>
+
+    <TextView
+        android:id="@+id/notice_contents"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="공지 내용"
+        android:textSize="12dp"
+        android:gravity="left"
+        android:maxLines="1"
+        android:padding="2dp"
+        android:textColor="#929292"/>
+
+    <TextView
+        android:id="@+id/notice_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="몇일 전"
+        android:textSize="10dp"
+        android:gravity="right"
+        android:textColor="#929292"/>
+    <View
+        android:layout_marginTop="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/lightBlueGrey"></View>
+
+</LinearLayout>

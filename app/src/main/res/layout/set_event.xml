@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:id="@+id/event_edit_page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageButton
+            android:id="@+id/event_back"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="9dp"
+            android:background="@drawable/round_arrow_back_ios_black" />
+        
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="행사 관리"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+        <ImageButton
+            android:layout_width="28dp"
+            android:layout_height="18dp"
+            android:background="@drawable/head"
+            android:layout_marginTop="11.5dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="9dp"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/greyish"/>
+    
+
+    <LinearLayout
+        android:id="@+id/none_event"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"></LinearLayout>
+
+
+    <android.support.v7.widget.RecyclerView
+        android:paddingTop="10dp"
+        android:id="@+id/rc_event_list"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        ></android.support.v7.widget.RecyclerView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingVertical="4dp"
+        android:layout_marginHorizontal="26dp">
+
+        <ImageButton
+            android:id="@+id/event_add_btn1"
+            android:layout_width="match_parent"
+            android:layout_height="72dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/button_bar" />
+
+        <ImageButton
+            android:id="@+id/event_add_btn2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/add" />
+    </RelativeLayout>
+
+</LinearLayout>

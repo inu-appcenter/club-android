@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:id="@+id/event_edit_page">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp">
+
+        <ImageButton
+            android:id="@+id/event_edit_back"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_marginTop="11.5dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="9dp"
+            android:background="@drawable/round_arrow_back_ios_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="행사 수정"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="15dp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/greyish"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="제목"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"/>
+
+            <EditText
+                android:id="@+id/event_edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/transparent"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:layout_marginLeft="32dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightBlueGrey"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginVertical="12dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="설명"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"/>
+
+            <EditText
+                android:id="@+id/event_edit_contents"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/transparent"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:layout_marginLeft="32dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightBlueGrey"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="12dp"
+        android:layout_marginHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="장소"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"/>
+
+            <EditText
+                android:id="@+id/event_edit_location"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/transparent"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:inputType="text"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:layout_marginLeft="32dp"/>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightBlueGrey"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="12dp"
+        android:layout_marginHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시작"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"/>
+
+            <TextView
+                android:id="@+id/event_edit_start_date"
+                android:layout_width="220dp"
+                android:layout_height="30dp"
+                android:background="@color/transparent"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:layout_marginLeft="32dp"/>
+
+            <TextView
+                android:id="@+id/event_edit_start_time"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/transparent"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:maxLines="1"
+                android:padding="8dp"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightBlueGrey"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginVertical="12dp"
+        android:layout_marginHorizontal="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="종료"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"/>
+
+            <TextView
+                android:id="@+id/event_edit_end_date"
+                android:layout_width="220dp"
+                android:layout_height="30dp"
+                android:background="@color/transparent"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:maxLines="1"
+                android:padding="8dp"
+                android:layout_marginLeft="32dp"/>
+
+            <TextView
+                android:id="@+id/event_edit_end_time"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/transparent"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:maxLines="1"
+                android:padding="8dp"/>
+
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/lightBlueGrey"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/event_edit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="54dp"
+            android:textColor="#ff4b4b"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:text="행사 수정하기"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/event_delete_btn" />
+    </RelativeLayout>
+
+</LinearLayout>
