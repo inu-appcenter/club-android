@@ -1,7 +1,6 @@
-package com.dowls99.inuclub;
+package com.jhyejin99.inuclub;
 
 import android.app.Activity;
-import android.content.Context;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;

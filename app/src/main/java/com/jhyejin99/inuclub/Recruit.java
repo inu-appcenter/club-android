@@ -1,4 +1,4 @@
-package com.dowls99.inuclub;
+package com.jhyejin99.inuclub;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;

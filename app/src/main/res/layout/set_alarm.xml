@@ -27,7 +27,8 @@
             android:text="알림 설정"
             android:textStyle="bold"
             android:textColor="#000000"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:fontFamily="@font/nanumsquare"/>
 
     </RelativeLayout>
 
@@ -44,7 +45,8 @@
         android:text="투표자"
         android:paddingStart="15dp"
         android:textColor="@color/warmGrey"
-        android:textSize="12dp"/>
+        android:textSize="12dp"
+        android:fontFamily="@font/nanumsquare"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -62,7 +64,8 @@
                 android:textSize="14dp"
                 android:paddingHorizontal="16dp"
                 android:textColor="#000000"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare"/>
 
             <Switch
                 android:id="@+id/alarm_recruit_vote"
@@ -86,7 +89,8 @@
         android:text="게시자"
         android:paddingStart="15dp"
         android:textColor="@color/warmGrey"
-        android:textSize="12dp"/>
+        android:textSize="12dp"
+        android:fontFamily="@font/nanumsquare"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,7 +109,8 @@
                 android:textSize="14dp"
                 android:paddingHorizontal="16dp"
                 android:textColor="#000000"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare"/>
 
             <Switch
                 android:id="@+id/alarm_comment"
@@ -136,7 +141,8 @@
                 android:textSize="14dp"
                 android:paddingHorizontal="16dp"
                 android:textColor="#000000"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare"/>
 
             <Switch
                 android:id="@+id/alarm_recruit"
@@ -166,7 +172,8 @@
                 android:textSize="14dp"
                 android:paddingHorizontal="16dp"
                 android:textColor="#000000"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare"/>
 
             <Switch
                 android:id="@+id/alarm_goal_people"

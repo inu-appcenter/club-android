@@ -1,4 +1,4 @@
-package com.dowls99.inuclub.Settings;
+package com.jhyejin99.inuclub.Settings;
 
 public class SettingItem {
     private String name;

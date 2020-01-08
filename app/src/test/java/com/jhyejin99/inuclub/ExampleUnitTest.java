@@ -1,4 +1,4 @@
-package com.dowls99.inuclub;
+package com.jhyejin99.inuclub;
 
 import org.junit.Test;
 

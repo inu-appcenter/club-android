@@ -1,4 +1,4 @@
-package com.dowls99.inuclub.Settings;
+package com.jhyejin99.inuclub.Settings;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -13,7 +13,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 import android.widget.Toast;
 
-import com.dowls99.inuclub.R;
+import com.jhyejin99.inuclub.R;
 
 public class Setting_Event_Add extends Activity {
     ImageButton event_add_back;

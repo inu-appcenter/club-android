@@ -1,4 +1,4 @@
-package com.dowls99.inuclub;
+package com.jhyejin99.inuclub;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

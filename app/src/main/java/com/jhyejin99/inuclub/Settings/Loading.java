@@ -1,14 +1,12 @@
-package com.dowls99.inuclub.Settings;
+package com.jhyejin99.inuclub.Settings;
 
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
-import com.dowls99.inuclub.MainActivity;
-import com.dowls99.inuclub.R;
+import com.jhyejin99.inuclub.R;
 
 public class Loading extends AppCompatActivity {
 
@@ -42,7 +40,7 @@ public class Loading extends AppCompatActivity {
     }
 
     public void Login () {
-        Intent intent = new Intent(Loading.this, Setting_Club_Edit.class); //로그인클래스로 변경
+        Intent intent = new Intent(Loading.this, Login.class); //로그인클래스로 변경
         intent.putExtra("fromLoading",1);
         startActivity(intent);
         finish();
@@ -55,7 +53,7 @@ public class Loading extends AppCompatActivity {
         finish();
     }
 
-    public void Logout () {
+    /*public void Logout () {
         SharedPreferences savedToken = getSharedPreferences("loginToken", MODE_PRIVATE);
         SharedPreferences.Editor editor = savedToken.edit();
         editor.putString("savedID", "noID");
@@ -66,7 +64,7 @@ public class Loading extends AppCompatActivity {
         startActivity(intent);
         finish();
         MainActivity.mainActivity.finish(); //스택에 쌓인 뷰페이저 종료
-    }
+    } */
 
     public void OpenNext() {
             switch (loadingText) {
@@ -84,7 +82,6 @@ public class Loading extends AppCompatActivity {
 
                 case "로그인":
                     Login();
-                    loading.setText(loadingText);
                     break;
 
                 /*case "로그아웃":

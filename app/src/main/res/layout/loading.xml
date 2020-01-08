@@ -23,6 +23,7 @@
         android:layout_height="wrap_content"
         android:text="잠시만 기다려주세요"
         android:textSize="20dp"
-        android:textStyle="bold"/>
+        android:textStyle="bold"
+        android:fontFamily="@font/nanumsquare"/>
 
 </LinearLayout>

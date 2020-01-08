@@ -29,7 +29,8 @@
             android:text="행사 수정"
             android:textStyle="bold"
             android:textColor="#000000"
-            android:textSize="15dp" />
+            android:textSize="15dp"
+            android:fontFamily="@font/nanumsquare"/>
 
         <ImageButton
             android:id="@+id/event_edit_btn"
@@ -67,7 +68,8 @@
                 android:text="제목"
                 android:textSize="14dp"
                 android:textColor="#000000"
-                android:paddingLeft="8dp"/>
+                android:paddingLeft="8dp"
+                android:fontFamily="@font/nanumsquare"/>
 
             <EditText
                 android:id="@+id/event_edit_title"
@@ -79,7 +81,8 @@
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:layout_marginLeft="32dp"/>
+                android:layout_marginLeft="32dp"
+                android:fontFamily="@font/nanumsquare"/>
 
         </LinearLayout>
         <View
@@ -109,7 +112,8 @@
                 android:text="설명"
                 android:textSize="14dp"
                 android:textColor="#000000"
-                android:paddingLeft="8dp"/>
+                android:paddingLeft="8dp"
+                android:fontFamily="@font/nanumsquare"/>
 
             <EditText
                 android:id="@+id/event_edit_contents"
@@ -121,7 +125,8 @@
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:layout_marginLeft="32dp"/>
+                android:layout_marginLeft="32dp"
+                android:fontFamily="@font/nanumsquare"/>
 
         </LinearLayout>
         <View
@@ -151,7 +156,8 @@
                 android:text="장소"
                 android:textSize="14dp"
                 android:textColor="#000000"
-                android:paddingLeft="8dp"/>
+                android:paddingLeft="8dp"
+                android:fontFamily="@font/nanumsquare"/>
 
             <EditText
                 android:id="@+id/event_edit_location"
@@ -163,7 +169,8 @@
                 android:inputType="text"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:layout_marginLeft="32dp"/>
+                android:layout_marginLeft="32dp"
+                android:fontFamily="@font/nanumsquare"/>
 
         </LinearLayout>
         <View
@@ -193,7 +200,8 @@
                 android:text="시작"
                 android:textSize="14dp"
                 android:textColor="#000000"
-                android:paddingLeft="8dp"/>
+                android:paddingLeft="8dp"
+                android:fontFamily="@font/nanumsquare"/>
 
             <TextView
                 android:id="@+id/event_edit_start_date"
@@ -204,7 +212,8 @@
                 android:textColor="#000000"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:layout_marginLeft="32dp"/>
+                android:layout_marginLeft="32dp"
+                android:fontFamily="@font/nanumsquare"/>
 
             <TextView
                 android:id="@+id/event_edit_start_time"
@@ -214,7 +223,8 @@
                 android:textSize="14dp"
                 android:textColor="#000000"
                 android:maxLines="1"
-                android:padding="8dp"/>
+                android:padding="8dp"
+                android:fontFamily="@font/nanumsquare"/>
 
 
         </LinearLayout>
@@ -246,7 +256,8 @@
                 android:text="종료"
                 android:textSize="14dp"
                 android:textColor="#000000"
-                android:paddingLeft="8dp"/>
+                android:paddingLeft="8dp"
+                android:fontFamily="@font/nanumsquare"/>
 
             <TextView
                 android:id="@+id/event_edit_end_date"
@@ -257,7 +268,8 @@
                 android:textColor="#000000"
                 android:maxLines="1"
                 android:padding="8dp"
-                android:layout_marginLeft="32dp"/>
+                android:layout_marginLeft="32dp"
+                android:fontFamily="@font/nanumsquare"/>
 
             <TextView
                 android:id="@+id/event_edit_end_time"
@@ -267,7 +279,8 @@
                 android:textSize="14dp"
                 android:textColor="#000000"
                 android:maxLines="1"
-                android:padding="8dp"/>
+                android:padding="8dp"
+                android:fontFamily="@font/nanumsquare"/>
 
 
         </LinearLayout>

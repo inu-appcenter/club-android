@@ -1,10 +1,10 @@
-package com.dowls99.inuclub;
+package com.jhyejin99.inuclub;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentStatePagerAdapter;
 
-import com.dowls99.inuclub.Settings.Setting;
+import com.jhyejin99.inuclub.Settings.Setting;
 
 public class FragmentAdapter extends FragmentStatePagerAdapter {
 

@@ -48,7 +48,8 @@
                 android:text="이름"
                 android:textSize="18dp"
                 android:textStyle="bold"
-                android:layout_marginRight="4dp"/>
+                android:layout_marginRight="4dp"
+                android:fontFamily="@font/nanumsquare"/>
 
             <TextView
                 android:id="@+id/student_num"
@@ -57,7 +58,8 @@
                 android:text="18"
                 android:gravity="center"
                 android:textColor="#ffffff"
-                android:background="@drawable/student_num" />
+                android:background="@drawable/student_num"
+                android:fontFamily="@font/nanumsquare"/>
 
         </LinearLayout>
 

@@ -1,4 +1,4 @@
-package com.dowls99.inuclub.Settings;
+package com.jhyejin99.inuclub.Settings;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,7 +8,7 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageButton;
 
-import com.dowls99.inuclub.R;
+import com.jhyejin99.inuclub.R;
 
 public class Setting_Event extends Activity {
 
