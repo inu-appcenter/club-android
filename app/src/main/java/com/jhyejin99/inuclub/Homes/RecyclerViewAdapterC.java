@@ -1,4 +1,4 @@
-package com.jhyejin99.inuclub;
+package com.jhyejin99.inuclub.Homes;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,6 +8,8 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+
+import com.jhyejin99.inuclub.R;
 
 public class RecyclerViewAdapterC extends RecyclerView.Adapter<RecyclerViewAdapterC.ViewHolder> {
 
