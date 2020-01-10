@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 import com.jhyejin99.inuclub.R;
 
-public class Setting_Event extends Activity {
+public class settingEvent extends Activity {
 
     RecyclerView rc_event_list;
     RecyclerView.LayoutManager layoutManager;
@@ -31,7 +31,7 @@ public class Setting_Event extends Activity {
         event_add_btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Setting_Event.this, Setting_Event_Add.class);
+                Intent intent = new Intent(settingEvent.this, settingEventAdd.class);
                 startActivity(intent);
                 finish();
             }

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="108dp" android:layout_height="133dp">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/category2x"
+        android:scaleType="fitCenter"/>
+
+    <ImageView
+        android:id="@+id/cate_image"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="22.4dp"
+        android:src="@drawable/soccer2x" />
+    <TextView
+        android:id="@+id/cate_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="23dp"
+        android:text="스포츠"
+        android:fontFamily="@font/nanumsquare"
+        android:textSize="14dp"
+        android:textColor="#ffffff"/>
+    <TextView
+        android:id="@+id/cate_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8.5dp"
+        android:fontFamily="@font/nanumsquare"
+        android:text="00"
+        android:textColor="@color/warmGrey"
+        android:textSize="10dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="25.4dp"
+        android:layout_marginBottom="8.5dp"
+        android:fontFamily="@font/nanumsquare"
+        android:text="개의 동아리"
+        android:textColor="@color/warmGrey"
+        android:textSize="10dp" />
+</RelativeLayout>

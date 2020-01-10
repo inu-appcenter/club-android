@@ -2,25 +2,46 @@ package com.jhyejin99.inuclub;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.ViewFlipper;
 
 
 public class Home extends Fragment {
-        public Home() {
-        }
+    ViewFlipper viewFlipper;
+    RecyclerView rc;
+    GridLayoutManager gridLayoutManager;
 
-        @Override
-        public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
+    public Home() {
     }
 
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
-            View view = inflater.inflate(R.layout.home, container, false);
+    @Override
+    public void onCreate(Bundle savedInstanceState) { super.onCreate(savedInstanceState); }
 
-            return view;
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.home, container, false);
+        // 광고 배너 슬라이드
+        int images[] = {R.drawable.inu, R.drawable.peoplex3};
+        viewFlipper = view.findViewById(R.id.banner_slide);
+        for(int image : images) { flipperImages(image); }
+
+        rc = (RecyclerView)view.findViewById(R.id.cate_recycler);
+        gridLayoutManager = new GridLayoutManager(getActivity(),3);
+
+
+    return view;
+    }
+
+    public void flipperImages(int image) {
+        ImageView imageView = new ImageView(getActivity());
+        imageView.setBackgroundResource(image);
+        viewFlipper.addView(imageView); // 이미지추가
+        viewFlipper.setFlipInterval(4000); // 자동 이미지 슬라이드 딜레이시간 (1000당 1초)
+        viewFlipper.setAutoStart(true); // 자동슬라이드
     }
 }

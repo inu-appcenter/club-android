@@ -107,7 +107,7 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="앱센터"
+                android:text="앱센터 계정 통합"
                 android:textColor="#e94b40"
                 android:gravity="center"
                 android:fontFamily="@font/nanumsquarel"/>

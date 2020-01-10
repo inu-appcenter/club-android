@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    android:orientation="vertical">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content">
 
-</FrameLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp">
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/search"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="24dp"/>
+                <EditText
+                    android:id="@+id/home_search"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="Search"
+                    android:background="@color/transparent"
+                    android:textColor="@color/warmGrey"
+                    android:fontFamily="@font/nanumsquare"
+                    android:textSize="16dp"/>
+            </LinearLayout>
+            <ViewFlipper
+                android:id="@+id/banner_slide"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginBottom="15dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="카테고리"
+                android:textColor="#000000"
+                android:textSize="22dp"
+                android:textStyle="bold"
+                android:layout_marginLeft="16dp"/>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:id="@+id/cate_recycler"
+                android:overScrollMode="never"/>
+        </LinearLayout>
+    </ScrollView>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="이달의 행사"
+        android:textColor="#000000"
+        android:textSize="22dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="16dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:id="@+id/event_recycler"
+        android:overScrollMode="never"/>
+
+</LinearLayout>
