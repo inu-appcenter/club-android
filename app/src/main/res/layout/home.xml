@@ -50,7 +50,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="300dp"
                 android:id="@+id/cate_recycler"
-                android:overScrollMode="never"/>
+                android:overScrollMode="never"
+                android:layout_margin="16dp"/>
         </LinearLayout>
     </ScrollView>
     <TextView

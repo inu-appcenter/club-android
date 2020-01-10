@@ -8,6 +8,7 @@ import androidx.fragment.app.FragmentTransaction;
 import androidx.appcompat.app.AppCompatActivity;
 import android.view.MenuItem;
 
+import com.jhyejin99.inuclub.Homes.Home;
 import com.jhyejin99.inuclub.Settings.Setting;
 
 public class MainActivity extends AppCompatActivity {

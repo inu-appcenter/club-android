@@ -1,4 +1,4 @@
-package com.jhyejin99.inuclub;
+package com.jhyejin99.inuclub.Homes;
 
 import android.os.Bundle;
 import androidx.fragment.app.Fragment;
@@ -10,11 +10,15 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ViewFlipper;
 
+import com.jhyejin99.inuclub.R;
+import com.jhyejin99.inuclub.RecyclerViewAdapterC;
+
 
 public class Home extends Fragment {
     ViewFlipper viewFlipper;
     RecyclerView rc;
-    GridLayoutManager gridLayoutManager;
+    RecyclerView.Adapter adapter;
+    RecyclerView.LayoutManager layoutManager;
 
     public Home() {
     }
@@ -30,8 +34,14 @@ public class Home extends Fragment {
         viewFlipper = view.findViewById(R.id.banner_slide);
         for(int image : images) { flipperImages(image); }
 
-        rc = (RecyclerView)view.findViewById(R.id.cate_recycler);
-        gridLayoutManager = new GridLayoutManager(getActivity(),3);
+        rc = view.findViewById(R.id.cate_recycler);
+        rc.setHasFixedSize(true); //고정된 크기 가짐
+
+        layoutManager = new GridLayoutManager(getActivity(),3);
+        rc.setLayoutManager(layoutManager);
+        adapter = new RecyclerViewAdapterC();
+        rc.setAdapter(adapter);
+        rc.addItemDecoration(new CateItemDecoration(8,12));
 
 
     return view;
