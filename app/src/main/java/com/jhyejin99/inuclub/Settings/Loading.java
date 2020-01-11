@@ -27,13 +27,13 @@ public class Loading extends AppCompatActivity {
     }
 
     public void EditClub () {
-        Intent intent = new Intent(Loading.this, settingClubEdit.class);
+        Intent intent = new Intent(Loading.this, SettingClubEdit.class);
         intent.putExtra("clubIDNumber",club_num);
         startActivity(intent);
         finish();
     }
     public void EditEvent () {
-        Intent intent = new Intent(Loading.this, settingEvent.class);
+        Intent intent = new Intent(Loading.this, SettingEvent.class);
         intent.putExtra("clubIDNumber",club_num);
         startActivity(intent);
         finish();
@@ -47,7 +47,7 @@ public class Loading extends AppCompatActivity {
     }
 
     public void AlarmSet () {
-        Intent intent = new Intent(Loading.this, settingAlarm.class);
+        Intent intent = new Intent(Loading.this, SettingAlarm.class);
         intent.putExtra("fromLoading",1);
         startActivity(intent);
         finish();

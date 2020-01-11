@@ -61,7 +61,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/home_event_time"
+        android:id="@+id/home_event_hour"
         android:text="행사시간"
         android:textSize="12dp"
         android:fontFamily="@font/nanumsquare"
@@ -71,25 +71,25 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/home_event_hour"
+        android:id="@+id/textView"
         android:text="시"
         android:textSize="12dp"
         android:fontFamily="@font/nanumsquare"
         android:layout_marginTop="3dp"
-        app:layout_constraintStart_toEndOf="@id/home_event_time"
+        app:layout_constraintStart_toEndOf="@id/home_event_hour"
         app:layout_constraintTop_toBottomOf="@+id/home_event_name"/>
 
     <TextView
+        android:id="@+id/home_event_place"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/home_event_place"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/nanumsquare"
         android:text="행사장소"
         android:textSize="12dp"
-        android:fontFamily="@font/nanumsquare"
-        android:layout_marginTop="3dp"
-        android:layout_marginLeft="3dp"
-        app:layout_constraintStart_toEndOf="@id/home_event_hour"
-        app:layout_constraintTop_toBottomOf="@+id/home_event_name"/>
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/home_event_name" />
 
     <TextView
         android:id="@+id/textView2"
@@ -104,7 +104,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/home_event_date"
+        android:id="@+id/home_event_day"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/nanumsquare"

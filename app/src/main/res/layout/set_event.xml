@@ -7,9 +7,6 @@
     android:background="#ffffff"
     android:orientation="vertical"
     android:id="@+id/event_edit_page">
-
-
-
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -55,21 +52,13 @@
                 android:layout_height="0.8dp"
                 android:background="@color/greyish"/>
 
-
-            <LinearLayout
-                android:id="@+id/none_event"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"></LinearLayout>
-
-
             <androidx.recyclerview.widget.RecyclerView
                 android:paddingTop="10dp"
                 android:id="@+id/rc_event_list"
                 android:scrollbars="vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                ></androidx.recyclerview.widget.RecyclerView>
+                android:layout_height="wrap_content">
+            </androidx.recyclerview.widget.RecyclerView>
 
             <RelativeLayout
                 android:layout_width="match_parent"

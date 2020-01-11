@@ -5,11 +5,12 @@ import android.os.Bundle;
 
 import com.jhyejin99.inuclub.R;
 
-public class settingAlarm extends Activity {
+public class SettingClubEdit extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.set_alarm);
+        setContentView(R.layout.set_event_edit);
+
     }
 }

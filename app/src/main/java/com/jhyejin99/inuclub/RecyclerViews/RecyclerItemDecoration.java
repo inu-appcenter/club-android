@@ -1,4 +1,4 @@
-package com.jhyejin99.inuclub.Homes;
+package com.jhyejin99.inuclub.RecyclerViews;
 
 import android.content.Context;
 import android.graphics.Rect;
@@ -7,11 +7,11 @@ import android.view.View;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class CateItemDecoration extends RecyclerView.ItemDecoration {
+public class RecyclerItemDecoration extends RecyclerView.ItemDecoration {
     private int hWidth;
     private int vWidth;
 
-    public CateItemDecoration(int hWidth, int vWidth) {
+    public RecyclerItemDecoration(int hWidth, int vWidth) {
         this.hWidth = hWidth;
         this.vWidth = vWidth;
     }

@@ -13,7 +13,7 @@
         android:layout_height="40dp">
 
         <ImageButton
-            android:id="@+id/event_edit_back"
+            android:id="@+id/event_detail_back"
             android:layout_width="18dp"
             android:layout_height="18dp"
             android:layout_marginTop="11.5dp"
@@ -26,7 +26,7 @@
             android:layout_height="match_parent"
             android:layout_centerInParent="true"
             android:gravity="center"
-            android:text="행사 수정"
+            android:text="행사"
             android:textStyle="bold"
             android:textColor="#000000"
             android:textSize="15dp"
@@ -62,14 +62,13 @@
                 android:paddingLeft="8dp"
                 android:fontFamily="@font/nanumsquare"/>
 
-            <EditText
-                android:id="@+id/event_edit_title"
+            <TextView
+                android:id="@+id/event_detail_title"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@color/transparent"
                 android:textSize="14dp"
                 android:textColor="#000000"
-                android:inputType="text"
                 android:maxLines="1"
                 android:padding="8dp"
                 android:layout_marginLeft="32dp"
@@ -106,14 +105,13 @@
                 android:paddingLeft="8dp"
                 android:fontFamily="@font/nanumsquare"/>
 
-            <EditText
-                android:id="@+id/event_edit_contents"
+            <TextView
+                android:id="@+id/event_detail_contents"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@color/transparent"
                 android:textSize="14dp"
                 android:textColor="#000000"
-                android:inputType="text"
                 android:maxLines="1"
                 android:padding="8dp"
                 android:layout_marginLeft="32dp"
@@ -150,14 +148,13 @@
                 android:paddingLeft="8dp"
                 android:fontFamily="@font/nanumsquare"/>
 
-            <EditText
-                android:id="@+id/event_edit_location"
+            <TextView
+                android:id="@+id/event_detail_location"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@color/transparent"
                 android:textSize="14dp"
                 android:textColor="#000000"
-                android:inputType="text"
                 android:maxLines="1"
                 android:padding="8dp"
                 android:layout_marginLeft="32dp"
@@ -195,7 +192,7 @@
                 android:fontFamily="@font/nanumsquare"/>
 
             <TextView
-                android:id="@+id/event_edit_start_date"
+                android:id="@+id/event_detail_start_date"
                 android:layout_width="220dp"
                 android:layout_height="30dp"
                 android:background="@color/transparent"
@@ -207,7 +204,7 @@
                 android:fontFamily="@font/nanumsquare"/>
 
             <TextView
-                android:id="@+id/event_edit_start_time"
+                android:id="@+id/event_detail_start_time"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@color/transparent"
@@ -251,7 +248,7 @@
                 android:fontFamily="@font/nanumsquare"/>
 
             <TextView
-                android:id="@+id/event_edit_end_date"
+                android:id="@+id/event_detail_end_date"
                 android:layout_width="220dp"
                 android:layout_height="30dp"
                 android:background="@color/transparent"
@@ -263,7 +260,7 @@
                 android:fontFamily="@font/nanumsquare"/>
 
             <TextView
-                android:id="@+id/event_edit_end_time"
+                android:id="@+id/event_detail_end_time"
                 android:layout_width="match_parent"
                 android:layout_height="30dp"
                 android:background="@color/transparent"

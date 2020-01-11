@@ -1,4 +1,4 @@
-package com.jhyejin99.inuclub.Homes;
+package com.jhyejin99.inuclub.RecyclerViews;
 
 import android.graphics.drawable.Drawable;
 

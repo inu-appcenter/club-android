@@ -1,4 +1,4 @@
-package com.jhyejin99.inuclub.Settings;
+package com.jhyejin99.inuclub.Settings.Events;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -15,7 +15,7 @@ import android.widget.Toast;
 
 import com.jhyejin99.inuclub.R;
 
-public class settingEventAdd extends Activity {
+public class SettingEventAdd extends Activity {
     ImageButton event_add_back;
     Button event_add_btn;
     final int DIALOG_DATE = 1;
@@ -67,7 +67,7 @@ public class settingEventAdd extends Activity {
     public Dialog onCreateDialog(int id){
         switch(id){
             case DIALOG_DATE :
-                DatePickerDialog datePickerDialog = new DatePickerDialog(settingEventAdd.this,
+                DatePickerDialog datePickerDialog = new DatePickerDialog(SettingEventAdd.this,
                         new DatePickerDialog.OnDateSetListener(){
                             public void onDateSet(DatePicker view, int year, int month, int day){
                                 Toast.makeText(getApplicationContext(),year+"년 "+(month+1)+"월 "+day +"일을 선택했습니다",Toast.LENGTH_LONG).show();
@@ -76,7 +76,7 @@ public class settingEventAdd extends Activity {
                 return datePickerDialog;
 
             case DIALOG_TIME :
-                TimePickerDialog timePickerDialog = new TimePickerDialog(settingEventAdd.this,
+                TimePickerDialog timePickerDialog = new TimePickerDialog(SettingEventAdd.this,
                         new TimePickerDialog.OnTimeSetListener() {
                             @Override
                             public void onTimeSet(TimePicker timePicker, int hour, int minute) {

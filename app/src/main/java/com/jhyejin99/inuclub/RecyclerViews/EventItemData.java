@@ -1,19 +1,21 @@
-package com.jhyejin99.inuclub.Homes;
+package com.jhyejin99.inuclub.RecyclerViews;
 
 public class EventItemData {
     private String club;
     private String eventName;
     private String content;
-    private int time;
-    private int date;
+    private int hour;
+    private int minute;
+    private int month;
+    private int day;
     private String place;
 
-    public EventItemData(String club, String eventName,String content, int time, int date, String place) {
+    public EventItemData(String club, String eventName, String content, int hour, int day, String place) {
         this.club = club;
         this.eventName = eventName;
         this.content = content;
-        this.time = time;
-        this.date = date;
+        this.hour = hour;
+        this.day = day;
         this.place = place;
     }
 
@@ -21,12 +23,12 @@ public class EventItemData {
         return eventName;
     }
 
-    public int getDate() {
-        return date;
+    public int getDay() {
+        return day;
     }
 
-    public int getTime() {
-        return time;
+    public int getHour() {
+        return hour;
     }
 
     public String getClub() {
@@ -45,16 +47,16 @@ public class EventItemData {
         this.eventName = eventName;
     }
 
-    public void setDate(int date) {
-        this.date = date;
+    public void setDay(int day) {
+        this.day = day;
     }
 
     public void setPlace(String place) {
         this.place = place;
     }
 
-    public void setTime(int time) {
-        this.time = time;
+    public void setHour(int hour) {
+        this.hour = hour;
     }
 
     public String getContent() {
