@@ -17,11 +17,13 @@
             </intent-filter>
         </activity>
         <activity android:name="com.jhyejin99.inuclub.Settings.Loading"></activity>
-        <activity android:name="com.jhyejin99.inuclub.Settings.Setting_Alarm"></activity>
-        <activity android:name="com.jhyejin99.inuclub.Settings.Setting_Club_Edit"></activity>
-        <activity android:name="com.jhyejin99.inuclub.Settings.Setting_Event"></activity>
-        <activity android:name="com.jhyejin99.inuclub.Settings.Setting_Event_Add"></activity>
+        <activity android:name="com.jhyejin99.inuclub.Settings.SettingAlarm"></activity>
+        <activity android:name="com.jhyejin99.inuclub.Settings.SettingClubEdit"></activity>
+        <activity android:name="com.jhyejin99.inuclub.Settings.SettingEvent"></activity>
+        <activity android:name="com.jhyejin99.inuclub.Settings.Events.SettingEventAdd"></activity>
         <activity android:name="com.jhyejin99.inuclub.Settings.Login"></activity>
+        <activity android:name=".Homes.CateClubList"></activity>
+        <activity android:name=".Settings.Events.SettingEventDetail"></activity>
     </application>
 
 </manifest>

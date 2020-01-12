@@ -1,11 +1,9 @@
 package com.jhyejin99.inuclub.Settings;
 
 import android.app.Activity;
-import android.content.Context;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.util.AttributeSet;
-import android.view.View;
+import androidx.annotation.Nullable;
+
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ImageView;

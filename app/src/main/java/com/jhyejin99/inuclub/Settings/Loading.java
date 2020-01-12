@@ -2,8 +2,8 @@ package com.jhyejin99.inuclub.Settings;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 import android.widget.TextView;
 
 import com.jhyejin99.inuclub.R;
@@ -27,13 +27,13 @@ public class Loading extends AppCompatActivity {
     }
 
     public void EditClub () {
-        Intent intent = new Intent(Loading.this, Setting_Club_Edit.class);
+        Intent intent = new Intent(Loading.this, SettingClubEdit.class);
         intent.putExtra("clubIDNumber",club_num);
         startActivity(intent);
         finish();
     }
     public void EditEvent () {
-        Intent intent = new Intent(Loading.this, Setting_Event.class);
+        Intent intent = new Intent(Loading.this, SettingEvent.class);
         intent.putExtra("clubIDNumber",club_num);
         startActivity(intent);
         finish();
@@ -47,7 +47,7 @@ public class Loading extends AppCompatActivity {
     }
 
     public void AlarmSet () {
-        Intent intent = new Intent(Loading.this, Setting_Alarm.class);
+        Intent intent = new Intent(Loading.this, SettingAlarm.class);
         intent.putExtra("fromLoading",1);
         startActivity(intent);
         finish();

@@ -5,7 +5,7 @@ import android.os.Bundle;
 
 import com.jhyejin99.inuclub.R;
 
-public class Setting_Alarm extends Activity {
+public class SettingAlarm extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
