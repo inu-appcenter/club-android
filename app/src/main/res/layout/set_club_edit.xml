@@ -5,8 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:orientation="vertical"
-    android:id="@+id/club_edit_page">
+    android:orientation="vertical">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -55,7 +54,7 @@
         <LinearLayout
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="wrap_content">
             
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -66,7 +65,9 @@
                 <ImageView
                     android:id="@+id/mainImage"
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                    android:layout_height="match_parent"
+                    android:src="@drawable/club1"
+                    android:scaleType="centerCrop"/>
 
                 <ImageButton
                     android:id="@+id/image_add_btn"
@@ -89,19 +90,25 @@
                     android:id="@+id/clubimage1"
                     android:layout_margin="8dp"
                     android:layout_width="88dp"
-                    android:layout_height="88dp" />
+                    android:layout_height="88dp"
+                    android:src="@drawable/club1"
+                    android:scaleType="centerCrop"/>
 
                 <ImageView
                     android:id="@+id/clubimage2"
                     android:layout_margin="8dp"
                     android:layout_width="88dp"
-                    android:layout_height="88dp" />
+                    android:layout_height="88dp"
+                    android:src="@drawable/club1"
+                    android:scaleType="centerCrop" />
 
                 <ImageView
                     android:id="@+id/clubimage3"
                     android:layout_margin="8dp"
                     android:layout_width="88dp"
-                    android:layout_height="88dp" />
+                    android:layout_height="88dp"
+                    android:src="@drawable/club1"
+                    android:scaleType="centerCrop" />
 
             </LinearLayout>
 
@@ -133,13 +140,12 @@
                     android:padding="8dp"
                     android:fontFamily="@font/nanumsquare"/>
             </LinearLayout>
-            <view
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0.8dp"
                 android:layout_marginVertical="10dp"
                 android:layout_marginHorizontal="30dp"
-                android:background="@color/lightBlueGrey"
-                android:fontFamily="@font/nanumsquare"/>
+                android:background="@color/lightBlueGrey"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -169,7 +175,7 @@
                     android:fontFamily="@font/nanumsquare"/>
             </LinearLayout>
 
-            <view
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0.8dp"
                 android:layout_marginVertical="10dp"
@@ -205,7 +211,7 @@
                     android:fontFamily="@font/nanumsquare"/>
             </LinearLayout>
 
-            <view
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0.8dp"
                 android:layout_marginVertical="10dp"
@@ -240,7 +246,7 @@
                     android:fontFamily="@font/nanumsquare"/>
             </LinearLayout>
 
-            <view
+            <View
                 android:layout_width="match_parent"
                 android:layout_height="0.8dp"
                 android:layout_marginVertical="10dp"

@@ -2,6 +2,8 @@ package com.jhyejin99.inuclub;
 
 import androidx.annotation.NonNull;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentTransaction;
@@ -24,6 +26,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //스플래시
+        Intent intent = new Intent(this,Splash.class);
+        startActivity(intent);
+
         bottomNavigationView = findViewById(R.id.bottom_nav);
         FragmentTransaction transaction = fragmentManager.beginTransaction();
         transaction.replace(R.id.frameLayout,home).commitAllowingStateLoss();

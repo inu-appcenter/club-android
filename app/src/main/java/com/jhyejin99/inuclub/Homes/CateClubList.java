@@ -26,6 +26,7 @@ public class CateClubList extends Activity {
     TextView cateName;
     TextView cateCount;
     ImageButton backbtn;
+
     private ArrayList<ClubListItemData> list;
 
     @Override

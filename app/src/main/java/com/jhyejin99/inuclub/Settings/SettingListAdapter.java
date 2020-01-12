@@ -15,9 +15,6 @@ public class SettingListAdapter extends BaseAdapter {
 
     private ArrayList<SettingItem> settingItems = new ArrayList<SettingItem>();
 
-    public SettingListAdapter(Setting setting) {
-    }
-
     public SettingListAdapter() {
 
     }

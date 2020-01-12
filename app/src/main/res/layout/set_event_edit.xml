@@ -74,7 +74,7 @@
             <EditText
                 android:id="@+id/event_edit_title"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:background="@color/transparent"
                 android:textSize="14dp"
                 android:textColor="#000000"
@@ -118,7 +118,7 @@
             <EditText
                 android:id="@+id/event_edit_contents"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:background="@color/transparent"
                 android:textSize="14dp"
                 android:textColor="#000000"
@@ -162,7 +162,7 @@
             <EditText
                 android:id="@+id/event_edit_location"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:background="@color/transparent"
                 android:textSize="14dp"
                 android:textColor="#000000"
@@ -205,8 +205,8 @@
 
             <TextView
                 android:id="@+id/event_edit_start_date"
-                android:layout_width="220dp"
-                android:layout_height="30dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:background="@color/transparent"
                 android:textSize="14dp"
                 android:textColor="#000000"
@@ -214,11 +214,18 @@
                 android:padding="8dp"
                 android:layout_marginLeft="32dp"
                 android:fontFamily="@font/nanumsquare"/>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"
+                android:fontFamily="@font/nanumsquare"/>
             <TextView
                 android:id="@+id/event_edit_start_time"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:background="@color/transparent"
                 android:textSize="14dp"
                 android:textColor="#000000"
@@ -261,8 +268,8 @@
 
             <TextView
                 android:id="@+id/event_edit_end_date"
-                android:layout_width="220dp"
-                android:layout_height="30dp"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
                 android:background="@color/transparent"
                 android:textSize="14dp"
                 android:textColor="#000000"
@@ -270,11 +277,18 @@
                 android:padding="8dp"
                 android:layout_marginLeft="32dp"
                 android:fontFamily="@font/nanumsquare"/>
-
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="시간"
+                android:textSize="14dp"
+                android:textColor="#000000"
+                android:paddingLeft="8dp"
+                android:fontFamily="@font/nanumsquare"/>
             <TextView
                 android:id="@+id/event_edit_end_time"
                 android:layout_width="match_parent"
-                android:layout_height="30dp"
+                android:layout_height="wrap_content"
                 android:background="@color/transparent"
                 android:textSize="14dp"
                 android:textColor="#000000"
