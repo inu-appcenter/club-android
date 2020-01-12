@@ -135,7 +135,7 @@ public class Setting extends Fragment {
     }
 
     public void getClubName() {
-        // 서버에서 학생이름 가져와 setText
+        //todo 서버에서 학생이름 가져와 setText
     }
 }
 

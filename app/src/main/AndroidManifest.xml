@@ -25,6 +25,7 @@
         <activity android:name=".Homes.CateClubList"></activity>
         <activity android:name=".Settings.Events.SettingEventDetail"></activity>
         <activity android:name=".Homes.ClubDetail"></activity>
+        <activity android:name=".Splash"></activity>
         <activity android:name=".Homes.ApplyPopup" android:theme="@style/Theme.AppCompat.Dialog"></activity>
     </application>
 
