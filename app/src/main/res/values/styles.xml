@@ -1,25 +1,18 @@
 <resources>
 
     <!-- Base application theme. -->
-<<<<<<< HEAD
     <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowNoTitle">true</item>
-=======
-    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
->>>>>>> 27bbc7b4f89c28ed20b744845b56ed8228c01511
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-<<<<<<< HEAD
     <!-- For Splash Screen -->
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-=======
->>>>>>> 651b30445aa30e2afa8515b832383dbffcc47aa8
 
 </resources>
