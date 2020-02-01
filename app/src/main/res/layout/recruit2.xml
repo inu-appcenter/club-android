@@ -6,6 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".Recruit">
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/imageView12" />
+
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
