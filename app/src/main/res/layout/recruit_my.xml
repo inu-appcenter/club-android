@@ -8,10 +8,9 @@
 
     <ImageView
         android:id="@+id/my_blue"
-        android:layout_width="570dp"
-        android:layout_height="130dp"
+        android:layout_width="444dp"
+        android:layout_height="100dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.505"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/recruit_my_blue" />
@@ -20,9 +19,9 @@
         android:id="@+id/my_arrow"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="55dp"
-        android:layout_marginEnd="121dp"
-        app:layout_constraintEnd_toStartOf="@+id/imageView9"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/arroww" />
 
@@ -36,5 +35,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/written_by_me2x" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="73dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/my_blue"
+        app:srcCompat="@drawable/gathering2x" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
