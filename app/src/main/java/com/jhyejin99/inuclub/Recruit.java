@@ -7,9 +7,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Toast;
 
-import com.google.android.material.tabs.TabItem;
 import com.google.android.material.tabs.TabLayout;
 import com.jhyejin99.inuclub.RecyclerViews.RecyclerViewAdapterR;
 
@@ -52,7 +50,7 @@ public class Recruit extends Fragment {
         tabs.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
-                onTabChanged((tab == tabIng) ? TAB_ING : TAB_DONE); //TODO 메소드 이름 바꿔놓기(refactor)
+                onMoimTabChanged((tab == tabIng) ? TAB_ING : TAB_DONE);
             }
 
             @Override
@@ -70,18 +68,18 @@ public class Recruit extends Fragment {
         RecyclerView rcv = root.findViewById(R.id.moim_recycler);
         rcv.setAdapter(adapter);
 
-        onTabChanged(1);
+        onMoimTabChanged(1);
     }
 
-    private void onTabChanged(int tab) {
+    private void onMoimTabChanged(int tab) {
         ArrayList<String> d = new ArrayList<>();
         switch (tab) {
             case TAB_ING:
-                d.add("!!!!!!!!!!!!!!!!!!!!!!!");
+                d.add("모집 중인 투표");
                 break;
 
             case TAB_DONE:
-                d.add("???????????????????????????///");
+                d.add("마감된 투표");
                 break;
         }
 
