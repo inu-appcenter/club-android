@@ -13,6 +13,7 @@ import com.jhyejin99.inuclub.RecyclerViews.RecyclerViewAdapterR;
 
 import java.util.ArrayList;
 
+//TODO fab구현 위해 edit.xml 만들기. 위... 저거를... 하늘색...그거 고정시켜야 할까...?
 
 public class Recruit extends Fragment {
 
