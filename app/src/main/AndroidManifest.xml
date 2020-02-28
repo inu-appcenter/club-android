@@ -9,24 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.jhyejin99.inuclub.MainActivity">
+        <activity android:name=".for_test"></activity>
+        <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.jhyejin99.inuclub.Settings.Loading"></activity>
-        <activity android:name="com.jhyejin99.inuclub.Settings.SettingAlarm"></activity>
-        <activity android:name="com.jhyejin99.inuclub.Settings.SettingClubEdit"></activity>
-        <activity android:name="com.jhyejin99.inuclub.Settings.SettingEvent"></activity>
-        <activity android:name="com.jhyejin99.inuclub.Settings.Events.SettingEventAdd"></activity>
-        <activity android:name="com.jhyejin99.inuclub.Settings.Login"></activity>
-        <activity android:name=".Homes.CateClubList"></activity>
-        <activity android:name=".Settings.Events.SettingEventDetail"></activity>
-        <activity android:name=".Homes.ClubDetail"></activity>
-        <activity android:name=".Splash"></activity>
-        <activity android:name=".Homes.ApplyPopup" android:theme="@style/Theme.AppCompat.Dialog"></activity>
+        <activity android:name=".Settings.Loading" />
+        <activity android:name=".Settings.SettingAlarm" />
+        <activity android:name=".Settings.SettingClubEdit" />
+        <activity android:name=".Settings.SettingEvent" />
+        <activity android:name=".Settings.Events.SettingEventAdd" />
+        <activity android:name=".Settings.Login" />
+        <activity android:name=".Homes.CateClubList" />
+        <activity android:name=".Settings.Events.SettingEventDetail" />
+        <activity android:name=".Homes.ClubDetail" />
+        <activity android:name=".Splash" />
+        <activity
+            android:name=".Homes.ApplyPopup"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+        <activity android:name=".MakeVoteActivity"/>
     </application>
 
 </manifest>

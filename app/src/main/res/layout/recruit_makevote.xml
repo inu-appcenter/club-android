@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".Recruit">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/recruit_makevote_"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_anchor="@+id/include"
+        app:layout_anchorGravity="bottom|center"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingTop="32dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/vote_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:text="투표제목"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@id/recruit_edit_title"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"></TextView>
+
+            <EditText
+                android:id="@+id/recruit_edit_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/border_vote"
+                android:fontFamily="@font/nanumsquare"
+                android:hint="제목을 입력해주세요."
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:lines="1"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vote_title"></EditText>
+
+            <TextView
+                android:id="@+id/vote_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:paddingTop="16dp"
+                android:paddingBottom="10dp"
+                android:text="내용"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@id/recruit_edit_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/recruit_edit_title"></TextView>
+
+            <EditText
+                android:id="@+id/recruit_edit_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_vote"
+                android:fontFamily="@font/nanumsquare"
+                android:gravity="start"
+                android:hint="내용을 입력해주세요."
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:lines="7"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:paddingTop="10dp"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vote_content"></EditText>
+
+            <TextView
+                android:id="@+id/vote_link"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:paddingTop="16dp"
+                android:paddingBottom="10dp"
+                android:text="오픈채팅 링크"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@id/recruit_edit_link"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recruit_edit_content"></TextView>
+
+            <EditText
+                android:id="@+id/recruit_edit_link"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_vote"
+                android:fontFamily="@font/nanumsquare"
+                android:gravity="start"
+                android:hint="모집이 마감된 후 모일 URL주소를 입력해주세요."
+                android:inputType="textMultiLine|textNoSuggestions"
+                android:lines="1"
+                android:paddingVertical="16dp"
+                android:paddingStart="16dp"
+                android:textSize="14dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vote_link"></EditText>
+
+            <TextView
+                android:id="@+id/vote_member"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:paddingTop="16dp"
+                android:paddingBottom="10dp"
+                android:text="목표인원"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                app:layout_constraintBottom_toTopOf="@id/spinner_member"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recruit_edit_link"></TextView>
+
+            <Spinner
+                android:id="@+id/spinner_member"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vote_member"></Spinner>
+
+            <TextView
+                android:id="@+id/vote_dday"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:paddingTop="16dp"
+                android:paddingBottom="10dp"
+                android:text="모집기간"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinner_member"></TextView>
+
+            <Spinner
+                android:id="@+id/spinner_start"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/vote_dday"></Spinner>
+
+            <Spinner
+                android:id="@+id/spinner_end"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="parent"></Spinner>
+
+            <TextView
+                android:id="@+id/vote_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:paddingTop="16dp"
+                android:paddingBottom="10dp"
+                android:text="카테고리"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/spinner_end"></TextView>
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
