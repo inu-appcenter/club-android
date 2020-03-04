@@ -10,7 +10,6 @@ public class MakeVoteActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.recruit_makevote);
-
         initView(findViewById(R.id.root));
     }
 
@@ -31,8 +30,9 @@ public class MakeVoteActivity extends AppCompatActivity {
      * 입력 체크도 한다.(유효성 검사)
      * 입력이 모두 올바를 경우 서버로 보낸다.
      * 입력이 틀릴 경우 사용자에게 알린다.
+     * 이 메소드는 버튼이 눌렸을 때 불린다.
      */
-    private void submit(){
+    private void onSubmit(){
         //뷰 5개를 다시 가져올 것
         //뷰 전체 유효성 검사
         boolean isValid = false;
