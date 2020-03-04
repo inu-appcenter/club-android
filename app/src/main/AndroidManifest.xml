@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.jhyejin99.inuclub">
+    package="org.inuappcenter.inuclub">
 
     <application
         android:allowBackup="true"
@@ -9,27 +9,28 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name="org.inuappcenter.inuclub.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Settings.Loading" />
-        <activity android:name=".Settings.SettingAlarm" />
-        <activity android:name=".Settings.SettingClubEdit" />
-        <activity android:name=".Settings.SettingEvent" />
-        <activity android:name=".Settings.Events.SettingEventAdd" />
-        <activity android:name=".Settings.Login" />
-        <activity android:name=".Homes.CateClubList" />
-        <activity android:name=".Settings.Events.SettingEventDetail" />
-        <activity android:name=".Homes.ClubDetail" />
-        <activity android:name=".Splash" />
+        <activity android:name="org.inuappcenter.inuclub.Settings.Loading" />
+        <activity android:name="org.inuappcenter.inuclub.Settings.SettingAlarm" />
+        <activity android:name="org.inuappcenter.inuclub.Settings.SettingClubEdit" />
+        <activity android:name="org.inuappcenter.inuclub.Settings.SettingEvent" />
+        <activity android:name="org.inuappcenter.inuclub.Settings.Events.SettingEventAdd" />
+        <activity android:name="org.inuappcenter.inuclub.Settings.Login" />
+        <activity android:name="org.inuappcenter.inuclub.Homes.CateClubList" />
+        <activity android:name="org.inuappcenter.inuclub.Settings.Events.SettingEventDetail" />
+        <activity android:name="org.inuappcenter.inuclub.Homes.ClubDetail" />
+        <activity android:name="org.inuappcenter.inuclub.Splash" />
         <activity
-            android:name=".Homes.ApplyPopup"
+            android:name="org.inuappcenter.inuclub.Homes.ApplyPopup"
             android:theme="@style/Theme.AppCompat.Dialog" />
-        <activity android:name=".MakeVoteActivity"/>
+        <activity android:name="org.inuappcenter.inuclub.MakeVoteActivity"/>
     </application>
 
 </manifest>
