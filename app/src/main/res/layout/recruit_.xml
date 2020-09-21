@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- 2020.02.24 <CollapsingToolbarLayout 만들기> 작성자: 전지희
+    기본 개념과 틀을 이해하기 위해 https://freehoon.tistory.com/m/38 참고함.
+    android support library 대신 androidx를 사용하였다. (최신버전이니까!)
+    android는 include를 이용한 layout의 재활용을 지원한다.
+    따라서, 사용 빈도가 높을(예정인) CollapsingToolbarLayout를 이 곳에 빼두었다.
+    디자인 특성상 toolbar가 넓어 공간을 많이 차지한다.
+    이를 해결하고자 CollapsingToolbarLayout을 사용하였다.
+    exitUntilCollapsed: 스크롤을 올릴 때 작아진 상태로 고정되어있음(=사라지지 않음)
+
+    스크롤을 내릴 때 색이 맘에 안들길래 styles.xml의 colorPrimary값을 바꿔버렸다.
+-->
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_bar"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:fitsSystemWindows="true"
+    android:background="@null"
+    android:theme="@style/AppTheme.AppBarOverlay">
+
+    <com.google.android.material.appbar.CollapsingToolbarLayout
+        android:id="@+id/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true"
+        app:contentScrim="?attr/colorPrimary"
+        android:background="@null"
+        app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+        <ImageView
+            android:id="@+id/expandedImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scaleType="fitXY"
+            android:src="@drawable/bg_blue"
+            app:layout_collapseMode="parallax"
+            app:layout_collapseParallaxMultiplier="1.0" />
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            app:title="소모임"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            app:layout_collapseMode="pin"
+            android:background="@null"
+            android:theme="@style/ToolbarTheme">
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.CollapsingToolbarLayout>
+</com.google.android.material.appbar.AppBarLayout>

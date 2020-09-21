@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#f0eff5">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#ffffff">
+
+        <ImageButton
+            android:id="@+id/notice_set_back"
+            android:layout_width="23dp"
+            android:layout_height="23dp"
+            android:layout_marginTop="8dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="9dp"
+            android:background="@drawable/round_arrow_back_ios_black" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_centerInParent="true"
+            android:text="알림 설정"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:textSize="15dp"
+            android:fontFamily="@font/nanumsquare"/>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/greyish"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="투표자"
+        android:paddingStart="15dp"
+        android:textColor="@color/warmGrey"
+        android:textSize="12dp"
+        android:fontFamily="@font/nanumsquare"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff">
+        
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="투표한 게시글 마감시 알림"
+                android:textSize="14dp"
+                android:paddingHorizontal="16dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare"/>
+
+            <Switch
+                android:id="@+id/alarm_recruit_vote"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                android:layout_margin="16dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="6dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="게시자"
+        android:paddingStart="15dp"
+        android:textColor="@color/warmGrey"
+        android:textSize="12dp"
+        android:fontFamily="@font/nanumsquare"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="댓글 달릴 시 알림"
+                android:textSize="14dp"
+                android:paddingHorizontal="16dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare"/>
+
+            <Switch
+                android:id="@+id/alarm_comment"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                android:layout_margin="16dp"/>
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/lightBlueGrey"
+            android:layout_marginHorizontal="16dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="마감 하루 전 알림"
+                android:textSize="14dp"
+                android:paddingHorizontal="16dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare"/>
+
+            <Switch
+                android:id="@+id/alarm_recruit"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                android:layout_margin="16dp"/>
+
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.8dp"
+            android:background="@color/lightBlueGrey"
+            android:layout_marginHorizontal="16dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="목표 인원 달성 시 알림"
+                android:textSize="14dp"
+                android:paddingHorizontal="16dp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquare"/>
+
+            <Switch
+                android:id="@+id/alarm_goal_people"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center_vertical"
+                android:thumb="@drawable/switch_thumb"
+                android:track="@drawable/switch_track"
+                android:layout_margin="16dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

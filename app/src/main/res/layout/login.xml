@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="60dp"/>
+            <ImageView
+                android:id="@+id/inu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/inu" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="인천대 동아리에 오신걸 환영합니다"
+                android:textColor="#000000"
+                android:textSize="16dp"
+                android:gravity="center"
+                android:layout_marginTop="17dp"
+                android:fontFamily="@font/nanumsquare"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="8dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/people1"
+                    android:paddingHorizontal="24dp"/>
+                <EditText
+                    android:id="@+id/login_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="아이디를 입력하세요"
+                    android:textSize="14dp"
+                    android:fontFamily="@font/nanumsquare"
+                    android:textColor="@color/warmGrey"
+                    android:inputType="text"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@color/warmGrey"/>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="45dp"
+                android:layout_marginBottom="8dp">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/lock"
+                    android:paddingHorizontal="24dp"/>
+                <EditText
+                    android:id="@+id/login_pw"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:hint="●●●●●●●"
+                    android:textSize="14dp"
+                    android:inputType="textPassword"
+                    android:fontFamily="@font/nanumsquare"
+                    android:textColor="@color/warmGrey"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginHorizontal="24dp"
+                android:background="@color/warmGrey"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="100dp"/>
+
+            <ImageButton
+                android:id="@+id/login"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/login2x"
+                android:background="@color/transparent"
+                android:layout_marginBottom="16dp"
+                android:scaleType="fitCenter"/>
+            <ImageButton
+                android:id="@+id/signup"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:src="@drawable/signup2x"
+                android:background="@color/transparent"
+                android:layout_marginBottom="12dp"
+                android:scaleType="fitCenter"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="앱센터 계정 통합"
+                android:textColor="#e94b40"
+                android:gravity="center"
+                android:fontFamily="@font/nanumsquarel"/>
+            <ImageButton
+                android:id="@+id/later"
+                android:layout_width="match_parent"
+                android:layout_height="15dp"
+                android:src="@drawable/later2x"
+                android:background="@color/transparent"
+                android:layout_marginBottom="12dp"
+                android:scaleType="fitCenter"
+                android:layout_marginTop="80dp"/>
+        </LinearLayout>
+    </ScrollView>
+
+
+
+</LinearLayout>

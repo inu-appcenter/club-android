@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f8f9fa">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/club_image_slide"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/indicator"
+        app:layout_constraintBottom_toBottomOf="@+id/club_image_slide"
+        app:layout_constraintEnd_toEndOf="@id/club_image_slide"
+        android:layout_marginBottom="19dp"
+        android:layout_marginRight="13dp"
+        android:text="1 / 5"
+        android:textSize="12dp"
+        android:textAlignment="center"
+        android:textColor="#ffffff"
+        android:fontFamily="@font/nanumsquare"/>
+
+    <ImageButton
+        android:id="@+id/club_detail_back"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:background="@drawable/round_arrow_back_white3x"
+        app:layout_constraintStart_toStartOf="@id/club_image_slide"
+        app:layout_constraintTop_toTopOf="@id/club_image_slide"
+        android:layout_marginTop="23dp"
+        android:layout_marginLeft="26dp"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="73dp"
+        android:weightSum="5"
+        app:layout_constraintTop_toBottomOf="@+id/club_image_slide"
+        android:background="#ffffff">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/image1"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="19dp"
+                android:src="@drawable/places"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/club_place"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:text="동아리방 주소"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image1" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/image2"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="19dp"
+                android:src="@drawable/people"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/club_people"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:text="회장"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image2" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2">
+
+            <ImageView
+                android:id="@+id/image3"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_marginTop="19dp"
+                android:src="@drawable/phone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/club_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nanumsquare"
+                android:text="회장번호"
+                android:textColor="#000000"
+                android:textSize="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/image3" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        android:paddingHorizontal="32dp"
+        android:paddingVertical="20dp">
+        <TextView
+            android:id="@+id/club_detail_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="동아리이름"
+            android:textColor="#000000"
+            android:textSize="18dp"
+            android:textStyle="bold"
+            android:layout_marginBottom="17dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/club_detail_contents"
+            android:fontFamily="@font/nanumsquare"
+            android:textColor="@color/warmGrey"
+            android:textSize="14dp"
+            android:text="동아리 소개 내용. 안녕하십니까. 인천대학교 검도부입니다. 서로 친목을 다지는 동아리로써 매주 금요일 7시에 부평에 위치한 000에서 정기전을 치루고 있으며 정기전 때에는 처음배우는 초보자가 쉽고 빠르게 배울 수 있도록 도와주고 있습니다. 그 외에도 부원간의 단합을 위해서 신입생 환영회 및 개강총회, 야유회, MT를 계획하여 진행하고 있습니다.
+            또한 특별한 행사로는 000을 매년 2회씩 진행하고 있습니다. 이 외에는 다른 대학교 총장배 참여하여 인천대 검도부를 다른 학교에 알리고 있습니다."/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="37dp">
+            <ImageView
+                android:layout_width="14dp"
+                android:layout_height="14dp"
+                android:src="@drawable/clock"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/warmGrey"
+                android:layout_marginLeft="3dp"
+                android:text="최근 업데이트 : "/>
+            <TextView
+                android:id="@+id/update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12dp"
+                android:textColor="@color/warmGrey"
+                android:layout_marginLeft="3dp"
+                android:text="19.07.11"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+    <ImageButton
+        android:id="@+id/detail_apply"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:background="@drawable/apply_btn2x"
+        app:layout_constraintBottom_toBottomOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

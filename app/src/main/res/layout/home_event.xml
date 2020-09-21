@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="70dp"
+    android:layout_marginHorizontal="24dp"
+    android:layout_marginBottom="18dp">
+
+    <TextView
+        android:id="@+id/home_event_club"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquare"
+        android:text="동아리이름"
+        android:textColor="#352641"
+        android:textSize="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="3dp" />
+
+    <TextView
+        android:id="@+id/home_event_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquare"
+        android:text="행사이름"
+        android:textSize="12dp"
+        android:layout_marginTop="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_event_club"
+        android:maxLines="1"/>
+
+    <TextView
+        android:id="@+id/home_event_slash"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:fontFamily="@font/nanumsquare"
+        android:maxLines="1"
+        android:text="/"
+        android:textSize="12dp"
+        android:layout_marginLeft="3dp"
+        app:layout_constraintStart_toEndOf="@+id/home_event_name"
+        app:layout_constraintTop_toBottomOf="@+id/home_event_club" />
+
+    <TextView
+        android:id="@+id/home_event_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquare"
+        android:text="행사이름"
+        android:textSize="12dp"
+        android:layout_marginTop="6dp"
+
+        android:layout_marginLeft="3dp"
+        app:layout_constraintStart_toEndOf="@id/home_event_slash"
+        app:layout_constraintTop_toBottomOf="@+id/home_event_club"
+        android:maxLines="1"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/home_event_hour"
+        android:text="행사시간"
+        android:textSize="12dp"
+        android:fontFamily="@font/nanumsquare"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/home_event_name"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/textView"
+        android:text="시"
+        android:textSize="12dp"
+        android:fontFamily="@font/nanumsquare"
+        android:layout_marginTop="3dp"
+        app:layout_constraintStart_toEndOf="@id/home_event_hour"
+        app:layout_constraintTop_toBottomOf="@+id/home_event_name"/>
+
+    <TextView
+        android:id="@+id/home_event_place"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="3dp"
+        android:fontFamily="@font/nanumsquare"
+        android:text="행사장소"
+        android:textSize="12dp"
+        app:layout_constraintStart_toEndOf="@id/textView"
+        app:layout_constraintTop_toBottomOf="@+id/home_event_name" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquare"
+        android:text="일"
+        android:textColor="@color/lightSalmon"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/home_event_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/nanumsquare"
+        android:text="행사날짜"
+        android:textColor="@color/lightSalmon"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.8dp"
+        android:background="@color/greyish"
+        app:layout_constraintBottom_toBottomOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
