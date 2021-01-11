@@ -3,11 +3,6 @@
     <module2copyright>
       <element module="Project Files" copyright="gpl3" />
     </module2copyright>
-    <LanguageOptions name="Groovy">
-      <option name="fileTypeOverride" value="3" />
-      <option name="separateBefore" value="true" />
-      <option name="lenBefore" value="2" />
-    </LanguageOptions>
     <LanguageOptions name="Kotlin">
       <option name="fileTypeOverride" value="3" />
       <option name="separateBefore" value="true" />
