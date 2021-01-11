@@ -59,4 +59,10 @@ dependencies {
     implementation project(":common")
     implementation project(":domain")
     implementation project(":data")
+
+    /** Material */
+    implementation 'com.google.android.material:material:1.2.1'
+
+    /** Constraint layout */
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
 }
