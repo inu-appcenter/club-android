@@ -1,4 +1,4 @@
-/*
+/**
  * This file is part of INU Club.
  *
  * Copyright (C) 2021 INU Global App Center <potados99@gmail.com>
@@ -16,8 +16,21 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-include ':data'
-include ':domain'
 
-include ':app'
-rootProject.name = "club"
+package org.inu.club
+
+import org.junit.Test
+
+import org.junit.Assert.*
+
+/**
+ * Example local unit test, which will execute on the development machine (host).
+ *
+ * See [testing documentation](http://d.android.com/tools/testing).
+ */
+class ExampleUnitTest {
+    @Test
+    fun addition_isCorrect() {
+        assertEquals(4, 2 + 2)
+    }
+}
