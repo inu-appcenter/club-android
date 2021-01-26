@@ -19,7 +19,7 @@
 
 // THE VERSION NAME!
 ext.base = '0.0.1'
-ext.phase = 'alpha3'
+ext.phase = 'alpha4'
 
 buildscript {
     repositories {
