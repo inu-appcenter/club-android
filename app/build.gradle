@@ -1,3 +1,6 @@
+import java.util.regex.Matcher
+import java.util.regex.Pattern
+
 /**
  * This file is part of INU Club.
  *
@@ -24,17 +27,18 @@ plugins {
 }
 
 android {
-    compileSdkVersion 29
+    compileSdkVersion project.ext.compileSdkVersion
 
     defaultConfig {
-        minSdkVersion 26
-        targetSdkVersion 29
+        minSdkVersion project.ext.minSdkVersion
+        targetSdkVersion project.ext.targetSdkVersion
 
         applicationId "org.inu.club"
+
         versionCode project.ext.versionCode
         versionName project.ext.versionName
 
-        archivesBaseName = "$applicationId-v$versionName-$project.ext.versionCode"
+        archivesBaseName = "$applicationId-v$versionName-$versionCode"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }

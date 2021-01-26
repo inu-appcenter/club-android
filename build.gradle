@@ -17,12 +17,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
+// THE VERSION NAME!
+ext.base = '0.0.1'
+ext.phase = 'alpha3'
+
 buildscript {
-
-    /** THE VERSION NAME! */
-    ext.version_name = '1.0.0'
-
     repositories {
         google()
         jcenter()
@@ -36,9 +35,14 @@ buildscript {
 }
 
 allprojects {
-    // These should be applied to all modules in this project.
-    project.ext.set("versionCode", getRevisionCount())
-    project.ext.set("versionName", version_name)
+    ext {
+        versionCode = getRevisionCount()
+        versionName = getVersionName(base, phase)
+
+        compileSdkVersion = 29
+        targetSdkVersion = 29
+        minSdkVersion = 26
+    }
 
     repositories {
         google()
@@ -56,5 +60,22 @@ task clean(type: Delete) {
  * @return the git revision count, integer.
  */
 static def getRevisionCount() {
-    return Integer.parseInt('git rev-list --count HEAD'.execute().text.trim())
+    return Integer.parseInt("git rev-list --count HEAD".execute().text.trim())
+}
+
+static def getVersionName(base, phase) {
+    String build = System.getenv("BITRISE_BUILD_NUMBER")
+
+    String all = ""
+
+    if (base)
+        all += base
+
+    if (build)
+        all += ".$build"
+
+    if (phase)
+        all += "-$phase"
+
+    return all
 }
