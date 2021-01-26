@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1062726345608",
+    "project_id": "club-3d38a",
+    "storage_bucket": "club-3d38a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1062726345608:android:e184b952b06777d933d03d",
+        "android_client_info": {
+          "package_name": "org.inu.club"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1062726345608-ib8em3iqi8ohe345j5a3jg2455pg28i1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDVGHmNAv5z6g6U73kII14MV1Y9xyt5LaI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1062726345608-ib8em3iqi8ohe345j5a3jg2455pg28i1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
