@@ -39,15 +39,12 @@ class MainActivity : NavigationActivity() {
             tabItemId = R.id.tab_today
         ),
 
-
-
-
-        /** Order notification */
+        /** Suggestions */
         NavigationHostFragment.createArguments(
-            layoutRes = R.layout.content_order_base,
-            toolbarId = R.id.toolbar_order,
-            navHostId = R.id.nav_host_order,
-            tabItemId = R.id.tab_order
+            layoutRes = R.layout.content_suggestions_base,
+            toolbarId = -1, // Unmanaged toolbar.
+            navHostId = R.id.nav_host_suggestions,
+            tabItemId = R.id.tab_suggestions
         ),
 
         /** Discount */
