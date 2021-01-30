@@ -22,8 +22,10 @@ import java.util.regex.Pattern
 
 plugins {
     id 'com.android.application'
-    id 'kotlin-android'
     id 'com.google.gms.google-services'
+    
+    id 'kotlin-android'
+    id 'kotlin-kapt'
 }
 
 android {
@@ -50,6 +52,11 @@ android {
         }
     }
 
+    buildFeatures {
+        dataBinding = true
+        viewBinding = true
+    }
+
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
@@ -74,6 +81,10 @@ dependencies {
 
     /** Persistent Cookie Jar */
     implementation "com.github.franmontiel:PersistentCookieJar:1.0.1"
+
+    /** Navigation */
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.3'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.3'
 
     /** Tests */
     testImplementation 'junit:junit:4.13.1'
