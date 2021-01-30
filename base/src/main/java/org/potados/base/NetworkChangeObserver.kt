@@ -1,4 +1,4 @@
-/*
+/**
  * This file is part of INU Club.
  *
  * Copyright (C) 2021 INU Global App Center <potados99@gmail.com>
@@ -16,12 +16,15 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-include ':base'
-include ':navigation'
-include ':network'
-include ':common'
-include ':data'
-include ':domain'
 
-include ':app'
-rootProject.name = "club"
+package org.potados.base
+
+/**
+ * It helps children to be notified when network status changes.
+ * They will override onNetworkStateChange, which will be called by their parents.
+ *
+ * [BaseFragment] and [BaseActivity] should implement this.
+ */
+interface NetworkChangeObserver {
+    fun onNetworkStateChange(available: Boolean)
+}

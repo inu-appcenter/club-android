@@ -1,4 +1,4 @@
-/*
+/**
  * This file is part of INU Club.
  *
  * Copyright (C) 2021 INU Global App Center <potados99@gmail.com>
@@ -16,12 +16,19 @@
  * You should have received a copy of the GNU General Public License
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
-include ':base'
-include ':navigation'
-include ':network'
-include ':common'
-include ':data'
-include ':domain'
 
-include ':app'
-rootProject.name = "club"
+/**
+ * Lifecycle.kt
+ *
+ * Credits to Fernando Cejas.
+ * https://github.com/android10/Android-CleanArchitecture-Kotlin
+ */
+
+package org.potados.base.extension
+
+import androidx.lifecycle.LifecycleOwner
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.Observer
+
+fun <T: Any?, L: LiveData<T>> LifecycleOwner.observe(liveData: L, body: (T?) -> Unit) =
+    liveData.observe(this, Observer(body))

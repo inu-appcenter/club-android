@@ -22,6 +22,9 @@ ext.base = '0.0.1'
 ext.phase = 'alpha4'
 
 buildscript {
+    ext {
+        kotlin_version = '1.4.21'
+    }
     repositories {
         google()
         jcenter()
