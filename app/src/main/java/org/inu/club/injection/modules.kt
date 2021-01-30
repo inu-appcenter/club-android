@@ -17,30 +17,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.common
+package org.inu.club.injection
 
-import android.app.Application
-import org.inu.club.injection.myModules
-import org.koin.android.ext.koin.androidContext
-import timber.log.Timber
+import org.koin.dsl.module
 
-class ThisApplication : Application() {
+val myModules = module {
 
-    override fun onCreate() {
-        super.onCreate()
-
-        startTimber()
-        startKoin()
-    }
-
-    private fun startTimber() {
-        Timber.plant(Timber.DebugTree())
-    }
-
-    private fun startKoin() {
-        org.koin.core.context.startKoin {
-            androidContext(this@ThisApplication)
-            modules(myModules)
-        }
-    }
 }
