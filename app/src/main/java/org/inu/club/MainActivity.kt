@@ -47,15 +47,15 @@ class MainActivity : NavigationActivity() {
             tabItemId = R.id.tab_suggestions
         ),
 
-        /** Discount */
+        /** Search */
         NavigationHostFragment.createArguments(
-            layoutRes = R.layout.content_discount_base,
-            toolbarId = R.id.toolbar_discount,
-            navHostId = R.id.nav_host_discount,
-            tabItemId = R.id.tab_discount
+            layoutRes = R.layout.content_search_base,
+            toolbarId = R.id.toolbar_search,
+            navHostId = R.id.nav_host_search,
+            tabItemId = R.id.tab_search
         ),
 
-        /** Support */
+        /** Categories */
         NavigationHostFragment.createArguments(
             layoutRes = R.layout.content_support_base,
             toolbarId = R.id.toolbar_support,
