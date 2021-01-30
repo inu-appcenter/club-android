@@ -19,12 +19,52 @@
 
 package org.inu.club
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import org.potados.base.NavigationActivity
+import org.potados.base.NavigationHostFragment
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+class MainActivity : NavigationActivity() {
+
+    override val menuRes: Int = R.menu.bottom_menu
+    override val layoutRes: Int = R.layout.main_activity
+    override val mainPagerRes: Int = R.id.main_pager
+    override val bottomNavRes: Int = R.id.bottom_nav
+
+    override val fragmentArguments: List<NavigationHostFragment.Arguments> = listOf(
+
+        /** Today */
+        NavigationHostFragment.createArguments(
+            layoutRes = R.layout.content_today_base,
+            toolbarId = -1, // Unmanaged toolbar.
+            navHostId = R.id.nav_host_today,
+            tabItemId = R.id.tab_today
+        ),
+
+
+
+
+        /** Order notification */
+        NavigationHostFragment.createArguments(
+            layoutRes = R.layout.content_order_base,
+            toolbarId = R.id.toolbar_order,
+            navHostId = R.id.nav_host_order,
+            tabItemId = R.id.tab_order
+        ),
+
+        /** Discount */
+        NavigationHostFragment.createArguments(
+            layoutRes = R.layout.content_discount_base,
+            toolbarId = R.id.toolbar_discount,
+            navHostId = R.id.nav_host_discount,
+            tabItemId = R.id.tab_discount
+        ),
+
+        /** Support */
+        NavigationHostFragment.createArguments(
+            layoutRes = R.layout.content_support_base,
+            toolbarId = R.id.toolbar_support,
+            navHostId = R.id.nav_host_support,
+            tabItemId = R.id.tab_support
+        )
+    )
+
 }

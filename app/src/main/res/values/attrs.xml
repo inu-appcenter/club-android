@@ -19,22 +19,7 @@
   -->
 
 <resources>
-
-    <color name="white">#FFFFFF</color>
-    <color name="almostWhite">#FAFAFA</color>
-    <color name="lightGray">#DDDDDD</color>
-    <color name="thinDark">#1f000000</color>
-    <color name="themeBlue">#007FFF</color>
-    <color name="orange">#FB9C30</color>
-
-    <color name="textPrimary">#262B31</color>
-    <color name="textSecondary">#70808D</color>
-    <color name="textTertiary">#B7B9C0</color>
-
-    <color name="rippleLight">@color/thinDark</color>
-    <color name="separatorLight">@color/lightGray</color>
-
-    <color name="backgroundLight">@color/white</color>
-    <color name="backgroundLightGray">@color/almostWhite</color>
-
+    <attr name="barBackground" format="reference" />
+    <attr name="barTextColor" format="reference" />
+    <attr name="barSelectedTextColor" format="reference" />
 </resources>

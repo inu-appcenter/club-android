@@ -18,23 +18,30 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<resources>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <color name="white">#FFFFFF</color>
-    <color name="almostWhite">#FAFAFA</color>
-    <color name="lightGray">#DDDDDD</color>
-    <color name="thinDark">#1f000000</color>
-    <color name="themeBlue">#007FFF</color>
-    <color name="orange">#FB9C30</color>
+    <item
+        android:id="@+id/tab_today"
+        android:icon="@drawable/abc_vector_test"
+        android:title="@string/tab_today" />
 
-    <color name="textPrimary">#262B31</color>
-    <color name="textSecondary">#70808D</color>
-    <color name="textTertiary">#B7B9C0</color>
+    <item
+        android:id="@+id/tab_suggestions"
+        android:icon="@drawable/abc_vector_test"
+        android:title="@string/tab_suggestions" />
 
-    <color name="rippleLight">@color/thinDark</color>
-    <color name="separatorLight">@color/lightGray</color>
+    <item
+        android:id="@+id/tab_search"
+        android:icon="@drawable/abc_vector_test"
+        android:title="@string/tab_search" />
 
-    <color name="backgroundLight">@color/white</color>
-    <color name="backgroundLightGray">@color/almostWhite</color>
+    <item
+        android:id="@+id/tab_categories"
+        android:icon="@drawable/abc_vector_test"
+        android:title="@string/tab_categories" />
 
-</resources>
+    <item
+        android:id="@+id/tab_gatherings"
+        android:icon="@drawable/abc_vector_test"
+        android:title="@string/tab_gatherings" />
+</menu>

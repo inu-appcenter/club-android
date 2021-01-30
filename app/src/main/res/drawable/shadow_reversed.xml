@@ -18,23 +18,12 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<resources>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
 
-    <color name="white">#FFFFFF</color>
-    <color name="almostWhite">#FAFAFA</color>
-    <color name="lightGray">#DDDDDD</color>
-    <color name="thinDark">#1f000000</color>
-    <color name="themeBlue">#007FFF</color>
-    <color name="orange">#FB9C30</color>
+    <gradient
+        android:angle="270"
+        android:endColor="#0D000000"
+        android:startColor="#00000000" />
 
-    <color name="textPrimary">#262B31</color>
-    <color name="textSecondary">#70808D</color>
-    <color name="textTertiary">#B7B9C0</color>
-
-    <color name="rippleLight">@color/thinDark</color>
-    <color name="separatorLight">@color/lightGray</color>
-
-    <color name="backgroundLight">@color/white</color>
-    <color name="backgroundLightGray">@color/almostWhite</color>
-
-</resources>
+</shape>

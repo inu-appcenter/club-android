@@ -20,21 +20,24 @@
 
 <resources>
 
-    <color name="white">#FFFFFF</color>
-    <color name="almostWhite">#FAFAFA</color>
-    <color name="lightGray">#DDDDDD</color>
-    <color name="thinDark">#1f000000</color>
-    <color name="themeBlue">#007FFF</color>
-    <color name="orange">#FB9C30</color>
+    <dimen name="textBig">24sp</dimen>
+    <dimen name="textToolbar">20sp</dimen>
+    <dimen name="textTitle">18sp</dimen>
+    <dimen name="textPrimary">16sp</dimen>
+    <dimen name="textSecondary">14sp</dimen>
+    <dimen name="textTertiary">12sp</dimen>
 
-    <color name="textPrimary">#262B31</color>
-    <color name="textSecondary">#70808D</color>
-    <color name="textTertiary">#B7B9C0</color>
+    <dimen name="close_space">4dp</dimen>
+    <dimen name="near_space">8dp</dimen>
+    <dimen name="mid_space">12dp</dimen>
+    <dimen name="far_space">16dp</dimen>
+    <dimen name="distant_space">18dp</dimen>
+    <dimen name="fell_apart_space">22dp</dimen>
 
-    <color name="rippleLight">@color/thinDark</color>
-    <color name="separatorLight">@color/lightGray</color>
+    <!-- Toolbar height including status bar. -->
+    <dimen name="toolbarAndStatusBarHeight">80dp</dimen>
 
-    <color name="backgroundLight">@color/white</color>
-    <color name="backgroundLightGray">@color/almostWhite</color>
+    <!-- Toolbar only height. -->
+    <dimen name="toolbarHeight">56dp</dimen>
 
 </resources>

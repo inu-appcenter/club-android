@@ -20,21 +20,16 @@
 
 <resources>
 
-    <color name="white">#FFFFFF</color>
-    <color name="almostWhite">#FAFAFA</color>
-    <color name="lightGray">#DDDDDD</color>
-    <color name="thinDark">#1f000000</color>
-    <color name="themeBlue">#007FFF</color>
-    <color name="orange">#FB9C30</color>
+    <!-- BottomNavigation -->
+    <style name="BottomNavigation" parent="HorizontallyFullSizedView">
+        <item name="android:background">?attr/barBackground</item>
+        <item name="itemIconTint">?attr/barSelectedTextColor</item>
+        <item name="itemTextColor">?attr/barSelectedTextColor</item>
+    </style>
 
-    <color name="textPrimary">#262B31</color>
-    <color name="textSecondary">#70808D</color>
-    <color name="textTertiary">#B7B9C0</color>
-
-    <color name="rippleLight">@color/thinDark</color>
-    <color name="separatorLight">@color/lightGray</color>
-
-    <color name="backgroundLight">@color/white</color>
-    <color name="backgroundLightGray">@color/almostWhite</color>
+    <style name="HorizontallyFullSizedView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
 
 </resources>
