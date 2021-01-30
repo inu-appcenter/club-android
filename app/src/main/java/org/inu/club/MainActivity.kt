@@ -57,10 +57,18 @@ class MainActivity : NavigationActivity() {
 
         /** Categories */
         NavigationHostFragment.createArguments(
-            layoutRes = R.layout.content_support_base,
-            toolbarId = R.id.toolbar_support,
-            navHostId = R.id.nav_host_support,
-            tabItemId = R.id.tab_support
+            layoutRes = R.layout.content_categories_base,
+            toolbarId = R.id.toolbar_categories,
+            navHostId = R.id.nav_host_categories,
+            tabItemId = R.id.tab_categories
+        ),
+
+        /** Gathering */
+        NavigationHostFragment.createArguments(
+            layoutRes = R.layout.content_gatherings_base,
+            toolbarId = R.id.toolbar_gatherings,
+            navHostId = R.id.nav_host_gatherings,
+            tabItemId = R.id.tab_gatherings
         )
     )
 
