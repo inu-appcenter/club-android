@@ -19,12 +19,9 @@
 
 // THE VERSION NAME!
 ext.base = '0.0.1'
-ext.phase = 'alpha4'
+ext.phase = 'alpha5'
 
 buildscript {
-    ext {
-        kotlin_version = '1.4.21'
-    }
     repositories {
         google()
         jcenter()
