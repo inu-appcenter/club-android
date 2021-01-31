@@ -76,7 +76,7 @@ class RetrofitFactory {
 
     companion object {
 
-        fun createCafeteriaNetworkService(context: Context): ClubNetworkService {
+        fun createNetworkService(context: Context): ClubNetworkService {
             val cookieJar = PersistentCookieJar(
                 SetCookieCache(),
                 SharedPrefsCookiePersistor(context)
