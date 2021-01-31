@@ -60,12 +60,22 @@ dependencies {
     /** Appcompat */
     api 'androidx.appcompat:appcompat:1.2.0'
 
+    /** Koin */
+    api "org.koin:koin-android:2.0.1"
+
+    /** Firebase */
+    api platform('com.google.firebase:firebase-bom:26.3.0')
+    api 'com.google.firebase:firebase-analytics-ktx'
+
+    /** Retrofit 2 */
+    api "com.squareup.retrofit2:retrofit:2.9.0"
+    api "com.squareup.retrofit2:converter-gson:2.9.0"
+
+    /** Timber */
+    api "com.jakewharton.timber:timber:4.7.1"
+
     /** Tests */
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
-
-    /** Firebase */
-    implementation platform('com.google.firebase:firebase-bom:26.3.0')
-    implementation 'com.google.firebase:firebase-analytics-ktx'
 }

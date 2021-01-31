@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ This file is part of INU Club.
+  ~
+  ~ Copyright (C) 2021 INU Global App Center <potados99@gmail.com>
+  ~
+  ~ INU Club is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ INU Club is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+
+    <!-- BottomNavigation -->
+    <style name="BottomNavigation" parent="HorizontallyFullSizedView">
+        <item name="android:background">?attr/barBackground</item>
+        <item name="itemIconTint">?attr/barSelectedTextColor</item>
+        <item name="itemTextColor">?attr/barSelectedTextColor</item>
+    </style>
+
+    <!-- Toolbar -->
+    <style name="Toolbar" parent="HorizontallyFullSizedView">
+        <item name="android:layout_height">?android:attr/actionBarSize</item>
+        <item name="android:background">?attr/barBackground</item>
+        <item name="titleTextAppearance">@style/ToolbarText</item>
+        <item name="contentInsetStartWithNavigation">0dp</item>
+    </style>
+    <style name="CustomToolbar" parent="Toolbar">
+        <item name="contentInsetStart">0dp</item>
+    </style>
+    <style name="ToolbarText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
+        <item name="android:background">@null</item>
+        <item name="android:ellipsize">end</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textSize">@dimen/textToolbar</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="HorizontallyFullSizedView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+</resources>

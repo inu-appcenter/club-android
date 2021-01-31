@@ -19,4 +19,10 @@
 
 <resources>
     <string name="app_name">club</string>
+    <string name="tab_today">투데이</string>
+    <string name="tab_suggestions">추천</string>
+    <string name="tab_search">검색</string>
+    <string name="tab_categories">카테고리</string>
+    <string name="tab_gatherings">소모임</string>
+    <string name="description_offline">인터넷에 연결되어 있지 않습니다. 연결을 복구하기 위해 계속 시도중입니다.</string>
 </resources>

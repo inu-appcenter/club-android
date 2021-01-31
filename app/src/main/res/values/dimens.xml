@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ This file is part of INU Club.
+  ~
+  ~ Copyright (C) 2021 INU Global App Center <potados99@gmail.com>
+  ~
+  ~ INU Club is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ INU Club is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+
+    <dimen name="textBig">24sp</dimen>
+    <dimen name="textToolbar">20sp</dimen>
+    <dimen name="textTitle">18sp</dimen>
+    <dimen name="textPrimary">16sp</dimen>
+    <dimen name="textSecondary">14sp</dimen>
+    <dimen name="textTertiary">12sp</dimen>
+
+    <dimen name="close_space">4dp</dimen>
+    <dimen name="near_space">8dp</dimen>
+    <dimen name="mid_space">12dp</dimen>
+    <dimen name="far_space">16dp</dimen>
+    <dimen name="distant_space">18dp</dimen>
+    <dimen name="fell_apart_space">22dp</dimen>
+
+    <!-- Toolbar height including status bar. -->
+    <dimen name="toolbarAndStatusBarHeight">80dp</dimen>
+
+    <!-- Toolbar only height. -->
+    <dimen name="toolbarHeight">56dp</dimen>
+
+</resources>

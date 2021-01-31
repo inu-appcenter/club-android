@@ -19,12 +19,57 @@
 
 package org.inu.club
 
-import androidx.appcompat.app.AppCompatActivity
-import android.os.Bundle
+import org.potados.base.NavigationActivity
+import org.potados.base.NavigationHostFragment
 
-class MainActivity : AppCompatActivity() {
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-    }
+class MainActivity : NavigationActivity() {
+
+    override val menuRes: Int = R.menu.bottom_menu
+    override val layoutRes: Int = R.layout.main_activity
+    override val mainPagerRes: Int = R.id.main_pager
+    override val bottomNavRes: Int = R.id.bottom_nav
+
+    override val fragmentArguments: List<NavigationHostFragment.Arguments> = listOf(
+
+        /** Today */
+        NavigationHostFragment.createArguments(
+            layoutRes = R.layout.content_today_base,
+            toolbarId = -1, // Unmanaged toolbar.
+            navHostId = R.id.nav_host_today,
+            tabItemId = R.id.tab_today
+        ),
+
+        /** Suggestions */
+        NavigationHostFragment.createArguments(
+            layoutRes = R.layout.content_suggestions_base,
+            toolbarId = -1, // Unmanaged toolbar.
+            navHostId = R.id.nav_host_suggestions,
+            tabItemId = R.id.tab_suggestions
+        ),
+
+        /** Search */
+        NavigationHostFragment.createArguments(
+            layoutRes = R.layout.content_search_base,
+            toolbarId = R.id.toolbar_search,
+            navHostId = R.id.nav_host_search,
+            tabItemId = R.id.tab_search
+        ),
+
+        /** Categories */
+        NavigationHostFragment.createArguments(
+            layoutRes = R.layout.content_categories_base,
+            toolbarId = R.id.toolbar_categories,
+            navHostId = R.id.nav_host_categories,
+            tabItemId = R.id.tab_categories
+        ),
+
+        /** Gathering */
+        NavigationHostFragment.createArguments(
+            layoutRes = R.layout.content_gatherings_base,
+            toolbarId = R.id.toolbar_gatherings,
+            navHostId = R.id.nav_host_gatherings,
+            tabItemId = R.id.tab_gatherings
+        )
+    )
+
 }
