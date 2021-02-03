@@ -35,12 +35,12 @@
         <item name="android:statusBarColor">@color/backgroundLight</item>
 
         <item name="colorPrimary">@color/themeBlue</item>
-        <item name="colorAccent">@color/themeBlue</item>
+        <item name="colorAccent">@color/themeViolet</item>
         <item name="selectableItemBackground">@drawable/ripple</item>
 
         <item name="barBackground">@color/backgroundLight</item>
         <item name="barTextColor">@color/textSecondary</item>
-        <item name="barSelectedTextColor">@drawable/bar_item_color</item>
+        <item name="barIconColor">@drawable/bar_item_color</item>
     </style>
 
     <!-- Splash theme -->

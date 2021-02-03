@@ -30,6 +30,14 @@
         android:gravity="center"
         android:height="126dp"
         android:width="126dp"
-        android:bottom="32dp" />
+        android:bottom="48dp" />
+
+    <!-- Copyrights -->
+    <item
+        android:drawable="@drawable/ic_copyrights"
+        android:gravity="bottom|center_horizontal"
+        android:height="11dp"
+        android:width="175dp"
+        android:bottom="64dp"/>
 
 </layer-list>

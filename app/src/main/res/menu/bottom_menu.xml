@@ -22,26 +22,26 @@
 
     <item
         android:id="@+id/tab_today"
-        android:icon="@drawable/abc_vector_test"
+        android:icon="@drawable/ic_tab_today"
         android:title="@string/tab_today" />
 
     <item
         android:id="@+id/tab_suggestions"
-        android:icon="@drawable/abc_vector_test"
+        android:icon="@drawable/ic_tab_suggestions"
         android:title="@string/tab_suggestions" />
 
     <item
         android:id="@+id/tab_search"
-        android:icon="@drawable/abc_vector_test"
+        android:icon="@drawable/ic_tab_search"
         android:title="@string/tab_search" />
 
     <item
         android:id="@+id/tab_categories"
-        android:icon="@drawable/abc_vector_test"
+        android:icon="@drawable/ic_tab_categories"
         android:title="@string/tab_categories" />
 
     <item
         android:id="@+id/tab_gatherings"
-        android:icon="@drawable/abc_vector_test"
+        android:icon="@drawable/ic_tab_suggestions"
         android:title="@string/tab_gatherings" />
 </menu>

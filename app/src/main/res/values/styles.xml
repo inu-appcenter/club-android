@@ -23,8 +23,9 @@
     <!-- BottomNavigation -->
     <style name="BottomNavigation" parent="HorizontallyFullSizedView">
         <item name="android:background">?attr/barBackground</item>
-        <item name="itemIconTint">?attr/barSelectedTextColor</item>
-        <item name="itemTextColor">?attr/barSelectedTextColor</item>
+        <item name="itemTextColor">?attr/barTextColor</item>
+        <item name="itemIconTint">?attr/barIconColor</item>
+        <item name="labelVisibilityMode">labeled</item>
     </style>
 
     <!-- Toolbar -->

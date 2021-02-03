@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <!--
   ~ This file is part of INU Club.
   ~
@@ -18,8 +17,27 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<resources>
-    <attr name="barBackground" format="reference" />
-    <attr name="barTextColor" format="reference" />
-    <attr name="barIconColor" format="reference" />
-</resources>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:pathData="M5,6h2v2h-2z"
+      android:fillColor="#949494"/>
+  <path
+      android:pathData="M5,11h2v2h-2z"
+      android:fillColor="#949494"/>
+  <path
+      android:pathData="M5,16h2v2h-2z"
+      android:fillColor="#949494"/>
+  <path
+      android:pathData="M9,6h10v2h-10z"
+      android:fillColor="#949494"/>
+  <path
+      android:pathData="M9,11h10v2h-10z"
+      android:fillColor="#949494"/>
+  <path
+      android:pathData="M9,16h10v2h-10z"
+      android:fillColor="#949494"/>
+</vector>

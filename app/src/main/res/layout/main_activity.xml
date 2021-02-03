@@ -36,14 +36,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!-- Navigation bar shadow -->
+    <!-- Navigation bar divider -->
     <View
         android:layout_width="0dp"
-        android:layout_height="4dp"
+        android:layout_height="1dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/bottom_nav"
-        android:background="@drawable/shadow_reversed" />
+        android:background="?android:attr/divider" />
 
     <!-- Bottom nav -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
