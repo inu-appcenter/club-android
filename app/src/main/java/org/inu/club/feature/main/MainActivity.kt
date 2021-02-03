@@ -45,7 +45,7 @@ class MainActivity : NavigationActivity() {
         /** Suggestions */
         NavigationHostFragment.createArguments(
             layoutRes = R.layout.content_suggestions_base,
-            toolbarId = -1, // Unmanaged toolbar.
+            toolbarId = R.id.toolbar_suggestions, // Unmanaged toolbar.
             navHostId = R.id.nav_host_suggestions,
             tabItemId = R.id.tab_suggestions
         ),

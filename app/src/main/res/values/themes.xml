@@ -31,8 +31,8 @@
         <item name="android:textColorSecondary">@color/textSecondary</item>
         <item name="android:textColorTertiary">@color/textTertiary</item>
 
-        <item name="android:windowLightStatusBar">true</item>
-        <item name="android:statusBarColor">@color/backgroundLight</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:statusBarColor">@color/themeLightBlue</item>
 
         <item name="colorPrimary">@color/themeBlue</item>
         <item name="colorAccent">@color/themeViolet</item>
