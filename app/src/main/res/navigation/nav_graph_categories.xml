@@ -27,6 +27,6 @@
     <fragment
         android:id="@+id/categories_dest"
         android:name="org.inu.club.feature.categories.CategoriesFragment"
-        android:label="CategoriesFragment" />
+        android:label="@string/title_categories" />
 
 </navigation>

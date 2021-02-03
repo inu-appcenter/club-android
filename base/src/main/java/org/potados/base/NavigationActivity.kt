@@ -79,6 +79,7 @@ abstract class NavigationActivity :
     /**
      * For children.
      * Override this to get notified when a user selects a bottom navigation(tab).
+     * This will be called when this activity is created.
      */
     protected open fun onTabSelected(item: MenuItem) {}
 
@@ -94,6 +95,8 @@ abstract class NavigationActivity :
 
         initViewPager(savedInstanceState)
         initBottomNavigation()
+
+        onTabSelected(getMenuItemByPosition(0))
     }
 
     private fun initViewPager(savedInstanceState: Bundle?) {

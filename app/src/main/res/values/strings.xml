@@ -25,4 +25,7 @@
     <string name="tab_categories">카테고리</string>
     <string name="tab_gatherings">소모임</string>
     <string name="description_offline">인터넷에 연결되어 있지 않습니다. 연결을 복구하기 위해 계속 시도중입니다.</string>
+    <string name="title_suggestions">이런 동아리는 어때요?</string>
+    <string name="title_categories">카테고리</string>
+    <string name="title_gatherings">소모임</string>
 </resources>

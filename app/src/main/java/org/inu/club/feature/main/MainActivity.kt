@@ -21,9 +21,12 @@ package org.inu.club.feature.main
 
 import android.content.Context
 import android.content.Intent
+import android.view.MenuItem
 import org.inu.club.R
 import org.potados.base.NavigationActivity
 import org.potados.base.NavigationHostFragment
+import org.potados.base.extension.setToolbarDark
+import org.potados.base.extension.setToolbarLight
 
 class MainActivity : NavigationActivity() {
 
@@ -45,7 +48,7 @@ class MainActivity : NavigationActivity() {
         /** Suggestions */
         NavigationHostFragment.createArguments(
             layoutRes = R.layout.content_suggestions_base,
-            toolbarId = -1, // Unmanaged toolbar.
+            toolbarId = R.id.toolbar_suggestions, // Unmanaged toolbar.
             navHostId = R.id.nav_host_suggestions,
             tabItemId = R.id.tab_suggestions
         ),
@@ -74,6 +77,14 @@ class MainActivity : NavigationActivity() {
             tabItemId = R.id.tab_gatherings
         )
     )
+
+    override fun onTabSelected(item: MenuItem) {
+        // Color of Status bar and toolbar varies.
+        when (item.itemId) {
+            R.id.tab_today -> setToolbarLight()
+            else -> setToolbarDark()
+        }
+    }
 
     companion object {
         fun callingIntent(context: Context) = Intent(context, MainActivity::class.java)

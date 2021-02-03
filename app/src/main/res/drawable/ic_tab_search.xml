@@ -1,0 +1,44 @@
+<!--
+  ~ This file is part of INU Club.
+  ~
+  ~ Copyright (C) 2021 INU Global App Center <potados99@gmail.com>
+  ~
+  ~ INU Club is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ INU Club is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+  <path
+      android:pathData="M19.4328,21L15,16.5672L16.5672,15L21,19.4328L19.4328,21Z"
+      android:fillColor="#949494"
+      android:fillType="evenOdd"/>
+  <path
+      android:pathData="M11,11m-7,0a7,7 0,1 1,14 0a7,7 0,1 1,-14 0"
+      android:strokeWidth="2"
+      android:fillColor="#00000000"
+      android:strokeColor="#949494"/>
+  <path
+      android:pathData="M11,6C11.6566,6 12.3068,6.1293 12.9134,6.3806C13.52,6.6319 14.0712,7.0002 14.5355,7.4645C14.9998,7.9288 15.3681,8.4799 15.6194,9.0866C15.8707,9.6932 16,10.3434 16,11H14C14,10.606 13.9224,10.2159 13.7716,9.8519C13.6209,9.488 13.3999,9.1573 13.1213,8.8787C12.8427,8.6001 12.512,8.3791 12.1481,8.2284C11.7841,8.0776 11.394,8 11,8V6Z"
+      android:fillColor="#949494"
+      android:fillType="evenOdd"/>
+  <path
+      android:pathData="M11,7m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0"
+      android:fillColor="#949494"/>
+  <path
+      android:pathData="M15,11m-1,0a1,1 0,1 1,2 0a1,1 0,1 1,-2 0"
+      android:fillColor="#949494"/>
+</vector>
