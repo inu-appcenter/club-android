@@ -17,8 +17,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club
+package org.inu.club.feature.main
 
+import android.content.Context
+import android.content.Intent
+import org.inu.club.R
 import org.potados.base.NavigationActivity
 import org.potados.base.NavigationHostFragment
 
@@ -31,7 +34,7 @@ class MainActivity : NavigationActivity() {
 
     override val fragmentArguments: List<NavigationHostFragment.Arguments> = listOf(
 
-        /** Today */
+        /** Today(Home) */
         NavigationHostFragment.createArguments(
             layoutRes = R.layout.content_today_base,
             toolbarId = -1, // Unmanaged toolbar.
@@ -72,4 +75,7 @@ class MainActivity : NavigationActivity() {
         )
     )
 
+    companion object {
+        fun callingIntent(context: Context) = Intent(context, MainActivity::class.java)
+    }
 }

@@ -17,18 +17,31 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.injection
+package org.inu.club.common.navigation
 
-import org.inu.club.common.navigation.Navigator
-import org.koin.dsl.module
+import android.content.Context
+import android.content.Intent
+import org.inu.club.feature.main.MainActivity
+import timber.log.Timber
 
-val myModules = module {
+class Navigator(
+    private val context: Context
+) {
 
-    /** Navigator */
-    single {
-        Navigator(
-            context = get()
+    fun showMain() {
+        startActivity(
+            MainActivity.callingIntent(context)
         )
     }
 
+    private fun startActivity(intent: Intent) {
+        // Recent versions Android requires this flag
+        // to start activity from non-activity context.
+        context.startActivity(
+            intent.apply {
+                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
+                Timber.i("Starting ${this.component?.className}.")
+            }
+        )
+    }
 }

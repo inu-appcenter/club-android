@@ -17,18 +17,22 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.injection
+package org.inu.club.feature.splash
 
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import org.inu.club.common.navigation.Navigator
-import org.koin.dsl.module
+import org.koin.android.ext.android.inject
 
-val myModules = module {
+class SplashActivity : AppCompatActivity() {
 
-    /** Navigator */
-    single {
-        Navigator(
-            context = get()
-        )
+    private val navigator: Navigator by inject()
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        navigator.showMain()
+        finish()
     }
 
 }
