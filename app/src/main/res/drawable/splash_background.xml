@@ -20,13 +20,16 @@
 
 <layer-list xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:drawable="@color/backgroundLight" />
+    <!-- Light background -->
+    <item
+        android:drawable="@color/backgroundLight" />
 
+    <!-- Logo and title -->
     <item
         android:drawable="@drawable/ic_splash_logo_and_title"
         android:gravity="center"
         android:height="126dp"
         android:width="126dp"
-        android:bottom="32dp"/>
+        android:bottom="32dp" />
 
 </layer-list>
