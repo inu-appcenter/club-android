@@ -27,6 +27,6 @@
     <fragment
         android:id="@+id/suggestions_dest"
         android:name="org.inu.club.feature.suggestions.SuggestionsFragment"
-        android:label="SuggestionsFragment" />
+        android:label="@string/title_suggestions" />
 
 </navigation>

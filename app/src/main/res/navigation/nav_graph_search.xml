@@ -27,6 +27,6 @@
     <fragment
         android:id="@+id/search_dest"
         android:name="org.inu.club.feature.search.SearchFragment"
-        android:label="SearchFragment" />
+        android:label="검색!" />
 
 </navigation>

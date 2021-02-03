@@ -79,7 +79,7 @@ class MainActivity : NavigationActivity() {
     )
 
     override fun onTabSelected(item: MenuItem) {
-        // Status bar and toolbar color varies.
+        // Color of Status bar and toolbar varies.
         when (item.itemId) {
             R.id.tab_today -> setToolbarLight()
             else -> setToolbarDark()
