@@ -45,8 +45,8 @@
     </style>
 
     <!-- Custom toolbar -->
-    <style name="CustomToolbar" parent="Toolbar">
-        <item name="contentInsetStart">0dp</item>
+    <style name="HomeToolbar" parent="Toolbar">
+        <item name="android:background">?android:attr/windowBackground</item>
     </style>
 
     <style name="HorizontallyFullSizedView">

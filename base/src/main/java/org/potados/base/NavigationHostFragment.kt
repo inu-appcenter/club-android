@@ -69,7 +69,7 @@ class NavigationHostFragment : Fragment() {
 
     private fun setUpToolbarAndNavController() = getToolbar()?.setupWithNavController(getNavController())
 
-    private fun getToolbar(): Toolbar? = if (toolbarId > 0) requireActivity().findViewById(toolbarId) else null
+    private fun getToolbar(): Toolbar? = if (toolbarId > 0) view?.findViewById(toolbarId) else null
 
     private fun getNavController(): NavController = requireActivity().findNavController(navHostId)
 

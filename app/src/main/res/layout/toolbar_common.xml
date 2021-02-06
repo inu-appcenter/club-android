@@ -18,27 +18,10 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<layout
+<!-- Common toolbar for app-wide use -->
+<androidx.appcompat.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <!-- Toolbar -->
-        <include layout="@layout/toolbar_common" />
-
-        <!-- Content here -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            android:text="여기는 추천 프래그먼트!" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
-
-</layout>
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Toolbar"
+    android:id="@+id/toolbar"
+    app:layout_constraintTop_toTopOf="parent" />
