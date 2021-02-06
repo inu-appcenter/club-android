@@ -19,8 +19,12 @@
 
 package org.inu.club.feature.categories
 
+import android.os.Bundle
+import android.view.View
+import org.inu.club.R
 import org.inu.club.databinding.CategoriesFragmentBinding
 import org.potados.base.BaseFragment
+import org.potados.base.extension.setupToolbarForNavigation
 
 class CategoriesFragment : BaseFragment<CategoriesFragmentBinding>() {
 
@@ -28,4 +32,9 @@ class CategoriesFragment : BaseFragment<CategoriesFragmentBinding>() {
         // Do some...
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupToolbarForNavigation(R.id.toolbar)
+    }
 }

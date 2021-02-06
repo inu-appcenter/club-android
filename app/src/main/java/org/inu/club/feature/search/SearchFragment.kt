@@ -19,8 +19,12 @@
 
 package org.inu.club.feature.search
 
+import android.os.Bundle
+import android.view.View
+import org.inu.club.R
 import org.inu.club.databinding.SearchFragmentBinding
 import org.potados.base.BaseFragment
+import org.potados.base.extension.setupToolbarForNavigation
 
 class SearchFragment : BaseFragment<SearchFragmentBinding>() {
 
@@ -28,4 +32,9 @@ class SearchFragment : BaseFragment<SearchFragmentBinding>() {
         // Do some...
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupToolbarForNavigation(R.id.toolbar)
+    }
 }

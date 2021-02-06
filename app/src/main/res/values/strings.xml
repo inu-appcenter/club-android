@@ -28,4 +28,7 @@
     <string name="title_suggestions">이런 동아리는 어때요?</string>
     <string name="title_categories">카테고리</string>
     <string name="title_gatherings">소모임</string>
+    <string name="description_toolbar_logo">툴바에 있는 로고입니다.</string>
+    <string name="hint_search">동아리명, 키워드를 입력하세요</string>
+    <string name="description_search_button">검색 버튼입니다.</string>
 </resources>

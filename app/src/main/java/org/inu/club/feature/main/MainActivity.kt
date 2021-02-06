@@ -48,7 +48,7 @@ class MainActivity : NavigationActivity() {
         /** Suggestions */
         NavigationHostFragment.createArguments(
             layoutRes = R.layout.content_suggestions_base,
-            toolbarId = R.id.toolbar_suggestions, // Unmanaged toolbar.
+            toolbarId = -1,
             navHostId = R.id.nav_host_suggestions,
             tabItemId = R.id.tab_suggestions
         ),
@@ -56,7 +56,7 @@ class MainActivity : NavigationActivity() {
         /** Search */
         NavigationHostFragment.createArguments(
             layoutRes = R.layout.content_search_base,
-            toolbarId = R.id.toolbar_search,
+            toolbarId = -1,
             navHostId = R.id.nav_host_search,
             tabItemId = R.id.tab_search
         ),
@@ -64,7 +64,7 @@ class MainActivity : NavigationActivity() {
         /** Categories */
         NavigationHostFragment.createArguments(
             layoutRes = R.layout.content_categories_base,
-            toolbarId = R.id.toolbar_categories,
+            toolbarId = -1,
             navHostId = R.id.nav_host_categories,
             tabItemId = R.id.tab_categories
         ),
@@ -72,7 +72,7 @@ class MainActivity : NavigationActivity() {
         /** Gathering */
         NavigationHostFragment.createArguments(
             layoutRes = R.layout.content_gatherings_base,
-            toolbarId = R.id.toolbar_gatherings,
+            toolbarId = R.id.toolbar,
             navHostId = R.id.nav_host_gatherings,
             tabItemId = R.id.tab_gatherings
         )

@@ -25,12 +25,7 @@
     android:layout_height="match_parent">
 
     <!-- Toolbar -->
-    <androidx.appcompat.widget.Toolbar
-        style="@style/Toolbar"
-        android:id="@+id/toolbar_gatherings"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <include layout="@layout/toolbar_common" />
 
     <!-- Content -->
     <androidx.fragment.app.FragmentContainerView
@@ -40,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar_gatherings"
+        app:layout_constraintTop_toBottomOf="@id/toolbar"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph_gatherings"
         android:name="androidx.navigation.fragment.NavHostFragment" />

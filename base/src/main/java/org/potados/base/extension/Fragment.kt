@@ -17,24 +17,22 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.suggestions
+package org.potados.base.extension
 
-import android.os.Bundle
-import android.view.View
-import org.inu.club.R
-import org.inu.club.databinding.SuggestionsFragmentBinding
-import org.potados.base.BaseFragment
-import org.potados.base.extension.setupToolbarForNavigation
+import androidx.annotation.IdRes
+import androidx.fragment.app.Fragment
+import androidx.appcompat.widget.Toolbar
+import androidx.navigation.ui.NavigationUI
+import androidx.navigation.fragment.findNavController
 
-class SuggestionsFragment : BaseFragment<SuggestionsFragmentBinding>() {
+fun Fragment.setupToolbarForNavigation(toolbar: Toolbar) {
+    val navController = findNavController()
 
-    override fun onCreateView(create: ViewCreator) = create<SuggestionsFragmentBinding> {
-        // Do some...
-    }
+    NavigationUI.setupWithNavController(toolbar, navController)
+}
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+fun Fragment.setupToolbarForNavigation(@IdRes toolbarId: Int) {
+    val toolbar = view?.findViewById<Toolbar>(toolbarId) ?: return
 
-        setupToolbarForNavigation(R.id.toolbar)
-    }
+    setupToolbarForNavigation(toolbar)
 }

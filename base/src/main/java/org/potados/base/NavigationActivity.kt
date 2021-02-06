@@ -96,7 +96,10 @@ abstract class NavigationActivity :
         initViewPager(savedInstanceState)
         initBottomNavigation()
 
-        onTabSelected(getMenuItemByPosition(0))
+        if (savedInstanceState == null) {
+            // On first creation
+            onTabSelected(getMenuItemByPosition(0))
+        }
     }
 
     private fun initViewPager(savedInstanceState: Bundle?) {
