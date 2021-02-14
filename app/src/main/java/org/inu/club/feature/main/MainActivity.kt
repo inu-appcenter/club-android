@@ -23,8 +23,8 @@ import android.content.Context
 import android.content.Intent
 import android.view.MenuItem
 import org.inu.club.R
-import org.potados.base.NavigationActivity
-import org.potados.base.NavigationHostFragment
+import org.potados.base.component.NavigationActivity
+import org.potados.base.component.NavigationHostFragment
 import org.potados.base.extension.setToolbarDark
 import org.potados.base.extension.setToolbarLight
 

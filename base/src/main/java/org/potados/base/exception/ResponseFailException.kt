@@ -17,8 +17,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base
+package org.potados.base.exception
 
-interface BindingOwner<T> {
-    var binding: T?
-}
+/**
+ * Thrown when response is not successful and the status code is
+ * not handled by other exceptions in [org.potados.base.exception.http].
+ */
+class ResponseFailException(val statusCode: Int, message: String = "") : Exception(message)

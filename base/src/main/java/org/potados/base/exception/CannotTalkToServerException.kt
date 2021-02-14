@@ -17,24 +17,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.search
+package org.potados.base.exception
 
-import android.os.Bundle
-import android.view.View
-import org.inu.club.R
-import org.inu.club.databinding.SearchFragmentBinding
-import org.potados.base.component.BaseFragment
-import org.potados.base.extension.setupToolbarForNavigation
-
-class SearchFragment : BaseFragment<SearchFragmentBinding>() {
-
-    override fun onCreateView(create: ViewCreator) = create<SearchFragmentBinding> {
-        // Do some...
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        setupToolbarForNavigation(R.id.toolbar)
-    }
-}
+/**
+ * Thrown when unable to talk to the server.
+ * Caused by [java.io.IOException], which is thrown by [retrofit2.Call.execute].
+ */
+class CannotTalkToServerException(message: String = "") : Exception(message)

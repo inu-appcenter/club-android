@@ -17,13 +17,9 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base
+package org.potados.base.exception.http
 
-interface PermissionFighter {
-    val requiredPermissions: Array<String>
-
-    fun onAllPermissionsGranted()
-    fun onPermissionNotGranted()
-
-    fun allPermissionsGranted(): Boolean
-}
+/**
+ * Thrown when response status code is 403.
+ */
+class ForbiddenException(message: String) : Exception(message)

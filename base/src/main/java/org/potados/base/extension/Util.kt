@@ -19,7 +19,7 @@
 
 package org.potados.base.extension
 
-import android.util.Log
+import timber.log.Timber
 
 inline fun <T> T?.onNull(block: () ->Unit): T? {
     if (this == null) {
@@ -33,7 +33,7 @@ fun <T> tryOrNull(logOnError: Boolean = true, body: () -> T?): T? {
         body()
     } catch (e: Exception) {
         if (logOnError) {
-            Log.w("tryOrNull", e)
+            Timber.e(e)
         }
 
         null

@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base
+package org.potados.base.component
 
 import android.os.Bundle
 import android.view.Menu
@@ -257,7 +257,8 @@ abstract class NavigationActivity :
         .findFragmentByTag("android:switcher:${mainPager.id}:${position}") as? NavigationHostFragment
 
     inner class ViewPagerAdapter : FragmentPagerAdapter(supportFragmentManager, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
-        override fun getItem(position: Int): Fragment = NavigationHostFragment.newInstance(fragmentArguments[position])
+        override fun getItem(position: Int): Fragment =
+            NavigationHostFragment.newInstance(fragmentArguments[position])
         override fun getCount(): Int = fragmentArguments.size
     }
 }

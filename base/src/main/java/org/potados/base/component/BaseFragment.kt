@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base
+package org.potados.base.component
 
 import android.os.Bundle
 import android.util.Log
@@ -28,8 +28,10 @@ import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import org.potados.base.extension.observe
 import org.potados.network.NetworkObserver
+import timber.log.Timber
 
-abstract class BaseFragment<T: ViewDataBinding> : BindingOwner<T>, Fragment(), NetworkChangeObserver {
+abstract class BaseFragment<T: ViewDataBinding> : BindingOwner<T>, Fragment(),
+    NetworkChangeObserver {
 
     /** BindingOwner */
     override var binding: T? = null
@@ -55,7 +57,7 @@ abstract class BaseFragment<T: ViewDataBinding> : BindingOwner<T>, Fragment(), N
         val casted = unknownBinding as? T
 
         if (casted == null) {
-            Log.e("BaseFragment", "Wrong binding type!!")
+            Timber.e("Wrong binding type!!")
             return
         }
 

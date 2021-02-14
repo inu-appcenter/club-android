@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base
+package org.potados.base.component
 
 import android.content.Intent
 import android.os.Bundle

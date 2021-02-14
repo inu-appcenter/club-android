@@ -59,17 +59,34 @@ android {
 }
 
 dependencies {
+    /**
+     * All projects specific dependencies.
+     * Only commonly used libraries should be noted here.
+     * This module will be reused on every project of potados99.
+     */
+
+    /** Network callback */
     api project(":network")
 
-    /** Navigation */
-    implementation "androidx.navigation:navigation-fragment-ktx:2.3.3"
-    implementation "androidx.navigation:navigation-ui-ktx:2.3.3"
-
     /** Core ktx */
-    implementation 'androidx.core:core-ktx:1.3.2'
+    api 'androidx.core:core-ktx:1.3.2'
 
     /** Appcompat */
-    implementation 'androidx.appcompat:appcompat:1.2.0'
+    api 'androidx.appcompat:appcompat:1.2.0'
+
+    /** Navigation */
+    api "androidx.navigation:navigation-fragment-ktx:2.3.3"
+    api "androidx.navigation:navigation-ui-ktx:2.3.3"
+
+    /** Timber */
+    api "com.jakewharton.timber:timber:4.7.1"
+
+    /** Koin */
+    api "org.koin:koin-android:2.0.1"
+
+    /** Retrofit2 */
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
 
     /** Tests */
     testImplementation 'junit:junit:4.13.1'

@@ -20,7 +20,7 @@
 package org.inu.club.feature.gatherings
 
 import org.inu.club.databinding.GatheringsFragmentBinding
-import org.potados.base.BaseFragment
+import org.potados.base.component.BaseFragment
 
 class GatheringsFragment : BaseFragment<GatheringsFragmentBinding>() {
 

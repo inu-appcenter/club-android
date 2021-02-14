@@ -17,24 +17,30 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.search
+package org.potados.base.architecture
 
-import android.os.Bundle
-import android.view.View
-import org.inu.club.R
-import org.inu.club.databinding.SearchFragmentBinding
-import org.potados.base.component.BaseFragment
-import org.potados.base.extension.setupToolbarForNavigation
+import org.potados.base.functional.Result
+import kotlinx.coroutines.*
+import timber.log.Timber
 
-class SearchFragment : BaseFragment<SearchFragmentBinding>() {
+/**
+ * Abstract class for Use Case (Interactor in terms of Clean Architecture).
+ * Any use case in this application should implement this.
+ */
+abstract class UseCase<in Params, out Type> {
+    abstract fun run(params: Params): Result<Type>
 
-    override fun onCreateView(create: ViewCreator) = create<SearchFragmentBinding> {
-        // Do some...
-    }
+    operator fun invoke(params: Params, onResult: (Result<Type>) -> Unit = {}) {
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
+        val className = this::class.java.name
 
-        setupToolbarForNavigation(R.id.toolbar)
+        val job = CoroutineScope(Dispatchers.IO).async {
+            Timber.v("UseCase $className running on ${Thread.currentThread().name}")
+            run(params)
+        }
+
+        MainScope().launch {
+            onResult(job.await())
+        }
     }
 }
