@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base
+package org.potados.base.component
 
 import android.content.Intent
 import android.os.Bundle
@@ -31,7 +31,10 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 
 /**
- * A base Fragment that will be a holder of each page of bottom navigation.
+ * A base Fragment that will be a holder of each navigation graph.
+ * Purpose of this [NavigationHostFragment] is to hold a
+ * [androidx.fragment.app.FragmentContainerView] inside and be in
+ * [androidx.viewpager.widget.ViewPager].
  */
 class NavigationHostFragment : Fragment() {
     private var layoutRes: Int = -1
@@ -63,15 +66,21 @@ class NavigationHostFragment : Fragment() {
     override fun onStart() {
         super.onStart()
 
-        // It doesn't work inside onCreate.
-        setUpToolbarAndNavController()
+        // **This does not work before [onStart].**
+        //
+        // Managed toolbar will be handled here.
+        // Otherwise, each Fragment should to call [setupToolbarForNavigation] in [onViewCreated].
+        //
+        // We can't use [Fragment.setupToolbarForNavigation] because we need to explicitly pass
+        // the navigation controller of the navigation host.
+        setupToolbar()
     }
 
-    private fun setUpToolbarAndNavController() = getToolbar()?.setupWithNavController(getNavController())
+    private fun setupToolbar() = getToolbar()?.setupWithNavController(getNavController())
 
     private fun getToolbar(): Toolbar? = if (toolbarId > 0) view?.findViewById(toolbarId) else null
 
-    private fun getNavController(): NavController = requireActivity().findNavController(navHostId)
+    private fun getNavController() = requireActivity().findNavController(navHostId)
 
     fun onBackPressed(): Boolean {
         return getNavController().navigateUp()

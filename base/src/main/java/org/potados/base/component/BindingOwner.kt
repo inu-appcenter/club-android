@@ -17,25 +17,13 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base.extension
+package org.potados.base.component
 
-import android.app.Activity
-import android.view.View
-
-/**
- * Sets status bar color to [android.R.attr.windowBackground].
- * Status bar UI color will turn black.
- */
-fun Activity.setStatusBarLight() {
-    window?.statusBarColor = resolveThemeColor(android.R.attr.windowBackground)
-    window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-}
+import androidx.databinding.ViewDataBinding
 
 /**
- * Sets status bar color to [android.R.attr.statusBarColor].
- *  * Status bar UI color will turn white.
+ * An interface that indicates the child has a data binding.
  */
-fun Activity.setStatusBarDark() {
-    window?.statusBarColor = resolveThemeColor(android.R.attr.statusBarColor)
-    window?.decorView?.systemUiVisibility = 0
+interface BindingOwner<T: ViewDataBinding> {
+    var binding: T?
 }

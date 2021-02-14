@@ -17,25 +17,16 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base.extension
-
-import android.app.Activity
-import android.view.View
+package org.potados.base.component
 
 /**
- * Sets status bar color to [android.R.attr.windowBackground].
- * Status bar UI color will turn black.
+ * It helps acquiring permission.
  */
-fun Activity.setStatusBarLight() {
-    window?.statusBarColor = resolveThemeColor(android.R.attr.windowBackground)
-    window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-}
+interface PermissionFighter {
+    val requiredPermissions: Array<String>
 
-/**
- * Sets status bar color to [android.R.attr.statusBarColor].
- *  * Status bar UI color will turn white.
- */
-fun Activity.setStatusBarDark() {
-    window?.statusBarColor = resolveThemeColor(android.R.attr.statusBarColor)
-    window?.decorView?.systemUiVisibility = 0
+    fun onAllPermissionsGranted()
+    fun onPermissionNotGranted()
+
+    fun allPermissionsGranted(): Boolean
 }

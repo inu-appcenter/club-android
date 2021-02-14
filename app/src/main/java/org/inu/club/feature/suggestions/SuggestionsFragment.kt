@@ -23,12 +23,12 @@ import android.os.Bundle
 import android.view.View
 import org.inu.club.R
 import org.inu.club.databinding.SuggestionsFragmentBinding
-import org.potados.base.BaseFragment
+import org.potados.base.component.BaseFragment
 import org.potados.base.extension.setupToolbarForNavigation
 
 class SuggestionsFragment : BaseFragment<SuggestionsFragmentBinding>() {
 
-    override fun onCreateView(create: ViewCreator) = create<SuggestionsFragmentBinding> {
+    override fun onCreateBinding(create: BindingCreator) = create<SuggestionsFragmentBinding> {
         // Do some...
     }
 

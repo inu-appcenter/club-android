@@ -20,11 +20,11 @@
 package org.inu.club.feature.today
 
 import org.inu.club.databinding.TodayFragmentBinding
-import org.potados.base.BaseFragment
+import org.potados.base.component.BaseFragment
 
 class TodayFragment : BaseFragment<TodayFragmentBinding>() {
 
-    override fun onCreateView(create: ViewCreator) = create<TodayFragmentBinding> {
+    override fun onCreateBinding(create: BindingCreator) = create<TodayFragmentBinding> {
         // Do some...
     }
 

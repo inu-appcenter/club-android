@@ -23,12 +23,12 @@ import android.os.Bundle
 import android.view.View
 import org.inu.club.R
 import org.inu.club.databinding.CategoriesFragmentBinding
-import org.potados.base.BaseFragment
+import org.potados.base.component.BaseFragment
 import org.potados.base.extension.setupToolbarForNavigation
 
 class CategoriesFragment : BaseFragment<CategoriesFragmentBinding>() {
 
-    override fun onCreateView(create: ViewCreator) = create<CategoriesFragmentBinding> {
+    override fun onCreateBinding(create: BindingCreator) = create<CategoriesFragmentBinding> {
         // Do some...
     }
 

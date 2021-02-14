@@ -23,12 +23,12 @@ import android.os.Bundle
 import android.view.View
 import org.inu.club.R
 import org.inu.club.databinding.SearchFragmentBinding
-import org.potados.base.BaseFragment
+import org.potados.base.component.BaseFragment
 import org.potados.base.extension.setupToolbarForNavigation
 
 class SearchFragment : BaseFragment<SearchFragmentBinding>() {
 
-    override fun onCreateView(create: ViewCreator) = create<SearchFragmentBinding> {
+    override fun onCreateBinding(create: BindingCreator) = create<SearchFragmentBinding> {
         // Do some...
     }
 

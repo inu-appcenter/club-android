@@ -20,11 +20,11 @@
 package org.inu.club.feature.gatherings
 
 import org.inu.club.databinding.GatheringsFragmentBinding
-import org.potados.base.BaseFragment
+import org.potados.base.component.BaseFragment
 
 class GatheringsFragment : BaseFragment<GatheringsFragmentBinding>() {
 
-    override fun onCreateView(create: ViewCreator) = create<GatheringsFragmentBinding> {
+    override fun onCreateBinding(create: BindingCreator) = create<GatheringsFragmentBinding> {
         // Do some...
     }
 

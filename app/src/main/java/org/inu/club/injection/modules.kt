@@ -20,7 +20,10 @@
 package org.inu.club.injection
 
 import org.inu.club.common.navigation.Navigator
+import org.inu.club.config.Config
+import org.inu.club.retrofit.ClubNetworkService
 import org.koin.dsl.module
+import org.potados.base.infrastructure.retrofit.RetrofitFactory
 
 val myModules = module {
 
@@ -31,4 +34,12 @@ val myModules = module {
         )
     }
 
+    /** Network Service */
+    single {
+        RetrofitFactory.createNetworkService(
+            networkInterface = ClubNetworkService::class.java,
+            context = get(),
+            baseUrl = Config.baseUrl
+        )
+    }
 }

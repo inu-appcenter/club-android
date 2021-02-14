@@ -17,25 +17,30 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base.extension
+package org.potados.base.architecture
 
-import android.app.Activity
-import android.view.View
-
-/**
- * Sets status bar color to [android.R.attr.windowBackground].
- * Status bar UI color will turn black.
- */
-fun Activity.setStatusBarLight() {
-    window?.statusBarColor = resolveThemeColor(android.R.attr.windowBackground)
-    window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-}
+import org.potados.base.functional.Result
+import kotlinx.coroutines.*
+import timber.log.Timber
 
 /**
- * Sets status bar color to [android.R.attr.statusBarColor].
- *  * Status bar UI color will turn white.
+ * Abstract class for Use Case (Interactor in terms of Clean Architecture).
+ * Any use case in this application should implement this.
  */
-fun Activity.setStatusBarDark() {
-    window?.statusBarColor = resolveThemeColor(android.R.attr.statusBarColor)
-    window?.decorView?.systemUiVisibility = 0
+abstract class UseCase<in Params, out Type> {
+    abstract fun run(params: Params): Result<Type>
+
+    operator fun invoke(params: Params, onResult: (Result<Type>) -> Unit = {}) {
+
+        val className = this::class.java.name
+
+        val job = CoroutineScope(Dispatchers.IO).async {
+            Timber.v("UseCase $className running on ${Thread.currentThread().name}")
+            run(params)
+        }
+
+        MainScope().launch {
+            onResult(job.await())
+        }
+    }
 }

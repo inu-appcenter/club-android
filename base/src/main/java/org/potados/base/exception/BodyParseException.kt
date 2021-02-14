@@ -17,14 +17,9 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base
+package org.potados.base.exception
 
 /**
- * It helps children to be notified when network status changes.
- * They will override onNetworkStateChange, which will be called by their parents.
- *
- * [BaseFragment] and [BaseActivity] should implement this.
+ * Thrown when failed to parse json response body.
  */
-interface NetworkChangeObserver {
-    fun onNetworkStateChange(available: Boolean)
-}
+class BodyParseException(message: String = "") : Exception(message)

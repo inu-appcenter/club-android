@@ -17,25 +17,10 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.base.extension
-
-import android.app.Activity
-import android.view.View
+package org.potados.base.exception
 
 /**
- * Sets status bar color to [android.R.attr.windowBackground].
- * Status bar UI color will turn black.
+ * Thrown when unable to talk to the server.
+ * Caused by [java.io.IOException], which is thrown by [retrofit2.Call.execute].
  */
-fun Activity.setStatusBarLight() {
-    window?.statusBarColor = resolveThemeColor(android.R.attr.windowBackground)
-    window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
-}
-
-/**
- * Sets status bar color to [android.R.attr.statusBarColor].
- *  * Status bar UI color will turn white.
- */
-fun Activity.setStatusBarDark() {
-    window?.statusBarColor = resolveThemeColor(android.R.attr.statusBarColor)
-    window?.decorView?.systemUiVisibility = 0
-}
+class CannotTalkToServerException(message: String = "") : Exception(message)
