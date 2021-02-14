@@ -28,7 +28,7 @@ import org.potados.base.extension.setupToolbarForNavigation
 
 class SearchFragment : BaseFragment<SearchFragmentBinding>() {
 
-    override fun onCreateView(create: ViewCreator) = create<SearchFragmentBinding> {
+    override fun onCreateBinding(create: BindingCreator) = create<SearchFragmentBinding> {
         // Do some...
     }
 

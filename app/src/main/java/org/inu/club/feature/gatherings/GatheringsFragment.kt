@@ -24,7 +24,7 @@ import org.potados.base.component.BaseFragment
 
 class GatheringsFragment : BaseFragment<GatheringsFragmentBinding>() {
 
-    override fun onCreateView(create: ViewCreator) = create<GatheringsFragmentBinding> {
+    override fun onCreateBinding(create: BindingCreator) = create<GatheringsFragmentBinding> {
         // Do some...
     }
 

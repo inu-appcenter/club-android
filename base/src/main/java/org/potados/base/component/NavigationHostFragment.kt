@@ -31,7 +31,10 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.setupWithNavController
 
 /**
- * A base Fragment that will be a holder of each page of bottom navigation.
+ * A base Fragment that will be a holder of each navigation graph.
+ * Purpose of this [NavigationHostFragment] is to hold a
+ * [androidx.fragment.app.FragmentContainerView] inside and be in
+ * [androidx.viewpager.widget.ViewPager].
  */
 class NavigationHostFragment : Fragment() {
     private var layoutRes: Int = -1

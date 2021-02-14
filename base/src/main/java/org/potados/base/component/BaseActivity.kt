@@ -35,10 +35,13 @@ import org.potados.network.NetworkObserver
  */
 abstract class BaseActivity :
     AppCompatActivity(),
-    NetworkChangeObserver,
-    PermissionFighter {
+    PermissionFighter,
+    NetworkChangeObserver {
 
-    /** AppCompatActivity */
+    /****************************************************************
+     * Activity
+     ****************************************************************/
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -72,24 +75,10 @@ abstract class BaseActivity :
         }
     }
 
-    /** NetworkChangeObserver */
-    protected fun isOnline() = NetworkObserver.isOnline
+    /****************************************************************
+     * PermissionFighter
+     ****************************************************************/
 
-    private fun observeNetworkStateChange(isThisFirstTimeCreated: Boolean) {
-        if (isThisFirstTimeCreated) {
-            onNetworkStateChange(isOnline())
-        }
-
-        observe(NetworkObserver.networkChangeEvent) {
-            it?.let(::onNetworkStateChange)
-        }
-    }
-
-    override fun onNetworkStateChange(available: Boolean) {
-        // Make your implementation here.
-    }
-
-    /** PermissionFighter */
     override val requiredPermissions: Array<String> = arrayOf()
 
     override fun onAllPermissionsGranted() {}
@@ -116,7 +105,27 @@ abstract class BaseActivity :
         }
     }
 
+    /****************************************************************
+     * NetworkChangeObserver
+     ****************************************************************/
+
+    protected fun isOnline() = NetworkObserver.isOnline
+
+    private fun observeNetworkStateChange(isThisFirstTimeCreated: Boolean) {
+        if (isThisFirstTimeCreated) {
+            onNetworkStateChange(isOnline())
+        }
+
+        observe(NetworkObserver.networkChangeEvent) {
+            it?.let(::onNetworkStateChange)
+        }
+    }
+
+    override fun onNetworkStateChange(available: Boolean) {
+        // Make your implementation here.
+    }
+
     companion object {
-        private const val REQUEST_CODE_PERMISSIONS = 10
+        private const val REQUEST_CODE_PERMISSIONS = 990211
     }
 }

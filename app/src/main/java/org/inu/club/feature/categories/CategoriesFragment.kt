@@ -28,7 +28,7 @@ import org.potados.base.extension.setupToolbarForNavigation
 
 class CategoriesFragment : BaseFragment<CategoriesFragmentBinding>() {
 
-    override fun onCreateView(create: ViewCreator) = create<CategoriesFragmentBinding> {
+    override fun onCreateBinding(create: BindingCreator) = create<CategoriesFragmentBinding> {
         // Do some...
     }
 

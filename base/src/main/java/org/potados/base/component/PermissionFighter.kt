@@ -19,6 +19,9 @@
 
 package org.potados.base.component
 
+/**
+ * It helps acquiring permission.
+ */
 interface PermissionFighter {
     val requiredPermissions: Array<String>
 

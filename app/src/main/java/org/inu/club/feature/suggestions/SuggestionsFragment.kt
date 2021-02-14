@@ -28,7 +28,7 @@ import org.potados.base.extension.setupToolbarForNavigation
 
 class SuggestionsFragment : BaseFragment<SuggestionsFragmentBinding>() {
 
-    override fun onCreateView(create: ViewCreator) = create<SuggestionsFragmentBinding> {
+    override fun onCreateBinding(create: BindingCreator) = create<SuggestionsFragmentBinding> {
         // Do some...
     }
 

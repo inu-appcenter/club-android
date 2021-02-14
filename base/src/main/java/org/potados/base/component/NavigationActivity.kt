@@ -32,7 +32,8 @@ import org.potados.base.widget.NonSwipingViewPager
 import java.util.*
 
 /**
- * A base Activity that acts as a host of bottom navigation.
+ * A base Activity that acts as a host of BottomNavigation.
+ * It is useful when each tab should sustain separated backstacks.
  *
  * Code flows follow steps below:
  *
@@ -49,6 +50,11 @@ import java.util.*
  *   5. selectTab() called.
  *   6. onNavigationItemSelected() triggered.
  *   7. The ViewPager is already set to a new position(at step 4), so do nothing!
+ *
+ * As you can see [here](https://github.com/android/architecture-components-samples/tree/master/NavigationAdvancedSample),
+ * Google supports an example for this case.
+ * However, it opens a fragment transaction and detach/attach fragments on EVERY TAB SELECTION,
+ * which slows down UI seriously.
  */
 abstract class NavigationActivity :
     BaseActivity(),
@@ -57,14 +63,17 @@ abstract class NavigationActivity :
 
     private val backStack = BackStack<Int>()
 
-    abstract val fragmentArguments: List<NavigationHostFragment.Arguments>
+    private lateinit var mainPager: NonSwipingViewPager
+    private lateinit var bottomNavigation: BottomNavigationView
+
+    /**
+     * Children must implement these.
+     */
     abstract val menuRes: Int
     abstract val layoutRes: Int
     abstract val mainPagerRes: Int
     abstract val bottomNavRes: Int
-
-    private lateinit var mainPager: NonSwipingViewPager
-    private lateinit var bottomNavigation: BottomNavigationView
+    abstract val fragmentArguments: List<NavigationHostFragment.Arguments>
 
     /**
      * For children.
@@ -88,6 +97,10 @@ abstract class NavigationActivity :
      * Override to modify menu.
      */
     protected open fun onInflatedBottomMenu(menu: Menu) {}
+
+    /****************************************************************
+     * Activity
+     ****************************************************************/
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -115,6 +128,20 @@ abstract class NavigationActivity :
         }
     }
 
+    private fun initBottomNavigation() {
+        bottomNavigation = findViewById(bottomNavRes)
+
+        with(bottomNavigation) {
+            menu.clear()
+            inflateMenu(menuRes)
+
+            onInflatedBottomMenu(menu)
+
+            setOnNavigationItemSelectedListener(this@NavigationActivity)
+            setOnNavigationItemReselectedListener(this@NavigationActivity)
+        }
+    }
+
     private fun checkDeepLink() {
         getAllFragments().forEachIndexed { position, fragment ->
             val hasDeepLink = fragment.handleDeepLink(intent)
@@ -132,20 +159,6 @@ abstract class NavigationActivity :
             }.map {
                 it as NavigationHostFragment
             }
-
-    private fun initBottomNavigation() {
-        bottomNavigation = findViewById(bottomNavRes)
-
-        with(bottomNavigation) {
-            menu.clear()
-            inflateMenu(menuRes)
-
-            onInflatedBottomMenu(menu)
-
-            setOnNavigationItemSelectedListener(this@NavigationActivity)
-            setOnNavigationItemReselectedListener(this@NavigationActivity)
-        }
-    }
 
     override fun onSaveInstanceState(outState: Bundle) {
         super.onSaveInstanceState(outState)
@@ -179,7 +192,7 @@ abstract class NavigationActivity :
     }
 
     private fun popFromBackStack() {
-        val popped = backStack.popOrNull() ?: return
+        val popped: Int = backStack.popOrNull() ?: return
 
         // Move the ViewPager first.
         setViewPagerItem(popped)
@@ -189,7 +202,10 @@ abstract class NavigationActivity :
         selectTab(popped)
     }
 
-    /** BottomNavigation handlers */
+    /****************************************************************
+     * BottomNavigation handlers
+     ****************************************************************/
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         if (viewPagerAlreadyMoved(item)) {
             // Triggered by onBackPressed()
@@ -217,10 +233,12 @@ abstract class NavigationActivity :
         backStack.placeOnTop(currentPosition)
     }
 
-    override fun onNavigationItemReselected(item: MenuItem) =
-        getHostFragmentByTabItem(item)?.popToRoot() ?: Unit
+    override fun onNavigationItemReselected(item: MenuItem) = getHostFragmentByTabItem(item)?.popToRoot() ?: Unit
 
-    /** Setting BottomNavigation/ViewPager */
+    /****************************************************************
+     * Setting BottomNavigation/ViewPager
+     ****************************************************************/
+
     private fun selectTab(position: Int) {
         val menuItem = getMenuItemByPosition(position)
 
@@ -247,7 +265,10 @@ abstract class NavigationActivity :
     private fun setViewPagerItemByMenuItem(item: MenuItem) =
         setViewPagerItem(getPositionByMenuItem(item))
 
-    /** Getting position/MenuItem/Fragment */
+    /****************************************************************
+     * Getting position/MenuItem/Fragment
+     ****************************************************************/
+
     private fun getPositionByMenuItem(item: MenuItem) = fragmentArguments.indexOfFirst { it.tabItemId == item.itemId }
     private fun getMenuItemByPosition(position: Int) = bottomNavigation.menu[position]
 

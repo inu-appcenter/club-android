@@ -20,7 +20,6 @@
 package org.potados.base.component
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -30,66 +29,48 @@ import org.potados.base.extension.observe
 import org.potados.network.NetworkObserver
 import timber.log.Timber
 
-abstract class BaseFragment<T: ViewDataBinding> : BindingOwner<T>, Fragment(),
+/**
+ * A base Fragment that:
+ * - provides shorthanded view creating
+ * - listens for network changes
+ */
+abstract class BaseFragment<T: ViewDataBinding> :
+    Fragment(),
+    BindingOwner<T>,
     NetworkChangeObserver {
 
-    /** BindingOwner */
+    /****************************************************************
+     * BindingOwner
+     ****************************************************************/
+
     override var binding: T? = null
 
-    /** Fragment */
+    /****************************************************************
+     * Fragment
+     ****************************************************************/
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         observeNetworkStateChange(savedInstanceState == null)
     }
 
+    /**
+     * See [onCreateBinding].
+     */
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ) = onCreateView(ViewCreator(this, inflater, container, ::setBindingIfPossible))
-        ?: super.onCreateView(inflater, container, savedInstanceState)
+    ) = onCreateBinding(BindingCreator(this, inflater, container))
+        .also { binding = it }
+        .root
 
-    private fun setBindingIfPossible(unknownBinding: ViewDataBinding?) {
-        unknownBinding ?: return
-
-        @Suppress("UNCHECKED_CAST")
-        val casted = unknownBinding as? T
-
-        if (casted == null) {
-            Timber.e("Wrong binding type!!")
-            return
-        }
-
-        binding = casted
-    }
-
-    protected open fun onCreateView(create: ViewCreator): View? = null
-
-    class ViewCreator(
-        val fragment: Fragment,
-        val inflater: LayoutInflater,
-        val container: ViewGroup?,
-        val onFinishBinding: (ViewDataBinding) -> Unit
-    ) {
-        inline operator fun <reified ReifiedT: ViewDataBinding> invoke(also: ReifiedT.() -> Unit = {}) =
-            createView(also)
-
-        inline fun <reified ReifiedT: ViewDataBinding> createView(also: ReifiedT.() -> Unit = {}): View {
-            val inflateMethod = ReifiedT::class.java.getMethod(
-                "inflate",
-                LayoutInflater::class.java,
-                ViewGroup::class.java,
-                Boolean::class.java
-            )
-
-            return (inflateMethod.invoke(null, inflater, container, false) as ReifiedT)
-                .apply { lifecycleOwner = fragment }
-                .apply { onFinishBinding(this) }
-                .apply { also(this) }
-                .root
-        }
-    }
+    /**
+     * User can choose to override [onCreateView] or this method [onCreateBinding].
+     * This method helps creating view easily.
+     */
+    abstract fun onCreateBinding(create: BindingCreator): T
 
     override fun onDestroyView() {
         super.onDestroyView()
@@ -97,8 +78,39 @@ abstract class BaseFragment<T: ViewDataBinding> : BindingOwner<T>, Fragment(),
         binding = null
     }
 
-    /** NetworkChangeObserver */
-    private fun isOnline() = NetworkObserver.isOnline
+    /**
+     * This wraps view creating code.
+     * Invoke a BindingCreator instance to create a ViewDataBinding instance.
+     */
+    inner class BindingCreator(
+        val fragment: Fragment,
+        val inflater: LayoutInflater,
+        val container: ViewGroup?
+    ) {
+        inline operator fun <reified ReifiedT: ViewDataBinding> invoke(also: ReifiedT.() -> Unit = {}) =
+            createView(also)
+
+        inline fun <reified ReifiedT: ViewDataBinding> createView(also: ReifiedT.() -> Unit = {}): T {
+            val inflateMethod = ReifiedT::class.java.getMethod(
+                "inflate",
+                LayoutInflater::class.java,
+                ViewGroup::class.java,
+                Boolean::class.java
+            )
+
+            @Suppress("UNCHECKED_CAST")
+            return (inflateMethod.invoke(null, inflater, container, false) as ReifiedT)
+                .apply { lifecycleOwner = fragment }
+                .apply { also(this) } as? T
+                ?: throw Exception("Type mismatch! Please check the generic parameters passed to the BindingCreator and BaseFragment. They must be equal.")
+        }
+    }
+
+    /****************************************************************
+     * NetworkChangeObserver
+     ****************************************************************/
+
+    protected fun isOnline() = NetworkObserver.isOnline
 
     private fun observeNetworkStateChange(isThisFirstTimeCreated: Boolean) {
         if (isThisFirstTimeCreated) {
@@ -113,11 +125,4 @@ abstract class BaseFragment<T: ViewDataBinding> : BindingOwner<T>, Fragment(),
     override fun onNetworkStateChange(available: Boolean) {
         // Make your implementation here.
     }
-
-    @PublishedApi
-    internal var accessBinding: T?
-        get() = binding
-        set(value) {
-            binding = value
-        }
 }

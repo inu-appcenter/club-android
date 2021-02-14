@@ -24,7 +24,7 @@ import org.potados.base.component.BaseFragment
 
 class TodayFragment : BaseFragment<TodayFragmentBinding>() {
 
-    override fun onCreateView(create: ViewCreator) = create<TodayFragmentBinding> {
+    override fun onCreateBinding(create: BindingCreator) = create<TodayFragmentBinding> {
         // Do some...
     }
 

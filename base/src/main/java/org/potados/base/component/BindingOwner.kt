@@ -19,6 +19,11 @@
 
 package org.potados.base.component
 
-interface BindingOwner<T> {
+import androidx.databinding.ViewDataBinding
+
+/**
+ * An interface that indicates the child has a data binding.
+ */
+interface BindingOwner<T: ViewDataBinding> {
     var binding: T?
 }
