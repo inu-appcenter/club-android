@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.injection
+package org.potados.base.infrastructure.retrofit
 
 import android.content.Context
 import android.content.pm.PackageManager
@@ -28,14 +28,33 @@ import com.franmontiel.persistentcookiejar.persistence.SharedPrefsCookiePersisto
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
-import org.inu.club.config.Config
-import org.inu.club.retrofit.ClubNetworkService
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 
-class RetrofitFactory {
+object RetrofitFactory {
+    fun <T> createNetworkService(networkInterface: Class<T>, context: Context, baseUrl: String): T {
+        val cookieJar = PersistentCookieJar(
+            SetCookieCache(),
+            SharedPrefsCookiePersistor(context)
+        )
 
-    // Original at https://jitpack.io/#danielceinos/Cooper
+        val okHttpClient = OkHttpClient.Builder()
+            .cookieJar(cookieJar)
+            .addInterceptor(CooperInterceptor(context)) // Set user agent
+            .build()
+
+        val builder = Retrofit.Builder()
+
+        val retrofit = builder
+            .baseUrl(baseUrl)
+            .addConverterFactory(GsonConverterFactory.create())
+            .client(okHttpClient)
+            .build()
+
+        return retrofit.create(networkInterface)
+    }
+
+    // Original from https://jitpack.io/#danielceinos/Cooper
     class CooperInterceptor(private val context: Context) : Interceptor {
 
         private val userAgent: String by lazy {
@@ -67,34 +86,11 @@ class RetrofitFactory {
                 val version = Build.VERSION.SDK_INT
                 val versionRelease = Build.VERSION.RELEASE
 
-                val installerName = getInstallerPackageName(context.packageName) ?: "StandAloneInstall"
+                val installerName =
+                    getInstallerPackageName(context.packageName) ?: "StandAloneInstall"
 
                 return "$appName/$versionName($versionCode); $installerName; $manufacturer; $model; SDK $version; Android $versionRelease"
             }
-        }
-    }
-
-    companion object {
-
-        fun createNetworkService(context: Context): ClubNetworkService {
-            val cookieJar = PersistentCookieJar(
-                SetCookieCache(),
-                SharedPrefsCookiePersistor(context)
-            )
-            val okHttpClient = OkHttpClient.Builder()
-                .cookieJar(cookieJar)
-                .addInterceptor(CooperInterceptor(context)) // Set user agent
-                .build()
-
-            val builder = Retrofit.Builder()
-
-            val retrofit = builder
-                .baseUrl(Config.baseUrl)
-                .addConverterFactory(GsonConverterFactory.create())
-                .client(okHttpClient)
-                .build()
-
-            return retrofit.create(ClubNetworkService::class.java)
         }
     }
 }
