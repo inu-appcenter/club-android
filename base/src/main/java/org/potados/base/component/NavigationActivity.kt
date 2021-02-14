@@ -207,7 +207,7 @@ abstract class NavigationActivity :
      ****************************************************************/
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
-        if (viewPagerAlreadyMoved(item)) {
+        if (isViewPagerAlreadyMoved(item)) {
             // Triggered by onBackPressed()
         } else {
             // Triggered by user's tap on BottomNavigation.
@@ -220,7 +220,7 @@ abstract class NavigationActivity :
         return true
     }
 
-    private fun viewPagerAlreadyMoved(item: MenuItem): Boolean {
+    private fun isViewPagerAlreadyMoved(item: MenuItem): Boolean {
         val currentPosition = mainPager.currentItem
         val newPosition = getPositionByMenuItem(item)
 
@@ -247,7 +247,7 @@ abstract class NavigationActivity :
 
     private fun selectTabByMenuItem(item: MenuItem) {
         /**
-         * Setting selectedItemId behave same as tapping on an item.
+         * Setting selectedItemId behaves as same as tapping on an item.
          * It will trigger onNavigationItemSelected or onNavigationItemReselected.
          *
          * Event flow:

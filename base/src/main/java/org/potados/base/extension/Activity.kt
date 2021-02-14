@@ -22,12 +22,20 @@ package org.potados.base.extension
 import android.app.Activity
 import android.view.View
 
-fun Activity.setToolbarLight() {
+/**
+ * Sets status bar color to [android.R.attr.windowBackground].
+ * Status bar UI color will turn black.
+ */
+fun Activity.setStatusBarLight() {
     window?.statusBarColor = resolveThemeColor(android.R.attr.windowBackground)
     window?.decorView?.systemUiVisibility = View.SYSTEM_UI_FLAG_LIGHT_STATUS_BAR
 }
 
-fun Activity.setToolbarDark() {
+/**
+ * Sets status bar color to [android.R.attr.statusBarColor].
+ *  * Status bar UI color will turn white.
+ */
+fun Activity.setStatusBarDark() {
     window?.statusBarColor = resolveThemeColor(android.R.attr.statusBarColor)
     window?.decorView?.systemUiVisibility = 0
 }

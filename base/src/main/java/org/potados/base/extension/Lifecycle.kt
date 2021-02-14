@@ -17,13 +17,6 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-/**
- * Lifecycle.kt
- *
- * Credits to Fernando Cejas.
- * https://github.com/android10/Android-CleanArchitecture-Kotlin
- */
-
 package org.potados.base.extension
 
 import androidx.lifecycle.LifecycleOwner

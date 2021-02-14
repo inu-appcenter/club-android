@@ -25,8 +25,8 @@ import android.view.MenuItem
 import org.inu.club.R
 import org.potados.base.component.NavigationActivity
 import org.potados.base.component.NavigationHostFragment
-import org.potados.base.extension.setToolbarDark
-import org.potados.base.extension.setToolbarLight
+import org.potados.base.extension.setStatusBarDark
+import org.potados.base.extension.setStatusBarLight
 
 class MainActivity : NavigationActivity() {
 
@@ -79,10 +79,10 @@ class MainActivity : NavigationActivity() {
     )
 
     override fun onTabSelected(item: MenuItem) {
-        // Color of Status bar and toolbar varies.
+        // Color of status bar and toolbar varies.
         when (item.itemId) {
-            R.id.tab_today -> setToolbarLight()
-            else -> setToolbarDark()
+            R.id.tab_today -> setStatusBarLight()
+            else -> setStatusBarDark()
         }
     }
 
