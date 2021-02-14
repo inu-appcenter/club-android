@@ -91,6 +91,9 @@ dependencies {
     /** Cookie jar */
     implementation 'com.github.franmontiel:PersistentCookieJar:1.0.1'
 
+    /** Shared preference */
+    implementation 'androidx.preference:preference-ktx:1.1.1'
+
     /** Tests */
     testImplementation 'junit:junit:4.13.1'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
