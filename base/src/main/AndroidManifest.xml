@@ -18,7 +18,9 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.potados.base">
+<!-- This module 'network' module and other useful things including
+     base components, extensions, exceptions, utilities, widgets. -->
+
+<manifest package="org.potados.base">
 
 </manifest>
