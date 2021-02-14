@@ -18,12 +18,12 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <color name="white">#FFFFFF</color>
-    <color name="almostWhite">#FAFAFA</color>
+    <color name="almostWhite" tools:keep="@color/almostWhite">#FAFAFA</color>
     <color name="lightGray">#DDDDDD</color>
-    <color name="gray">#949494</color>
+    <color name="gray" tools:keep="@color/gray">#949494</color>
     <color name="thinDark">#1f000000</color>
     <color name="orange">#FB9C30</color>
     <color name="themeBlue">#6D8CF0</color>
@@ -38,6 +38,6 @@
     <color name="separatorLight">@color/lightGray</color>
 
     <color name="backgroundLight">@color/white</color>
-    <color name="backgroundLightGray">@color/almostWhite</color>
+    <color name="backgroundLightGray" tools:keep="@color/backgroundLightGray">@color/almostWhite</color>
 
 </resources>

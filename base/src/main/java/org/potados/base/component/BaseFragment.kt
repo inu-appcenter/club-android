@@ -21,13 +21,11 @@ package org.potados.base.component
 
 import android.os.Bundle
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import org.potados.base.extension.observe
 import org.potados.network.NetworkObserver
-import timber.log.Timber
 
 /**
  * A base Fragment that:
