@@ -18,7 +18,7 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <!-- BottomNavigation -->
     <style name="BottomNavigation" parent="HorizontallyFullSizedView">
@@ -45,7 +45,7 @@
     </style>
 
     <!-- Custom toolbar -->
-    <style name="HomeToolbar" parent="Toolbar">
+    <style name="HomeToolbar" parent="Toolbar" tools:keep="@style/HomeToolbar">
         <item name="android:background">?android:attr/windowBackground</item>
     </style>
 

@@ -18,26 +18,26 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
-    <dimen name="textBig">24sp</dimen>
+    <dimen name="textBig" tools:keep="@dimen/textBig">24sp</dimen>
     <dimen name="textToolbar">20sp</dimen>
-    <dimen name="textTitle">18sp</dimen>
-    <dimen name="textPrimary">16sp</dimen>
+    <dimen name="textTitle" tools:keep="@dimen/textTitle">18sp</dimen>
+    <dimen name="textPrimary" tools:keep="@dimen/textPrimary">16sp</dimen>
     <dimen name="textSecondary">14sp</dimen>
-    <dimen name="textTertiary">12sp</dimen>
+    <dimen name="textTertiary" tools:keep="@dimen/textTertiary">12sp</dimen>
 
-    <dimen name="close_space">4dp</dimen>
-    <dimen name="near_space">8dp</dimen>
+    <dimen name="close_space" tools:keep="@dimen/close_space">4dp</dimen>
+    <dimen name="near_space" tools:keep="@dimen/near_space">8dp</dimen>
     <dimen name="mid_space">12dp</dimen>
     <dimen name="far_space">16dp</dimen>
-    <dimen name="distant_space">18dp</dimen>
-    <dimen name="fell_apart_space">22dp</dimen>
+    <dimen name="distant_space" tools:keep="@dimen/distant_space">18dp</dimen>
+    <dimen name="fell_apart_space" tools:keep="@dimen/fell_apart_space">22dp</dimen>
 
     <!-- Toolbar height including status bar. -->
-    <dimen name="toolbarAndStatusBarHeight">80dp</dimen>
+    <dimen name="toolbarAndStatusBarHeight" tools:keep="@dimen/toolbarAndStatusBarHeight">80dp</dimen>
 
     <!-- Toolbar only height. -->
-    <dimen name="toolbarHeight">56dp</dimen>
+    <dimen name="toolbarHeight" tools:keep="@dimen/toolbarHeight">56dp</dimen>
 
 </resources>
