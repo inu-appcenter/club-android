@@ -26,12 +26,6 @@ import timber.log.Timber
 /**
  * Abstract class for Use Case (Interactor in terms of Clean Architecture).
  * Any use case in this application should implement this.
- *
- * 레이어에 진입하기 위한 DTO의 정의는 해당 레이어에 둡니다.
- * 예를 들어, UseCase(domain 레이어)의 파라미터(input port)는 해당 UseCase 근처에 둡니다.
- * 그리고 presentation 레이어에서 쓰는 view도 해당 레이어 안에 둡니다.
- *
- * 엔티티도 단일 책임 원칙을 준수해야 합니다. 엔티티 변경에 의해 다른 레이어까지 영향이 퍼지는 것은 좋지 않습니다.
  */
 abstract class UseCase<in Params, out Type> {
     abstract fun run(params: Params): Result<Type>
