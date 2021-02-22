@@ -19,19 +19,14 @@
 
 package org.inu.club.entity
 
-import org.inu.club.entity.base.AggregationRoot
 import org.inu.club.entity.base.Entity
 
 /**
- * 동아리.
+ * 카테고리.
+ *
+ * 이 카테고리는 동아리와 소모임에서 모두 사용됩니다.
  */
-data class Club(
+data class Category(
         val id: Int,
-        val name: String,
-        val category: Category,
-        val location: String,
-        val representative: String,
-        val summary: String,
-        val images: List<Image>,
-        val application: ClubApplication
-) : Entity, AggregationRoot
+        val name: String
+) : Entity

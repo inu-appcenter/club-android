@@ -19,19 +19,22 @@
 
 package org.inu.club.entity
 
-import org.inu.club.entity.base.AggregationRoot
 import org.inu.club.entity.base.Entity
 
 /**
- * 동아리.
+ * 소모임.
  */
-data class Club(
+data class Gatherings(
         val id: Int,
-        val name: String,
-        val category: Category,
-        val location: String,
-        val representative: String,
-        val summary: String,
-        val images: List<Image>,
-        val application: ClubApplication
-) : Entity, AggregationRoot
+        val host: String,
+        val title: String,
+        val body: String,
+        val application: GatheringsApplication,
+        val numberOfPersonsJoined: Int,
+        val numberOfPersonsToInvite: Int
+        ) : Entity {
+
+    fun isFull(): Boolean {
+        return numberOfPersonsJoined >= numberOfPersonsToInvite
+    }
+}

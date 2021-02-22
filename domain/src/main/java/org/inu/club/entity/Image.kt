@@ -19,6 +19,11 @@
 
 package org.inu.club.entity
 
+import org.inu.club.entity.base.ValueObject
+
+/**
+ * 이미지.
+ */
 data class Image(
         val url: String
-)
+) : ValueObject

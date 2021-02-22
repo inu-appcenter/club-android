@@ -19,19 +19,11 @@
 
 package org.inu.club.entity
 
-import org.inu.club.entity.base.AggregationRoot
-import org.inu.club.entity.base.Entity
+import org.inu.club.entity.base.ValueObject
 
 /**
- * 동아리.
+ * 소모임 참여 정보.
  */
-data class Club(
-        val id: Int,
-        val name: String,
-        val category: Category,
-        val location: String,
-        val representative: String,
-        val summary: String,
-        val images: List<Image>,
-        val application: ClubApplication
-) : Entity, AggregationRoot
+data class GatheringsApplication(
+        val openChatUrl: String
+) : ValueObject

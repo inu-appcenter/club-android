@@ -19,10 +19,12 @@
 
 package org.inu.club.entity
 
+import org.inu.club.entity.base.ValueObject
+
 /**
- * 동아리 지원 정보
+ * 동아리 지원 정보.
  */
 data class ClubApplication(
         val openChatUrl: String,
         val websiteUrl: String
-)
+) : ValueObject

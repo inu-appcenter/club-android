@@ -1,4 +1,4 @@
-/**
+ /**
  * This file is part of INU Club.
  *
  * Copyright (C) 2021 INU Global App Center <potados99@gmail.com>
@@ -17,21 +17,9 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.entity
-
-import org.inu.club.entity.base.AggregationRoot
-import org.inu.club.entity.base.Entity
+package org.inu.club.entity.base
 
 /**
- * 동아리.
+ * 도메인 주도 설계(DDD)에서 엔티티를 나타냅니다.
  */
-data class Club(
-        val id: Int,
-        val name: String,
-        val category: Category,
-        val location: String,
-        val representative: String,
-        val summary: String,
-        val images: List<Image>,
-        val application: ClubApplication
-) : Entity, AggregationRoot
+interface Entity

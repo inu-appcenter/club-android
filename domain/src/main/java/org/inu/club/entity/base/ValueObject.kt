@@ -17,21 +17,12 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.entity
-
-import org.inu.club.entity.base.AggregationRoot
-import org.inu.club.entity.base.Entity
+package org.inu.club.entity.base
 
 /**
- * 동아리.
+ * 도메인 주도 설계(DDD)에서 값 객체를 나타냅니다.
+ *
+ * [Entity]와는 w다릅니다. [이 글](https://enterprisecraftsmanship.com/posts/entity-vs-value-object-the-ultimate-list-of-differences/)에 잘 정리되어 있습니다.
  */
-data class Club(
-        val id: Int,
-        val name: String,
-        val category: Category,
-        val location: String,
-        val representative: String,
-        val summary: String,
-        val images: List<Image>,
-        val application: ClubApplication
-) : Entity, AggregationRoot
+interface ValueObject {
+}
