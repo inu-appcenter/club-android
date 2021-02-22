@@ -29,12 +29,17 @@ data class Gatherings(
         val host: String,
         val title: String,
         val body: String,
-        val application: GatheringsApplication,
+        val participationInfo: GatheringsParticipationInfo,
         val numberOfPersonsJoined: Int,
-        val numberOfPersonsToInvite: Int
-        ) : Entity {
+        val numberOfPersonsToInvite: Int,
+        val comments: List<Comment>
+) : Entity {
 
-    fun isFull(): Boolean {
+    fun canWeJoinHere(): Boolean {
+        return !isFull()
+    }
+
+    private fun isFull(): Boolean {
         return numberOfPersonsJoined >= numberOfPersonsToInvite
     }
 }

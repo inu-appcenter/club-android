@@ -19,19 +19,12 @@
 
 package org.inu.club.entity
 
-import org.inu.club.entity.base.AggregationRoot
 import org.inu.club.entity.base.Entity
 
 /**
- * 동아리.
+ * 사용자.
  */
-data class Club(
+data class User(
         val id: Int,
-        val name: String,
-        val category: Category,
-        val location: String,
-        val representative: String,
-        val summary: String,
-        val images: List<Image>,
-        val applicationInfo: ClubApplicationInfo
-) : Entity, AggregationRoot
+        val nickname: String,
+) : Entity

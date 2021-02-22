@@ -19,12 +19,25 @@
 
 package org.inu.club.entity
 
-import org.inu.club.entity.base.ValueObject
+import org.inu.club.entity.base.Entity
 
 /**
- * 동아리 지원 정보.
+ * 소모임 댓글.
  */
-data class ClubApplication(
-        val openChatUrl: String,
-        val websiteUrl: String
-) : ValueObject
+data class Comment(
+        val id: Int,
+        val content: String,
+        val date: Long,
+        val user: User,
+        val replying: Comment?,
+        val replies: List<Comment>
+) : Entity {
+
+    fun canWeAddReply(): Boolean {
+        /**
+         * 대댓글은 1단계만 허용합니다.
+         * 이 댓글이 대댓글이 아니어야(=reply하는 댓글이 없어야) 이 댓글에 대댓글을 달 수 있습니다.
+         */
+        return replying == null
+    }
+}
