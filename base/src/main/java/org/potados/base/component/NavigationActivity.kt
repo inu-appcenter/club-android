@@ -54,7 +54,7 @@ import java.util.*
  * As you can see [here](https://github.com/android/architecture-components-samples/tree/master/NavigationAdvancedSample),
  * Google supports an example for this case.
  * However, it opens a fragment transaction and detach/attach fragments on EVERY TAB SELECTION,
- * which slows down UI seriously.
+ * which slows down UI significantly.
  */
 abstract class NavigationActivity :
     BaseActivity(),
