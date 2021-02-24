@@ -25,6 +25,6 @@ import org.inu.club.entity.base.Entity
  * 사용자.
  */
 data class User(
-        val id: Int,
-        val nickname: String,
+    val id: Int,
+    val nickname: String,
 ) : Entity

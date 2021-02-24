@@ -27,6 +27,6 @@ import org.inu.club.entity.base.Entity
  * 이 카테고리는 동아리와 소모임에서 모두 사용됩니다.
  */
 data class Category(
-        val id: Int,
-        val name: String
+    val id: Int,
+    val name: String
 ) : Entity

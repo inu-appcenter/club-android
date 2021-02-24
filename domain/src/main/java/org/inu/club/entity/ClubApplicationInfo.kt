@@ -25,6 +25,6 @@ import org.inu.club.entity.base.ValueObject
  * 동아리 지원 정보.
  */
 data class ClubApplicationInfo(
-        val openChatUrl: String,
-        val websiteUrl: String
+    val openChatUrl: String,
+    val websiteUrl: String
 ) : ValueObject

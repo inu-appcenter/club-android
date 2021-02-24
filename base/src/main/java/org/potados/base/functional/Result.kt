@@ -29,7 +29,7 @@ sealed class Result<out T> {
     data class Success<out T>(val data: T) : Result<T>()
     data class Error(val exception: Exception) : Result<Nothing>()
 
-    val succeeded get() = this is Success && data != null
+    val succeeded get() = this is Success
 
     fun <R> onSuccess(body: (T) -> R): Result<T> {
         if (this is Success) {

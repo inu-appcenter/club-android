@@ -19,11 +19,20 @@
 
 package org.inu.club.entity
 
-import org.inu.club.entity.base.ValueObject
+import org.inu.club.entity.base.Entity
 
 /**
- * 이미지.
+ * 동아리 추천입니다.
+ *
+ * 아래와 같은 형태를 가집니다:
+ * ClubSuggestions {
+ *     theme: "새내기를 위한 추천",
+ *     clubs: [동아리1, 동아리2]
+ * }
+ *
+ * "인기", "추천"과 같이 추천 동아리를 분류하는 기준은 이 엔티티 안에 나타나지 않습니다.
  */
-data class Image(
-    val url: String
-) : ValueObject
+data class ClubSuggestions(
+    val theme: String,
+    val clubs: List<Club>
+) : Entity

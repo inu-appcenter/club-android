@@ -25,12 +25,12 @@ import org.inu.club.entity.base.Entity
  * 소모임 댓글.
  */
 data class Comment(
-        val id: Int,
-        val content: String,
-        val date: Long,
-        val user: User,
-        val replying: Comment?,
-        val replies: List<Comment>
+    val id: Int,
+    val content: String,
+    val date: Long,
+    val user: User,
+    val replying: Comment?,
+    val replies: List<Comment>
 ) : Entity {
 
     fun canWeAddReply(): Boolean {

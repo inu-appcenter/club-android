@@ -25,9 +25,9 @@ import org.inu.club.entity.base.Entity
  * 동아리 투데이.
  */
 data class ClubToday(
-        val id: Int,
-        val headerImage: Image,
-        val title: String,
-        val body: String,
-        val club: Club
+    val id: Int,
+    val headerImage: Image,
+    val title: String,
+    val body: String,
+    val club: Club
 ) : Entity

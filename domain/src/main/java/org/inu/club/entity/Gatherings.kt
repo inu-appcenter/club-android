@@ -25,14 +25,14 @@ import org.inu.club.entity.base.Entity
  * 소모임.
  */
 data class Gatherings(
-        val id: Int,
-        val host: String,
-        val title: String,
-        val body: String,
-        val participationInfo: GatheringsParticipationInfo,
-        val numberOfPersonsJoined: Int,
-        val numberOfPersonsToInvite: Int,
-        val comments: List<Comment>
+    val id: Int,
+    val host: String,
+    val title: String,
+    val body: String,
+    val participationInfo: GatheringsParticipationInfo,
+    val numberOfPersonsJoined: Int,
+    val numberOfPersonsToInvite: Int,
+    val comments: List<Comment>
 ) : Entity {
 
     fun canWeJoinHere(): Boolean {

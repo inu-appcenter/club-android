@@ -31,7 +31,6 @@ abstract class UseCase<in Params, out Type> {
     abstract fun run(params: Params): Result<Type>
 
     operator fun invoke(params: Params, onResult: (Result<Type>) -> Unit = {}) {
-
         val className = this::class.java.name
 
         val job = CoroutineScope(Dispatchers.IO).async {
@@ -41,6 +40,15 @@ abstract class UseCase<in Params, out Type> {
 
         MainScope().launch {
             onResult(job.await())
+        }
+    }
+
+    /**
+     * Equivalent to [Unit] of Kotlin.
+     */
+    object None {
+        override fun toString(): String {
+            return "org.potados.base.architecture.UseCase.None"
         }
     }
 }
