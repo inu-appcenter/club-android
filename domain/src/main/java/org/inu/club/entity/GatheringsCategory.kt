@@ -22,25 +22,9 @@ package org.inu.club.entity
 import org.inu.club.entity.base.Entity
 
 /**
- * 소모임.
+ * 소모임 카테고리.
  */
-data class Gatherings(
+data class GatheringsCategory(
     val id: Int,
-    val host: String,
-    val category: GatheringsCategory,
-    val title: String,
-    val body: String,
-    val participationInfo: GatheringsParticipationInfo,
-    val numberOfPersonsJoined: Int,
-    val numberOfPersonsToInvite: Int,
-    val comments: List<Comment>
-) : Entity {
-
-    fun canWeJoinHere(): Boolean {
-        return !isFull()
-    }
-
-    private fun isFull(): Boolean {
-        return numberOfPersonsJoined >= numberOfPersonsToInvite
-    }
-}
+    val name: String
+) : Entity

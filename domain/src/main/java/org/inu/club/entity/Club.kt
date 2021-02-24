@@ -28,7 +28,7 @@ import org.inu.club.entity.base.Entity
 data class Club(
     val id: Int,
     val name: String,
-    val category: Category,
+    val category: ClubCategory,
     val location: String,
     val representative: String,
     val summary: String,

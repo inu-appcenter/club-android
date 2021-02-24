@@ -20,6 +20,7 @@
 package org.inu.club.repository
 
 import org.inu.club.entity.Club
+import org.inu.club.entity.ClubCategory
 import org.inu.club.entity.ClubSuggestions
 import org.inu.club.entity.ClubToday
 
@@ -28,6 +29,7 @@ interface ClubRepository {
     fun getClubsByCategory(categoryId: Int): List<Club>
     fun getClubsByKeyword(keyword: String): List<Club>
 
+    fun getAllCategories(): List<ClubCategory>
     fun getAllClubTodays(): List<ClubToday>
     fun getAllClubSuggestions(): Map<String, ClubSuggestions>
 }
