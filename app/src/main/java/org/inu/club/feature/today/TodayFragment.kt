@@ -20,25 +20,45 @@
 package org.inu.club.feature.today
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuInflater
+import android.view.MenuItem
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import org.inu.club.R
 import org.inu.club.databinding.TodayFragmentBinding
 import org.potados.base.component.BaseFragment
+import org.potados.base.extension.observeNotNull
+import org.potados.base.extension.setSupportActionBar
+import org.potados.base.extension.setupToolbarForNavigation
 import org.potados.base.extension.setupToolbarMenu
+import org.potados.base.util.Alert
 
 class TodayFragment : BaseFragment<TodayFragmentBinding>() {
 
     private val viewModel: TodayViewModel by viewModels()
 
     override fun onCreateBinding(create: BindingCreator) = create<TodayFragmentBinding> {
-        // Do some...
+        observeNotNull(viewModel.navigateEvent) {
+            findNavController().navigate(it)
+        }
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        inflater.inflate(R.menu.home_menu, menu)
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        viewModel.onClickOptionsMenu(item)
+        return true
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        setupToolbarMenu(R.id.toolbar, R.menu.home_menu) {
-            viewModel.onClickOptionsMenu(it)
-            true
-        }
+        setHasOptionsMenu(true)
+
+        setSupportActionBar(R.id.toolbar)
+        setupToolbarForNavigation(R.id.toolbar)
     }
 }

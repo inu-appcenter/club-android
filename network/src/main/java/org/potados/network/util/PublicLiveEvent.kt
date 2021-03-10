@@ -27,6 +27,11 @@ import java.util.*
 import java.util.concurrent.ConcurrentHashMap
 import java.util.concurrent.atomic.AtomicBoolean
 
+/**
+ * Similar to [androidx.lifecycle.LiveData].
+ * However, it does not trigger observer when starting observing:
+ * It only fires event when new value is set.
+ */
 class PublicLiveEvent<T> : MediatorLiveData<T?>() {
 
     private val observers = ConcurrentHashMap<LifecycleOwner, MutableSet<ObserverWrapper<in T?>>>()

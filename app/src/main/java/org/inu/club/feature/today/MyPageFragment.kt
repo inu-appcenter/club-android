@@ -19,28 +19,20 @@
 
 package org.inu.club.feature.today
 
-import android.view.MenuItem
+import android.os.Bundle
+import android.view.View
 import org.inu.club.R
-import org.potados.base.component.BaseViewModel
-import org.potados.network.util.SingleLiveEvent
+import org.inu.club.databinding.MyPageFragmentBinding
+import org.potados.base.component.BaseFragment
+import org.potados.base.extension.setupToolbarForNavigation
 
-class TodayViewModel : BaseViewModel() {
+class MyPageFragment : BaseFragment<MyPageFragmentBinding>() {
 
-    val navigateEvent = SingleLiveEvent<Int>()
+    override fun onCreateBinding(create: BindingCreator) = create<MyPageFragmentBinding> {
 
-    fun onClickOptionsMenu(item: MenuItem) {
-        when (item.itemId) {
-            R.id.menu_profile -> showProfile()
-            R.id.menu_notifications -> showNotifications()
-        }
     }
 
-    private fun showProfile() {
-        notify("하하 아직 안만들었어요")
-        navigateEvent.value = R.id.action_today_dest_to_my_page_dest
-    }
-
-    private fun showNotifications() {
-        notify("하하 아직이에요!")
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        setupToolbarForNavigation(R.id.toolbar)
     }
 }
