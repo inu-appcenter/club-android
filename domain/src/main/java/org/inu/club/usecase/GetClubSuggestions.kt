@@ -17,13 +17,21 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.entity
+package org.inu.club.usecase
 
-import org.inu.club.entity.base.ValueObject
+import org.inu.club.entity.ClubSuggestions
+import org.inu.club.repository.ClubRepository
+import org.potados.base.architecture.UseCase
+import org.potados.base.functional.Result
 
 /**
- * 이미지.
+ * 동아리 추천을 모두 가져옵니다.
  */
-data class Image(
-    val url: String
-) : ValueObject
+class GetClubSuggestions(
+    private val clubRepository: ClubRepository
+) : UseCase<UseCase.None, Map<String, ClubSuggestions>>() {
+
+    override fun run(params: None) = Result.of {
+        clubRepository.getAllClubSuggestions()
+    }
+}

@@ -26,12 +26,12 @@ import org.inu.club.entity.base.Entity
  * 동아리.
  */
 data class Club(
-        val id: Int,
-        val name: String,
-        val category: Category,
-        val location: String,
-        val representative: String,
-        val summary: String,
-        val images: List<Image>,
-        val applicationInfo: ClubApplicationInfo
+    val id: Int,
+    val name: String,
+    val category: ClubCategory,
+    val location: String,
+    val representative: String,
+    val summary: String,
+    val images: List<Image>,
+    val applicationInfo: ClubApplicationInfo
 ) : Entity, AggregationRoot

@@ -17,16 +17,21 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.entity
+package org.inu.club.usecase
 
-import org.inu.club.entity.base.Entity
+import org.inu.club.entity.ClubCategory
+import org.inu.club.repository.ClubRepository
+import org.potados.base.architecture.UseCase
+import org.potados.base.functional.Result
 
 /**
- * 카테고리.
- *
- * 이 카테고리는 동아리와 소모임에서 모두 사용됩니다.
+ * 동아리 카테고리를 모두 가져옵니다.
  */
-data class Category(
-        val id: Int,
-        val name: String
-) : Entity
+class GetClubCategories(
+    private val clubRepository: ClubRepository
+) : UseCase<UseCase.None, List<ClubCategory>>() {
+
+    override fun run(params: None) = Result.of {
+        clubRepository.getAllCategories()
+    }
+}

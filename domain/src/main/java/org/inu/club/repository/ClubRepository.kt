@@ -17,13 +17,19 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.entity
+package org.inu.club.repository
 
-import org.inu.club.entity.base.ValueObject
+import org.inu.club.entity.Club
+import org.inu.club.entity.ClubCategory
+import org.inu.club.entity.ClubSuggestions
+import org.inu.club.entity.ClubToday
 
-/**
- * 이미지.
- */
-data class Image(
-    val url: String
-) : ValueObject
+interface ClubRepository {
+    fun getAllClubs(): List<Club>
+    fun getClubsByCategory(categoryId: Int): List<Club>
+    fun getClubsByKeyword(keyword: String): List<Club>
+
+    fun getAllCategories(): List<ClubCategory>
+    fun getAllClubTodays(): List<ClubToday>
+    fun getAllClubSuggestions(): Map<String, ClubSuggestions>
+}

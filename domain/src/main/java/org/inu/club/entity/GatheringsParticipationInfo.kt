@@ -25,5 +25,5 @@ import org.inu.club.entity.base.ValueObject
  * 소모임 참여 정보.
  */
 data class GatheringsParticipationInfo(
-        val openChatUrl: String
+    val openChatUrl: String
 ) : ValueObject

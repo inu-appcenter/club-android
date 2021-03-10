@@ -19,11 +19,14 @@
 
 package org.inu.club.entity
 
-import org.inu.club.entity.base.ValueObject
+import org.inu.club.entity.base.Entity
 
 /**
- * 이미지.
+ * 동아리 카테고리.
  */
-data class Image(
-    val url: String
-) : ValueObject
+data class ClubCategory(
+    val id: Int,
+    val name: String,
+    val iconImage: Image,
+    val clubs: List<Club>
+) : Entity
