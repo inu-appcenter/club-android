@@ -39,7 +39,7 @@
         <item name="selectableItemBackground">@drawable/ripple</item>
 
         <item name="barBackground">@color/backgroundLight</item>
-        <item name="barTextColor">@color/textSecondary</item>
+        <item name="barTextColor">@drawable/bar_text_color</item>
         <item name="barIconColor">@drawable/bar_item_color</item>
 
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>

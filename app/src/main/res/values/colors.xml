@@ -38,6 +38,6 @@
     <color name="separatorLight">@color/lightGray</color>
 
     <color name="backgroundLight">@color/white</color>
-    <color name="backgroundLightGray" tools:keep="@color/backgroundLightGray">@color/almostWhite</color>
+    <color name="backgroundLightGray">@color/almostWhite</color>
 
 </resources>
