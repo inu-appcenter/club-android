@@ -19,26 +19,24 @@
 
 package org.inu.club.feature.today
 
-import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.viewModels
+import android.view.MenuItem
 import org.inu.club.R
-import org.inu.club.databinding.TodayFragmentBinding
-import org.potados.base.component.BaseFragment
-import org.potados.base.extension.setupToolbarMenu
+import org.potados.base.component.BaseViewModel
 
-class TodayFragment : BaseFragment<TodayFragmentBinding>() {
+class TodayViewModel : BaseViewModel() {
 
-    private val viewModel: TodayViewModel by viewModels()
-
-    override fun onCreateBinding(create: BindingCreator) = create<TodayFragmentBinding> {
-        // Do some...
+    fun onClickOptionsMenu(item: MenuItem) {
+        when (item.itemId) {
+            R.id.menu_profile -> showProfile()
+            R.id.menu_notifications -> showNotifications()
+        }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        setupToolbarMenu(R.id.toolbar, R.menu.home_menu) {
-            viewModel.onClickOptionsMenu(it)
-            true
-        }
+    private fun showProfile() {
+        notify("하하 아직 안만들었어요")
+    }
+
+    private fun showNotifications() {
+        notify("하하 아직이에요!")
     }
 }

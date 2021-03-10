@@ -18,31 +18,19 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/tab_today"
-        android:icon="@drawable/ic_tab_today"
-        android:title="@string/tab_today" />
+        android:id="@+id/menu_profile"
+        android:icon="@drawable/ic_profile"
+        android:title="@string/menu_my_page"
+        app:showAsAction="ifRoom"/>
 
     <item
-        android:id="@+id/tab_suggestions"
-        android:icon="@drawable/ic_tab_suggestions"
-        android:title="@string/tab_suggestions" />
-
-    <item
-        android:id="@+id/tab_search"
-        android:icon="@drawable/ic_tab_search"
-        android:title="@string/tab_search" />
-
-    <item
-        android:id="@+id/tab_categories"
-        android:icon="@drawable/ic_tab_categories"
-        android:title="@string/tab_categories" />
-
-    <item
-        android:id="@+id/tab_gatherings"
-        android:icon="@drawable/ic_tab_suggestions"
-        android:title="@string/tab_gatherings" />
+        android:id="@+id/menu_notifications"
+        android:icon="@drawable/ic_notification"
+        android:title="@string/menu_notifications"
+        app:showAsAction="ifRoom"/>
 
 </menu>

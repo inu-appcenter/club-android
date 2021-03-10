@@ -17,28 +17,27 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.today
+package org.potados.base.util
 
-import android.os.Bundle
-import android.view.View
-import androidx.fragment.app.viewModels
-import org.inu.club.R
-import org.inu.club.databinding.TodayFragmentBinding
-import org.potados.base.component.BaseFragment
-import org.potados.base.extension.setupToolbarMenu
+import android.content.Context
+import android.widget.Toast
+import androidx.annotation.StringRes
+import org.potados.base.android.ContextHolder
 
-class TodayFragment : BaseFragment<TodayFragmentBinding>() {
-
-    private val viewModel: TodayViewModel by viewModels()
-
-    override fun onCreateBinding(create: BindingCreator) = create<TodayFragmentBinding> {
-        // Do some...
+object Alert {
+    fun show(
+        text: CharSequence?,
+        duration: Int = Toast.LENGTH_SHORT,
+        context: Context? = ContextHolder.applicationContext
+        ) {
+        Toast.makeText(context, text, duration).show()
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        setupToolbarMenu(R.id.toolbar, R.menu.home_menu) {
-            viewModel.onClickOptionsMenu(it)
-            true
-        }
+    fun show(
+        @StringRes resId: Int,
+        duration: Int = Toast.LENGTH_SHORT,
+        context: Context? = ContextHolder.applicationContext
+        ) {
+        Toast.makeText(context, resId, duration).show()
     }
 }

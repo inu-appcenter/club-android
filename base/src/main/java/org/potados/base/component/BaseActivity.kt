@@ -41,7 +41,7 @@ abstract class BaseActivity :
     NetworkChangeObserver {
 
     /****************************************************************
-     * Activity
+     * [AppCompatActivity]
      ****************************************************************/
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -78,7 +78,7 @@ abstract class BaseActivity :
     }
 
     /****************************************************************
-     * PermissionFighter
+     * [PermissionFighter]
      ****************************************************************/
 
     override val requiredPermissions: Array<String> = arrayOf()
@@ -108,7 +108,7 @@ abstract class BaseActivity :
     }
 
     /****************************************************************
-     * NetworkChangeObserver
+     * [NetworkChangeObserver]
      ****************************************************************/
 
     protected fun isOnline() = NetworkObserver.isOnline

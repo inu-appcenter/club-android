@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  ~ This file is part of INU Club.
+  ~
+  ~ Copyright (C) 2021 INU Global App Center <potados99@gmail.com>
+  ~
+  ~ INU Club is free software: you can redistribute it and/or modify
+  ~ it under the terms of the GNU General Public License as published by
+  ~ the Free Software Foundation, either version 3 of the License, or
+  ~ (at your option) any later version.
+  ~
+  ~ INU Club is distributed in the hope that it will be useful,
+  ~ but WITHOUT ANY WARRANTY; without even the implied warranty of
+  ~ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  ~ GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License
+  ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
+  -->
+
+<resources>
+    <string name="fail_connection">서버와 연결하는 데에 실패하였습니다.</string>
+    <string name="fail_server_internal">서버 내부의 문제로 응답을 받아오지 못하였습니다.</string>
+    <string name="fail_unsuccessful_response">요청하신 작업을 수행하는 데에 실패하였습니다.</string>
+    <string name="fail_null_body">응답 결과가 비어 있습니다.</string>
+    <string name="sorry_to_be_offline">죄송해요 오프라인이라 할 수 있는게 없어요 ㅠ</string>
+</resources>

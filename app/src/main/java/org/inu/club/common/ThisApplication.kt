@@ -22,6 +22,7 @@ package org.inu.club.common
 import android.app.Application
 import org.inu.club.injection.myModules
 import org.koin.android.ext.koin.androidContext
+import org.potados.base.android.ContextHolder
 import org.potados.network.NetworkObserver
 import timber.log.Timber
 
@@ -30,9 +31,14 @@ class ThisApplication : Application() {
     override fun onCreate() {
         super.onCreate()
 
+        startBaseModule()
         startTimber()
         startKoin()
         startNetworkObserver()
+    }
+
+    private fun startBaseModule() {
+        ContextHolder.setApplicationContext(this)
     }
 
     private fun startTimber() {

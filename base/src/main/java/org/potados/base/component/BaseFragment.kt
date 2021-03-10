@@ -38,13 +38,13 @@ abstract class BaseFragment<T: ViewDataBinding> :
     NetworkChangeObserver {
 
     /****************************************************************
-     * BindingOwner
+     * [BindingOwner]
      ****************************************************************/
 
     override var binding: T? = null
 
     /****************************************************************
-     * Fragment
+     * [Fragment]
      ****************************************************************/
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -105,7 +105,7 @@ abstract class BaseFragment<T: ViewDataBinding> :
     }
 
     /****************************************************************
-     * NetworkChangeObserver
+     * [NetworkChangeObserver]
      ****************************************************************/
 
     protected fun isOnline() = NetworkObserver.isOnline

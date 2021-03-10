@@ -19,12 +19,22 @@
 
 package org.potados.base.extension
 
+import android.view.MenuItem
+import android.widget.Toast
 import androidx.annotation.IdRes
+import androidx.annotation.MenuRes
+import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.fragment.findNavController
 
+/**
+ * Find NavigationController in this Fragment's scope, and bind with it.
+ * Useful when each navigation destination has its own Toolbar.
+ *
+ * Call this at [Fragment.onViewCreated] or later.
+ */
 fun Fragment.setupToolbarForNavigation(toolbar: Toolbar) {
     val navController = findNavController()
 
@@ -35,4 +45,53 @@ fun Fragment.setupToolbarForNavigation(@IdRes toolbarId: Int) {
     val toolbar = view?.findViewById<Toolbar>(toolbarId) ?: return
 
     setupToolbarForNavigation(toolbar)
+}
+
+fun Fragment.setupToolbarMenu(
+    toolbar: Toolbar,
+    @MenuRes menuId: Int,
+    onClick: (MenuItem) -> Boolean = this::onOptionsItemSelected
+) {
+    with(toolbar) {
+        menu.clear()
+        inflateMenu(menuId)
+        setOnMenuItemClickListener(onClick)
+    }
+}
+
+fun Fragment.setupToolbarMenu(
+    @IdRes toolbarId: Int,
+    @MenuRes menuId: Int,
+    onClick: (MenuItem) -> Boolean = this::onOptionsItemSelected
+) {
+    activity?.findViewById<Toolbar>(toolbarId)?.let {
+        setupToolbarMenu(it, menuId, onClick)
+    }
+}
+
+fun Fragment.setSupportActionBar(
+    toolbar: Toolbar?,
+    showTitle: Boolean = false,
+    showUpButton: Boolean = false
+) {
+    toolbar ?: return
+
+    withNonNull(activity as? AppCompatActivity) {
+        setSupportActionBar(toolbar)
+
+        withNonNull(supportActionBar) {
+            setDisplayShowTitleEnabled(showTitle)
+            setDisplayHomeAsUpEnabled(showUpButton)
+        }
+    }
+}
+
+fun Fragment.setSupportActionBar(
+    @IdRes toolbarId: Int,
+    showTitle: Boolean = false,
+    showUpButton: Boolean = false
+) {
+    activity?.findViewById<Toolbar>(toolbarId)?.let {
+        setSupportActionBar(it, showTitle, showUpButton)
+    }
 }
