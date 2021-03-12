@@ -22,25 +22,34 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/toolbar_wrapper"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:orientation="vertical"
-    app:layout_constraintTop_toTopOf="parent"
-    tools:keep="@layout/toolbar_home">
+    app:layout_constraintTop_toTopOf="parent">
 
     <!-- Toolbar with logo -->
     <androidx.appcompat.widget.Toolbar
         style="@style/HomeToolbar"
         android:id="@+id/toolbar">
 
-        <ImageView
-            android:layout_width="@dimen/toolbarHeight"
-            android:layout_height="@dimen/toolbarHeight"
-            android:scaleType="fitCenter"
-            android:src="@drawable/ic_logo_toolbar"
-            android:contentDescription="@string/description_toolbar_logo" />
+        <!-- Logo wrapper -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <!-- The logo -->
+            <ImageView
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/toolbarHeight"
+                app:layout_constraintDimensionRatio="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_logo_toolbar"
+                android:contentDescription="@string/description_toolbar_logo" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.appcompat.widget.Toolbar>
 

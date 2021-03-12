@@ -20,12 +20,15 @@
 package org.potados.base.component
 
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import org.potados.base.extension.observe
 import org.potados.network.NetworkObserver
+import timber.log.Timber
 
 /**
  * A base Fragment that:
@@ -49,6 +52,7 @@ abstract class BaseFragment<T: ViewDataBinding> :
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        dumpLifecycle()
 
         observeNetworkStateChange(savedInstanceState == null)
     }
@@ -60,9 +64,13 @@ abstract class BaseFragment<T: ViewDataBinding> :
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
-    ) = onCreateBinding(BindingCreator(this, inflater, container))
-        .also { binding = it }
-        .root
+    ) : View {
+        dumpLifecycle()
+
+        return onCreateBinding(BindingCreator(this, inflater, container))
+            .also { binding = it }
+            .root
+    }
 
     /**
      * User can choose to override [onCreateView] or this method [onCreateBinding].
@@ -70,10 +78,38 @@ abstract class BaseFragment<T: ViewDataBinding> :
      */
     abstract fun onCreateBinding(create: BindingCreator): T
 
+    override fun onStart() {
+        super.onStart()
+        dumpLifecycle()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        dumpLifecycle()
+    }
+
+    override fun onPause() {
+        super.onPause()
+        dumpLifecycle()
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
+        dumpLifecycle()
 
         binding = null
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        dumpLifecycle()
+    }
+
+    private fun dumpLifecycle() {
+        val stackTraceElements = Thread.currentThread().stackTrace
+        val callerMethod = stackTraceElements[3] // Exact caller method
+
+        Timber.d("${this::class.java.name.split('.').last()}: ${callerMethod.methodName}")
     }
 
     /**

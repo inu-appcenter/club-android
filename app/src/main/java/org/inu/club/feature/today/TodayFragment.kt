@@ -61,4 +61,5 @@ class TodayFragment : BaseFragment<TodayFragmentBinding>() {
         setSupportActionBar(R.id.toolbar)
         setupToolbarForNavigation(R.id.toolbar)
     }
+
 }
