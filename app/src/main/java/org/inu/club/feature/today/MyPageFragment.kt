@@ -33,6 +33,8 @@ class MyPageFragment : BaseFragment<MyPageFragmentBinding>() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
         setupToolbarForNavigation(R.id.toolbar)
     }
 }

@@ -21,9 +21,8 @@ package org.potados.base.component
 
 import android.os.Bundle
 import android.util.Log
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
+import androidx.annotation.CallSuper
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import org.potados.base.extension.observe
@@ -78,6 +77,17 @@ abstract class BaseFragment<T: ViewDataBinding> :
      */
     abstract fun onCreateBinding(create: BindingCreator): T
 
+    @CallSuper
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        dumpLifecycle()
+    }
+
+    override fun onActivityCreated(savedInstanceState: Bundle?) {
+        super.onActivityCreated(savedInstanceState)
+        dumpLifecycle()
+    }
+
     override fun onStart() {
         super.onStart()
         dumpLifecycle()
@@ -103,6 +113,20 @@ abstract class BaseFragment<T: ViewDataBinding> :
     override fun onDestroy() {
         super.onDestroy()
         dumpLifecycle()
+    }
+
+    @CallSuper
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+        dumpLifecycle()
+    }
+
+    @CallSuper
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        val result = super.onOptionsItemSelected(item)
+        dumpLifecycle()
+
+        return result
     }
 
     private fun dumpLifecycle() {
