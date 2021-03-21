@@ -27,6 +27,15 @@
     <fragment
         android:id="@+id/today_dest"
         android:name="org.inu.club.feature.today.TodayFragment"
-        android:label="TodayFragment" />
+        android:label="TodayFragment" >
+        <action
+            android:id="@+id/action_today_dest_to_my_page_dest"
+            app:destination="@id/my_page_dest" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/my_page_dest"
+        android:name="org.inu.club.feature.today.MyPageFragment"
+        android:label="MyPageFragment" />
 
 </navigation>

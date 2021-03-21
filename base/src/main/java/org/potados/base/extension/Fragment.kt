@@ -28,6 +28,7 @@ import androidx.fragment.app.Fragment
 import androidx.appcompat.widget.Toolbar
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.fragment.findNavController
+import androidx.navigation.ui.setupWithNavController
 
 /**
  * Find NavigationController in this Fragment's scope, and bind with it.
@@ -36,15 +37,13 @@ import androidx.navigation.fragment.findNavController
  * Call this at [Fragment.onViewCreated] or later.
  */
 fun Fragment.setupToolbarForNavigation(toolbar: Toolbar) {
-    val navController = findNavController()
-
-    NavigationUI.setupWithNavController(toolbar, navController)
+    toolbar.setupWithNavController(findNavController())
 }
 
 fun Fragment.setupToolbarForNavigation(@IdRes toolbarId: Int) {
-    val toolbar = view?.findViewById<Toolbar>(toolbarId) ?: return
-
-    setupToolbarForNavigation(toolbar)
+    view?.findViewById<Toolbar>(toolbarId)?.let {
+        setupToolbarForNavigation(it)
+    }
 }
 
 fun Fragment.setupToolbarMenu(
@@ -64,11 +63,12 @@ fun Fragment.setupToolbarMenu(
     @MenuRes menuId: Int,
     onClick: (MenuItem) -> Boolean = this::onOptionsItemSelected
 ) {
-    activity?.findViewById<Toolbar>(toolbarId)?.let {
+    view?.findViewById<Toolbar>(toolbarId)?.let {
         setupToolbarMenu(it, menuId, onClick)
     }
 }
 
+@Deprecated("There won't be any needs for Fragments to set an Activity level toolbar.")
 fun Fragment.setSupportActionBar(
     toolbar: Toolbar?,
     showTitle: Boolean = false,
@@ -86,6 +86,8 @@ fun Fragment.setSupportActionBar(
     }
 }
 
+@Suppress("DeprecatedCallableAddReplaceWith")
+@Deprecated("There won't be any needs for Fragments to set an Activity level toolbar.")
 fun Fragment.setSupportActionBar(
     @IdRes toolbarId: Int,
     showTitle: Boolean = false,

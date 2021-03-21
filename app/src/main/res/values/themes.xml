@@ -31,18 +31,16 @@
         <item name="android:textColorSecondary">@color/textSecondary</item>
         <item name="android:textColorTertiary">@color/textTertiary</item>
 
-        <item name="android:windowLightStatusBar">false</item>
-        <item name="android:statusBarColor">@color/themeLightBlue</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:statusBarColor">@color/backgroundLight</item>
 
         <item name="colorPrimary">@color/themeBlue</item>
-        <item name="colorAccent">@color/themeViolet</item>
+        <item name="colorAccent">@color/themeBlue</item>
         <item name="selectableItemBackground">@drawable/ripple</item>
 
         <item name="barBackground">@color/backgroundLight</item>
         <item name="barTextColor">@drawable/bar_text_color</item>
         <item name="barIconColor">@drawable/bar_item_color</item>
-
-        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
     </style>
 
     <!-- Splash theme -->

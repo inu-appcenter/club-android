@@ -19,9 +19,25 @@
   -->
 
 <!-- Common toolbar for app-wide use -->
-<androidx.appcompat.widget.Toolbar
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    style="@style/Toolbar"
-    android:id="@+id/toolbar"
-    app:layout_constraintTop_toTopOf="parent" />
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/toolbar_wrapper"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!-- The toolbar -->
+    <androidx.appcompat.widget.Toolbar
+        style="@style/Toolbar"
+        android:id="@+id/toolbar"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/divider" />
+
+</LinearLayout>
+
