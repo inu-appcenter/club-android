@@ -35,7 +35,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/toolbar"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_wrapper"
         app:defaultNavHost="true"
         app:navGraph="@navigation/nav_graph_gatherings"
         android:name="androidx.navigation.fragment.NavHostFragment" />

@@ -78,14 +78,6 @@ class MainActivity : NavigationActivity() {
         )
     )
 
-    override fun onTabSelected(item: MenuItem) {
-        // Color of status bar and toolbar varies.
-        when (item.itemId) {
-            R.id.tab_today -> setStatusBarLight()
-            else -> setStatusBarDark()
-        }
-    }
-
     companion object {
         fun callingIntent(context: Context) = Intent(context, MainActivity::class.java)
     }

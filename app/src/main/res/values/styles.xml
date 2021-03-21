@@ -28,13 +28,12 @@
         <item name="labelVisibilityMode">labeled</item>
     </style>
 
-    <!-- Dark Toolbar -->
+    <!-- Toolbar -->
     <style name="Toolbar" parent="@style/ThemeOverlay.AppCompat.ActionBar">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">?android:attr/actionBarSize</item>
-        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:background">?android:attr/statusBarColor</item>
         <item name="titleTextAppearance">@style/ToolbarText</item>
-        <item name="titleTextColor">?android:attr/textColorPrimaryInverse</item>
         <item name="contentInsetStartWithNavigation">0dp</item>
     </style>
     <style name="ToolbarText" parent="TextAppearance.AppCompat.Widget.ActionBar.Title">
@@ -46,7 +45,7 @@
 
     <!-- Custom toolbar -->
     <style name="HomeToolbar" parent="Toolbar" tools:keep="@style/HomeToolbar">
-        <item name="android:background">?android:attr/windowBackground</item>
+        <item name="android:background">?android:attr/statusBarColor</item>
     </style>
 
     <style name="HorizontallyFullSizedView">
