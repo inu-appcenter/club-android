@@ -23,7 +23,7 @@ import android.app.Application
 import org.inu.club.injection.myModules
 import org.koin.android.ext.koin.androidContext
 import org.potados.base.android.ContextHolder
-import org.potados.network.NetworkObserver
+import org.potados.base.network.NetworkObserver
 import timber.log.Timber
 
 class ThisApplication : Application() {

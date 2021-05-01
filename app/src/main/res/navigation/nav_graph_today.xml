@@ -28,9 +28,13 @@
         android:id="@+id/today_dest"
         android:name="org.inu.club.feature.today.TodayFragment"
         android:label="TodayFragment" >
+
         <action
             android:id="@+id/action_today_dest_to_my_page_dest"
-            app:destination="@id/my_page_dest" />
+            app:destination="@id/my_page_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:popEnterAnim="@anim/slide_in_left" />
+
     </fragment>
 
     <fragment

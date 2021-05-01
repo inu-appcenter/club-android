@@ -28,7 +28,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import org.potados.base.extension.observe
-import org.potados.network.NetworkObserver
+import org.potados.base.network.NetworkObserver
 
 /**
  * A base activity that handles:

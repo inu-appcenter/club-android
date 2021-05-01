@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.network.helper
+package org.potados.base.network.helper
 
 import android.net.ConnectivityManager
 import android.net.Network

@@ -28,7 +28,7 @@ import org.potados.base.exception.NullBodyException
 import org.potados.base.exception.ResponseFailException
 import org.potados.base.exception.http.InternalErrorException
 import org.potados.base.util.Alert
-import org.potados.network.NetworkObserver
+import org.potados.base.network.NetworkObserver
 
 abstract class BaseViewModel : ViewModel(), ContextOwner, Verbal, NetworkSensitive, FailureFriendly {
 

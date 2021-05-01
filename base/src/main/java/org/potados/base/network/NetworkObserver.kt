@@ -17,12 +17,12 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.network
+package org.potados.base.network
 
 import android.content.Context
 import android.net.ConnectivityManager
-import org.potados.network.repository.DeviceStatusRepository
-import org.potados.network.util.PublicLiveEvent
+import org.potados.base.network.repository.DeviceStatusRepository
+import org.potados.base.network.util.PublicLiveEvent
 
 object NetworkObserver {
 

@@ -18,12 +18,16 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<!-- This module includes network state change observer. -->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <translate
+        android:fromXDelta="-10%p"
+        android:toXDelta="0%p"
+        android:duration="300"
+        android:repeatCount="0"
+        android:fillAfter="true"/>
 
-<manifest
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    package="org.potados.network">
-
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-
-</manifest>
+    <alpha
+        android:fromAlpha="0"
+        android:toAlpha="1"
+        android:duration="300" />
+</set>

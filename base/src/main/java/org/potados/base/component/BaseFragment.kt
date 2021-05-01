@@ -20,13 +20,12 @@
 package org.potados.base.component
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.annotation.CallSuper
 import androidx.databinding.ViewDataBinding
 import androidx.fragment.app.Fragment
 import org.potados.base.extension.observe
-import org.potados.network.NetworkObserver
+import org.potados.base.network.NetworkObserver
 import timber.log.Timber
 
 /**

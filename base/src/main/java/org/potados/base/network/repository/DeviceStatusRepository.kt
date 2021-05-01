@@ -17,11 +17,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.potados.network.repository
+package org.potados.base.network.repository
 
 import android.net.ConnectivityManager
-import org.potados.network.helper.NetworkHelper
-import org.potados.network.util.PublicLiveEvent
+import org.potados.base.network.helper.NetworkHelper
+import org.potados.base.network.util.PublicLiveEvent
 import java.util.*
 import kotlin.concurrent.schedule
 

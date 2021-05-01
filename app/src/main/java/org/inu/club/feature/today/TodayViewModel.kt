@@ -22,7 +22,7 @@ package org.inu.club.feature.today
 import android.view.MenuItem
 import org.inu.club.R
 import org.potados.base.component.BaseViewModel
-import org.potados.network.util.SingleLiveEvent
+import org.potados.base.network.util.SingleLiveEvent
 
 class TodayViewModel : BaseViewModel() {
 
