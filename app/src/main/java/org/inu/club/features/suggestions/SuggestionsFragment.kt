@@ -17,31 +17,24 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.common.navigation
+package org.inu.club.features.suggestions
 
-import android.content.Context
-import android.content.Intent
-import org.inu.club.features.main.MainActivity
-import timber.log.Timber
+import android.os.Bundle
+import android.view.View
+import org.inu.club.R
+import org.inu.club.databinding.SuggestionsFragmentBinding
+import org.potados.base.component.BaseFragment
+import org.potados.base.extension.setupToolbarForNavigation
 
-class Navigator(
-    private val context: Context
-) {
+class SuggestionsFragment : BaseFragment<SuggestionsFragmentBinding>() {
 
-    fun showMain() {
-        startActivity(
-            MainActivity.callingIntent(context)
-        )
+    override fun onCreateBinding(create: BindingCreator) = create<SuggestionsFragmentBinding> {
+        // Do some...
     }
 
-    private fun startActivity(intent: Intent) {
-        // Recent versions Android requires this flag
-        // to start activity from non-activity context.
-        context.startActivity(
-            intent.apply {
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                Timber.i("Starting ${this.component?.className}.")
-            }
-        )
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setupToolbarForNavigation(R.id.toolbar)
     }
 }

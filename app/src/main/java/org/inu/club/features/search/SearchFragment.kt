@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.search
+package org.inu.club.features.search
 
 import android.os.Bundle
 import android.view.View

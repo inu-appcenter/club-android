@@ -17,24 +17,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.suggestions
+package org.inu.club.features.today
 
-import android.os.Bundle
-import android.view.View
-import org.inu.club.R
-import org.inu.club.databinding.SuggestionsFragmentBinding
-import org.potados.base.component.BaseFragment
-import org.potados.base.extension.setupToolbarForNavigation
-
-class SuggestionsFragment : BaseFragment<SuggestionsFragmentBinding>() {
-
-    override fun onCreateBinding(create: BindingCreator) = create<SuggestionsFragmentBinding> {
-        // Do some...
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        setupToolbarForNavigation(R.id.toolbar)
-    }
-}
+data class TodayCard(
+    val id: Int,
+    val title: String,
+    val excerpts: String,
+    val headerImageUrl: String
+)

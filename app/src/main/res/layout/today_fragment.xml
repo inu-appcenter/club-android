@@ -23,6 +23,12 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:keep="@layout/today_fragment">
 
+    <data>
+        <variable
+            name="vm"
+            type="org.inu.club.features.today.TodayViewModel" />
+    </data>
+
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -30,15 +36,42 @@
         <!-- Toolbar -->
         <include layout="@layout/toolbar_home" />
 
-        <!-- Content here -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:layout_constraintTop_toBottomOf="@id/toolbar_wrapper"
-            app:layout_constraintBottom_toBottomOf="parent"
+        <!-- Contents -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/todayCardsRecycler"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            android:text="여기는 홈! 투데이!!" />
+            app:layout_constraintTop_toBottomOf="@id/toolbar_wrapper"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            todayCards="@{vm.todayCards}"
+            isTodayCardsLoading="@{vm.isLoading}"
+            tools:listitem="@layout/today_card_item" />
+
+        <!-- Empty view -->
+        <TextView
+            style="@style/TextSecondary"
+            android:id="@+id/emptyCardsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_wrapper"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="@string/text_aint_nothing" />
+
+        <!-- Loading view -->
+        <ProgressBar
+            android:id="@+id/loadingCardsView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolbar_wrapper"
+            app:layout_constraintBottom_toBottomOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

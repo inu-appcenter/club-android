@@ -33,7 +33,7 @@
 
         <!-- Activities -->
         <activity
-            android:name=".feature.splash.SplashActivity"
+            android:name=".features.splash.SplashActivity"
             android:theme="@style/SplashTheme">
 
             <intent-filter>
@@ -43,7 +43,7 @@
 
         </activity>
 
-        <activity android:name=".feature.main.MainActivity">
+        <activity android:name=".features.main.MainActivity">
         </activity>
 
     </application>

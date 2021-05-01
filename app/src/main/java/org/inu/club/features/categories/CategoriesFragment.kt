@@ -17,19 +17,19 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.today
+package org.inu.club.features.categories
 
 import android.os.Bundle
 import android.view.View
 import org.inu.club.R
-import org.inu.club.databinding.MyPageFragmentBinding
+import org.inu.club.databinding.CategoriesFragmentBinding
 import org.potados.base.component.BaseFragment
 import org.potados.base.extension.setupToolbarForNavigation
 
-class MyPageFragment : BaseFragment<MyPageFragmentBinding>() {
+class CategoriesFragment : BaseFragment<CategoriesFragmentBinding>() {
 
-    override fun onCreateBinding(create: BindingCreator) = create<MyPageFragmentBinding> {
-
+    override fun onCreateBinding(create: BindingCreator) = create<CategoriesFragmentBinding> {
+        // Do some...
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

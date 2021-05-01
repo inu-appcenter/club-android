@@ -17,31 +17,15 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.common.navigation
+package org.inu.club.features.gatherings
 
-import android.content.Context
-import android.content.Intent
-import org.inu.club.features.main.MainActivity
-import timber.log.Timber
+import org.inu.club.databinding.GatheringsFragmentBinding
+import org.potados.base.component.BaseFragment
 
-class Navigator(
-    private val context: Context
-) {
+class GatheringsFragment : BaseFragment<GatheringsFragmentBinding>() {
 
-    fun showMain() {
-        startActivity(
-            MainActivity.callingIntent(context)
-        )
+    override fun onCreateBinding(create: BindingCreator) = create<GatheringsFragmentBinding> {
+        // Do some...
     }
 
-    private fun startActivity(intent: Intent) {
-        // Recent versions Android requires this flag
-        // to start activity from non-activity context.
-        context.startActivity(
-            intent.apply {
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                Timber.i("Starting ${this.component?.className}.")
-            }
-        )
-    }
 }

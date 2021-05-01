@@ -26,7 +26,7 @@
 
     <fragment
         android:id="@+id/gatherings_dest"
-        android:name="org.inu.club.feature.gatherings.GatheringsFragment"
+        android:name="org.inu.club.features.gatherings.GatheringsFragment"
         android:label="@string/title_gatherings" />
 
 </navigation>

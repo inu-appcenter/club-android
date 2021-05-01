@@ -17,31 +17,11 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.common.navigation
+package org.potados.base.component
 
-import android.content.Context
-import android.content.Intent
-import org.inu.club.features.main.MainActivity
-import timber.log.Timber
+import android.view.View
+import androidx.recyclerview.widget.RecyclerView
 
-class Navigator(
-    private val context: Context
-) {
-
-    fun showMain() {
-        startActivity(
-            MainActivity.callingIntent(context)
-        )
-    }
-
-    private fun startActivity(intent: Intent) {
-        // Recent versions Android requires this flag
-        // to start activity from non-activity context.
-        context.startActivity(
-            intent.apply {
-                addFlags(Intent.FLAG_ACTIVITY_NEW_TASK)
-                Timber.i("Starting ${this.component?.className}.")
-            }
-        )
-    }
+abstract class BaseViewHolder<T>(view: View) : RecyclerView.ViewHolder(view) {
+    abstract fun bind(item: T)
 }

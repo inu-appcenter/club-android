@@ -18,15 +18,20 @@
   ~ along with this program.  If not, see <https://www.gnu.org/licenses/>.
   -->
 
-<navigation
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph_search"
-    app:startDestination="@id/search_dest">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <fragment
-        android:id="@+id/search_dest"
-        android:name="org.inu.club.features.search.SearchFragment"
-        android:label="검색!" />
+    <data>
+        <variable
+            name="item"
+            type="org.inu.club.features.today.TodayCard" />
+    </data>
 
-</navigation>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+

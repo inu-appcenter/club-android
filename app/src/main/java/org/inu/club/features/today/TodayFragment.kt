@@ -17,26 +17,42 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.today
+package org.inu.club.features.today
 
 import android.os.Bundle
 import android.view.View
+import androidx.databinding.BindingAdapter
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.RecyclerView
 import org.inu.club.R
 import org.inu.club.databinding.TodayFragmentBinding
 import org.potados.base.component.BaseFragment
 import org.potados.base.extension.observeNotNull
 import org.potados.base.extension.setupToolbarForNavigation
 import org.potados.base.extension.setupToolbarMenu
+import timber.log.Timber
 
 class TodayFragment : BaseFragment<TodayFragmentBinding>() {
 
     private val viewModel: TodayViewModel by viewModels()
 
     override fun onCreateBinding(create: BindingCreator) = create<TodayFragmentBinding> {
-        observeNotNull(viewModel.navigateEvent) {
-            findNavController().navigate(it)
+        with(todayCardsRecycler) {
+            adapter = TodayCardsAdapter().apply {
+                emptyView = emptyCardsView
+                loadingView = loadingCardsView
+            }
+        }
+
+        with(viewModel) {
+            vm = this
+
+            observeNotNull(navigateEvent) {
+                findNavController().navigate(it)
+            }
+
+            load()
         }
     }
 
@@ -47,6 +63,24 @@ class TodayFragment : BaseFragment<TodayFragmentBinding>() {
         setupToolbarMenu(R.id.toolbar, R.menu.home_menu) {
             viewModel.onClickOptionsMenu(it)
             true
+        }
+    }
+
+    companion object {
+        @JvmStatic
+        @BindingAdapter("todayCards")
+        fun setTodayCards(view: RecyclerView, cards: List<TodayCard>?) {
+            cards ?: return
+
+            (view.adapter as? TodayCardsAdapter)?.items = cards
+        }
+
+        @JvmStatic
+        @BindingAdapter("isTodayCardsLoading")
+        fun setTodayCardsLoading(view: RecyclerView, isLoading: Boolean?) {
+            isLoading ?: return
+
+            (view.adapter as? TodayCardsAdapter)?.isLoading = isLoading
         }
     }
 }

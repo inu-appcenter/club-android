@@ -33,4 +33,5 @@
     <string name="description_search_button" tools:keep="@string/description_search_button">검색 버튼입니다.</string>
     <string name="menu_my_page">내 정보</string>
     <string name="menu_notifications">알림</string>
+    <string name="text_aint_nothing">아무것도 없어요 ㅠㅡㅠ</string>
 </resources>

@@ -17,15 +17,27 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.gatherings
+package org.potados.base.component
 
-import org.inu.club.databinding.GatheringsFragmentBinding
-import org.potados.base.component.BaseFragment
+import android.view.View
 
-class GatheringsFragment : BaseFragment<GatheringsFragmentBinding>() {
+interface BasicAdapterFeatures<T> {
+    /**
+     * loadingView will be shown when it is not null and isLoading is true.
+     */
+    var loadingView: View?
 
-    override fun onCreateBinding(create: BindingCreator) = create<GatheringsFragmentBinding> {
-        // Do some...
-    }
+    var isLoading: Boolean
 
+    /**
+     * emptyView will be shown when it is not null and data.isEmpty() returns true
+     */
+    var emptyView: View?
+
+    var items: List<T>
+
+    /**
+     * User can modify notify action
+     */
+    fun onItemsChanged(old: List<T>, new: List<T>)
 }

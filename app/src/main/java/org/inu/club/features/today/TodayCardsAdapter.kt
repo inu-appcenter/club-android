@@ -17,24 +17,15 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.categories
+package org.inu.club.features.today
 
-import android.os.Bundle
-import android.view.View
 import org.inu.club.R
-import org.inu.club.databinding.CategoriesFragmentBinding
-import org.potados.base.component.BaseFragment
-import org.potados.base.extension.setupToolbarForNavigation
+import org.potados.base.component.BindingAdapter
+import androidx.databinding.library.baseAdapters.BR
+import org.inu.club.databinding.TodayCardItemBinding
 
-class CategoriesFragment : BaseFragment<CategoriesFragmentBinding>() {
+class TodayCardsAdapter : BindingAdapter<TodayCard, TodayCardItemBinding>(BR.item) {
 
-    override fun onCreateBinding(create: BindingCreator) = create<CategoriesFragmentBinding> {
-        // Do some...
-    }
+    override fun getLayoutIdForPosition(position: Int) = R.layout.today_card_item
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        setupToolbarForNavigation(R.id.toolbar)
-    }
 }

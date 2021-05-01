@@ -17,16 +17,13 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.main
+package org.inu.club.features.main
 
 import android.content.Context
 import android.content.Intent
-import android.view.MenuItem
 import org.inu.club.R
 import org.potados.base.component.NavigationActivity
 import org.potados.base.component.NavigationHostFragment
-import org.potados.base.extension.setStatusBarDark
-import org.potados.base.extension.setStatusBarLight
 
 class MainActivity : NavigationActivity() {
 

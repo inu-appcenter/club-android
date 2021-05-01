@@ -17,7 +17,7 @@
  * along with this program.  If not, see <https://www.gnu.org/licenses/>.
  */
 
-package org.inu.club.feature.splash
+package org.inu.club.features.splash
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity

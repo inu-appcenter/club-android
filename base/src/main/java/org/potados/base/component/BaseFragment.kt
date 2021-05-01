@@ -65,7 +65,8 @@ abstract class BaseFragment<T: ViewDataBinding> :
     ) : View {
         dumpLifecycle()
 
-        return onCreateBinding(BindingCreator(this, inflater, container))
+        return onCreateBinding(BindingCreator(inflater, container))
+            .also { it.lifecycleOwner = this }
             .also { binding = it }
             .root
     }
@@ -140,7 +141,6 @@ abstract class BaseFragment<T: ViewDataBinding> :
      * Invoke a BindingCreator instance to create a ViewDataBinding instance.
      */
     inner class BindingCreator(
-        val fragment: Fragment,
         val inflater: LayoutInflater,
         val container: ViewGroup?
     ) {
@@ -157,7 +157,6 @@ abstract class BaseFragment<T: ViewDataBinding> :
 
             @Suppress("UNCHECKED_CAST")
             return (inflateMethod.invoke(null, inflater, container, false) as ReifiedT)
-                .apply { lifecycleOwner = fragment }
                 .apply { also(this) } as? T
                 ?: throw Exception("Type mismatch! Please check the generic parameters passed to the BindingCreator and BaseFragment. They must be equal.")
         }
